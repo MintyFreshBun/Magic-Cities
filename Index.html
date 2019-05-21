@@ -23,21 +23,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   
-    <!--Containers for the login and sign up buttons-->
+    <!--Containers for the login and sign up buttons (we will need to do a css clean up, putting any css code, to the style sheet file)-->
     <div class="container-fluid" style="background-color:red; padding-top: 10px">
       <div class="row justify-content-end">
 
-        <div class="col-1">
-          <button type="button" class="btn btn-outline-primary">Log In</button>
+        <div class="col-1-12" style="padding-right:10px"> <!--we need to manipulat the css of the buttons and make sure they are properly allied -->
+          <button type="button" class="btn btn-outline-primary btn-lg">Log In</button>
         </div>        
       </div>
       
       <div class="row justify-content-end" style="padding-top: 10px">
-        <div class="col-1">
-          <button type="button" class="btn btn-outline-warning">Sign UP</button>
+        <div class="col-1-12" style="padding-right:10px">
+          <button type="button" class="btn btn-outline-warning btn-lg">Sign UP</button>
         </div>
       </div>
       
   </div>
+
+  <!--Cotainers for the speach bubble-->
+  <div class="container" >
+    <div class="row rounded-lg" style="background-color:snow; height: 200%;"> <!--we need a size that can stay in the middle whit out change on both phone and desktop resolutions -->
+      <div id="intro-text" style="margin:10px">
+        <p>test line here , intro text of the wizard goes heres, bababababaabababababababababababa
+          bababababababab aabababadbkjashdwqdlk waldalahdahlh asldasldhwih</p>
+      </div>
+      
+      
+    </div>
+  
+  </div>
+
+  <!--Wizard container, needs to be always below the speach bubble contater to do the speach bubble effect -->
+  <div class="container-fluid">
+    <div class="row justify-content-start" style="padding-left: 8%">
+      <img src="misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_wizard.png" alt="Responsive image" width="15%" height="15%" >
+    </div>
+  </div>
+
+
+
   </body>
 </html>
