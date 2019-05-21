@@ -1,10 +1,12 @@
 .StartingPageBody{
   background-image: url("../misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_background.png");
   background-color: #cccccc;
-  height: 500px;
-  background-position: center;
+  
+  
   background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  background-size:100% auto;
+  
  }
+
+ 
 
