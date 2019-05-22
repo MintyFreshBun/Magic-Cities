@@ -28,22 +28,95 @@
    <!--Containers for the login, sign up buttons and logo (we will need to do a css clean up, putting any css code, to the style sheet file)-->
     <div class="container-fluid" id="topBar">
 
-    <div  class="row justify-content-start"> <!--Organizing logo to the side of the sign up and login buttons-->
-      <div class= "col">
+    <div  class="row justify-content-end"> <!--Organizing logo to the side of the sign up and login buttons-->
+      <div class= "col-4">
         <img src="misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_logo.png" id="logo">
       </div>
-      <div class="col"> 
+      <div class="col-4"> 
         <div class="row justify-content-end">
 
           <div class="col-1-12" style="padding-right:10px"> <!--we need to manipulat the css of the buttons and make sure they are properly allied -->
-            <button type="button" class="btn btn-outline-primary btn-lg">Log In</button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#loginModal">Log In</button>
           </div>
         </div>        
       
-      
+      <!-- Login Modal -->
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Entrar na Conta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+                <div class="container">
+                  <!--Check inputted info-->
+                  <form action="" method="GET">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <br>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <br>
+                    <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+                </form>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Sign up Modal-->
         <div class="row justify-content-end" style="padding-top: 10px">
           <div class="col-1-12" style="padding-right:10px">
-            <button type="button" class="btn btn-outline-warning btn-lg">Sign UP</button>
+            <button type="button" class="btn btn-outline-warning btn-lg" data-toggle="modal" data-target="#signupModal">Sign UP</button>
+
+            <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Inscreve-te!</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="action_page.php" style="border:1px solid #ccc">
+                            <div class="container">
+                              <p>Por favor preenche o formulário para criar uma conta</p>
+                              <hr>
+                          <form action="" method="POST">
+                              <label for="email"><b>Email</b></label>
+                              <input type="text" placeholder="Enter Email" name="email" required>
+                              <br>
+                              <label for="psw"><b>Password</b></label>
+                              <input type="password" placeholder="Enter Password" name="psw" required>
+                              <br>
+                              <label for="psw-repeat"><b>Repeat Password</b></label>
+                              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                          
+                              <label>
+                                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                              </label>
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -55,8 +128,8 @@
   <div class="container" >
     <div class="row rounded-lg" id="dialogueBox"> <!--we need a size that can stay in the middle whithout change on both phone and desktop resolutions -->
       <div id="intro-text">
-        <p>test line here , intro text of the wizard goes heres, bababababaabababababababababababa
-          bababababababab aabababadbkjashdwqdlk waldalahdahlh asldasldhwih</p>
+        <p>Bem vindo á Magic Cities. O lugar onde feiticeiros e feiticeiras podem usar os seus 
+          poderes para explorar e salvar um País agora confuso mas muito importante para vários, Portugal!</p>
       </div>
       
       

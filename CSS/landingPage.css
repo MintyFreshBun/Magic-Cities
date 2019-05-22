@@ -13,10 +13,18 @@ body,html{
   background-repeat: no-repeat;
   background-size: cover;
  }
+input[type=text], input[type=password]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
 
  #topBar{
-   background-color:red;
-   padding-top: 10px;
+  
+   padding-top: 30px;
  }
  #wizzard{
    width:20%;
@@ -37,7 +45,7 @@ body,html{
 
  #logo{
    height:70%;
-   width:50%;
+   width:70%;
 
  }
 
