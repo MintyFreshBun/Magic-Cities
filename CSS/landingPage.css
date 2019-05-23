@@ -1,0 +1,53 @@
+body,html{
+  height:100%;
+}
+#bg{
+  background-image: url("../misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_background.png");
+  background-color: #cccccc;
+  
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+input[type=text], input[type=password]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+ #topBar{
+  
+   padding-top: 30px;
+ }
+ #wizzard{
+   width:20%;
+   height: 20%;
+   padding-left: 8%
+ }
+
+ 
+
+ #dialogueBox{
+  background-color:snow;
+  height: 200%;
+ }
+
+ #introBox{
+  margin:10px;
+ }
+
+ #logo{
+   height:70%;
+   width:70%;
+
+ }
+
+ 
+
