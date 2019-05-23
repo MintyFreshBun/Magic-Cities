@@ -5,14 +5,16 @@ body,html{
   background-image: url("../misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_background.png");
   background-color: #cccccc;
   
-  /* Full height */
+  /* Full height and width */
   height: 100%; 
+  width: 100%;
 
   /* Center and scale the image nicely */
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
  }
+ /*customize the model input boxes*/
 input[type=text], input[type=password]{
   width: 100%;
   padding: 15px;
@@ -23,9 +25,9 @@ input[type=text], input[type=password]{
 }
 
  #topBar{
-  
-   padding-top: 30px;
+   padding-top: 7%;
  }
+
  #wizzard{
    width:20%;
    height: 20%;
@@ -43,9 +45,15 @@ input[type=text], input[type=password]{
   margin:10px;
  }
 
+ #introText{
+  font: italic bold 12px/30px Georgia, serif;
+   margin:10px;
+   font-size: 150%;
+ }
+
  #logo{
-   height:70%;
-   width:70%;
+   height:100%;
+   width:100%;
 
  }
 
