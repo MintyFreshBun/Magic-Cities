@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-    <!--Custom CSS ( it's not being linked. Why?)-->
+    <!--Custom CS-->
     <link rel="stylesheet" href="CSS/landingPage.css">
     <!--Style Test-->
   
@@ -24,11 +24,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <div class="container-fluid" id="bg">
-    
-    <div class="row align-items-start">
-   <!--Containers for the login, sign up buttons and logo (we will need to do a css clean up, putting any css code, to the style sheet file)-->
-    <div class="container-fluid" id="topBar">
-   
+
+    <!--Containers for the login, sign up buttons and logo (we will need to do a css clean up, putting any css code, to the style sheet file)-->
+      <div class="container-fluid" id="topBar">
+
       <div  class="row justify-content-end"> <!--Organizing logo to the side of the sign up and login buttons-->
         <div class= "col-4">
           <img src="misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_logo.png" id="logo">
@@ -36,7 +35,7 @@
         <div class="col-4"> 
           <div class="row justify-content-end">
 
-            <div class="col-1-12" style="padding-right:10px"> <!--we need to manipulate the css of the buttons and make sure they are properly allied -->
+            <div class="col-1-12" style="padding-right:10px"> <!--we need to manipulat the css of the buttons and make sure they are properly allied -->
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#loginModal">Log In</button>
             </div>
@@ -55,7 +54,7 @@
               <div class="modal-body">
                 <div class="container-fluid">
                   <div class="container">
-                    <!--Check inputted info-->
+                    <!--Calls a function to check inputted info with the storaged one-->
                     <form action="" method="GET">
                       <label for="uname"><b>Username</b></label>
                       <input type="text" placeholder="Enter Username" name="uname" required>
@@ -65,8 +64,8 @@
                       <br>
                       <label>
                       <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                  </form>
+                      </label>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -96,6 +95,7 @@
                               <div class="container">
                                 <p>Por favor preenche o formulário para criar uma conta</p>
                                 <hr>
+                                <!--Will call a function to post the inputted information-->
                             <form action="" method="POST">
                                 <label for="email"><b>Email</b></label>
                                 <input type="text" placeholder="Enter Email" name="email" required>
@@ -113,7 +113,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">sign up</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                       </div>
                     </div>
                   </div>
@@ -122,35 +122,30 @@
           </div>
         </div>
       </div>
-      </div>
+        
     </div>
- 
-  
-</div>
-  <!--Cotainers for the speach bubble-->
-  <div class="row align-items-center">
-  <div class="container" >
-    <div class="row rounded-lg" id="dialogueBox"> <!--we need a size that can stay in the middle whithout change on both phone and desktop resolutions -->
-      <div id="intro-text">
-        <p id="introText"> Bem vindo á Magic Cities. O lugar onde feiticeiros e feiticeiras podem usar os seus 
-          poderes para explorar e salvar um País agora confuso mas muito importante para vários, Portugal!</p>
-      </div>
-      
-      
-    </div>
-  
-  </div>
-</div>
 
-  <!--Wizard container, needs to be always below the speach bubble contater to do the speach bubble effect -->
-  <div class="row align-items-end">
-  <div class="container-fluid">
-    <div class="row justify-content-start">
-      <img src="misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_wizard.png" class="img-fluid" alt="Responsive image" id="wizzard"  >
+    <!--Cotainers for the speach bubble-->
+    <div class="container" >
+      <div class="row rounded-lg" id="dialogueBox"> <!--we need a size that can stay in the middle whithout change on both phone and desktop resolutions -->
+        <div id="intro-text">
+          <p>Bem vindo á Magic Cities. O lugar onde feiticeiros e feiticeiras podem usar os seus 
+            poderes para explorar e salvar um País agora confuso mas muito importante para vários, Portugal!</p>
+        </div>
+        
+        
+      </div>
+    
+    </div>
+
+    <!--Wizard container, needs to be always below the speach bubble contater to do the speach bubble effect -->
+    <div class="container-fluid">
+      <div class="row justify-content-start">
+        <img src="misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_wizard.png" class="img-fluid" alt="Responsive image" id="wizzard"  >
+      </div>
     </div>
   </div>
-</div>
-</div>
+  </div>
    
 
 
