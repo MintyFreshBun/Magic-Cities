@@ -23,7 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <div class="container-fluid" id="bg">
+  <div class="container-fluid" id="bg">
 
     <!--Containers for the login, sign up buttons and logo (we will need to do a css clean up, putting any css code, to the style sheet file)-->
       <div class="container-fluid" id="topBar">
@@ -43,7 +43,7 @@
         
         <!-- Login Modal -->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+          <div class="modal-dialog"  role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Entrar na Conta</h5>
@@ -55,16 +55,13 @@
                 <div class="container-fluid">
                   <div class="container">
                     <!--Calls a function to check inputted info with the storaged one-->
-                    <form action="" method="GET">
-                      <label for="uname"><b>Username</b></label>
-                      <input type="text" placeholder="Enter Username" name="uname" required>
+                    <form id="frmLogin">
+                      <label for="usernameLogin"><b>Username</b></label>
+                      <input type="text" id="usernameLogin" placeholder="Introduz Username" required>
                       <br>
-                      <label for="psw"><b>Password</b></label>
-                      <input type="password" placeholder="Enter Password" name="psw" required>
+                      <label for="passwordLogin"><b>Password</b></label>
+                      <input type="password" id="passwordLogin" placeholder="Introduz Password" required>
                       <br>
-                      <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
-                      </label>
                     </form>
                   </div>
                 </div>
@@ -82,7 +79,7 @@
               <button type="button" class="btn btn-outline-warning btn-lg" data-toggle="modal" data-target="#signupModal">Sign UP</button>
 
               <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
+                  <div class="modal-dialog"  role="document">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Inscreve-te!</h5>
@@ -91,24 +88,21 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                          <form action="action_page.php" style="border:1px solid #ccc">
+                          <form action="action_page.php">
                               <div class="container">
                                 <p>Por favor preenche o formulário para criar uma conta</p>
                                 <hr>
                                 <!--Will call a function to post the inputted information-->
-                            <form action="" method="POST">
-                                <label for="email"><b>Email</b></label>
-                                <input type="text" placeholder="Enter Email" name="email" required>
+                            <form id="frmSignUp">
+                                <label for="usernameRegister"><b>Username</b></label>
+                                <input type="text" id="usernameRegister"placeholder="Introduza username" required>
                                 <br>
-                                <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
+                                <label for="passwordRegister"><b>Password</b></label>
+                                <input type="password" placeholder="Introduza Password"  required>
                                 <br>
-                                <label for="psw-repeat"><b>Repeat Password</b></label>
-                                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                            
-                                <label>
-                                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                                </label>
+                                <label for="passwordRegisterConfirm"><b>Confirmar Password</b></label>
+                                <input type="password" placeholder="Repita a password" id="passwordRegisterConfirm"  required>
+
                             </form>
                       </div>
                       <div class="modal-footer">
@@ -126,25 +120,24 @@
     </div>
 
     <!--Cotainers for the speach bubble-->
-    <div class="container" >
-      <div class="row rounded-lg" id="dialogueBox"> <!--we need a size that can stay in the middle whithout change on both phone and desktop resolutions -->
-        <div id="intro-text">
-          <p>Bem vindo á Magic Cities. O lugar onde feiticeiros e feiticeiras podem usar os seus 
-            poderes para explorar e salvar um País agora confuso mas muito importante para vários, Portugal!</p>
-        </div>
-        
-        
+    <div class="container">
+      <div class="row justify-content-center" >
+        <div class="row rounded-lg" id="dialogueBox"> <!--we need a size that can stay in the middle whithout change on both phone and desktop resolutions -->
+          <div id="introText">
+            <p>Bem vindo á Magic Cities. O lugar onde feiticeiros e feiticeiras podem usar os seus 
+              poderes para explorar e salvar um País agora confuso mas muito importante para vários, Portugal!</p>
+          </div>
       </div>
-    
     </div>
+   </div>
 
     <!--Wizard container, needs to be always below the speach bubble contater to do the speach bubble effect -->
-    <div class="container-fluid">
-      <div class="row justify-content-start">
-        <img src="misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_wizard.png" class="img-fluid" alt="Responsive image" id="wizzard"  >
+      <div class="container-fluid">
+        <div class="row justify-content-start">
+          <img src="misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_wizard.png" class="img-fluid" alt="Image Not Found" id="wizzard"  >
+        </div>
       </div>
     </div>
-  </div>
   </div>
    
 

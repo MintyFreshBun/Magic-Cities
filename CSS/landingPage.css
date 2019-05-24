@@ -24,6 +24,10 @@ input[type=text], input[type=password]{
   background: #f1f1f1;
 }
 
+#modalBox{
+  color:blue;
+}
+
  #topBar{
    padding-top: 7%;
  }
@@ -38,7 +42,8 @@ input[type=text], input[type=password]{
 
  #dialogueBox{
   background-color:snow;
-  height: 200%;
+  max-width: 50%;
+  height: 100%;
  }
 
  #introBox{
@@ -48,7 +53,7 @@ input[type=text], input[type=password]{
  #introText{
   font: italic bold 12px/30px Georgia, serif;
    margin:10px;
-   font-size: 150%;
+   font-size: 100%;
  }
 
  #logo{
