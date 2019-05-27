@@ -14,7 +14,7 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
     }else{
         const registerResult = register(
             document.querySelector("#usernameRegister").value,
-            document.queryCommandEnabled("#passwordRegister").value)
+            document.querySelector("#passwordRegister").value)
         if(registerResult == true){
             //Close modal window
             $('#signupModal').modal('hide')
