@@ -1,4 +1,22 @@
-#QuestionNumer {
-text-align: right;
+/*######################## SIDEBAR BURGER/nav CODE HERE##############################  */
+#sideBurger ul { 
+    position: absolute; /* set a fixed position relative to the screen of the device */
+    right: -7%; /* position hidden from the screen nothing above the width */
+    transition: 0.3s; /* hovver transsation */
+    padding: 1%;
+    width: 8%; 
+       
+    border-radius: 5px 0 0 5px; /* Rounded corners on the right sides*/
+    background-color: chartreuse; /*temp color - color pick the color from AI */
+    z-index: 1;
+    
+}
 
+#sideBurger ul:hover{
+    right: 0px;
+}
+
+#sideBurger img{
+    width: 80%;
+    height: 80%;
 }
