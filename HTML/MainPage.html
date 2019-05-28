@@ -9,8 +9,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/MainPage.css">
+
+    
+
   </head>
   <body>
+
+    
       
     <!-- Optional JavaScript -->
     <script src="/JS/Views/MainPage.js"></script>
@@ -65,50 +70,72 @@
     <div class="container-fluid bg-primary rounded-lg " style="width: 93%; margin-top: 2.7% ; margin-bottom: 2.7%">
       <!--############ FIRST ROW (Each row is a ard system) #################-->
       <br>
-      <h4>Cidades Recentemente Adicionadas:</h4>
+      <form class="form-inline">
+          <div class="form-group">
+              <label for="sltGenre">Cidades Mais: </label>
+              <select class="form-control m-2" name="" id="sltGenre">
+                  <option value="Recent">Recentes</option>
+                  <option value="Votes">Votadas</option>
+                  <option value="Metal">Comentadas</option>
+              </select>
+          </div>
+          
+          <button id="btnSearch" type="button" class="btn btn-warning m-2">Selecionar</button>
+      </form>
+      <!-- after the press 4 cards will apper via JS-->
 
       <!--######## Card row  whit filter for most viewed, faved and comented ##############-->
       <!-- NOTE_:(Hardcode, after needs to be in js inplemented in the views but first you will need some predefined data in the controlls)-->
       <div class="row justify-content-md-between align-self-center" style="padding: 2%">
       
 
-          <!--Card layout , witch will be inplemented -->
+          <!-- ####HARDCODE##### Card layout , witch will be inplemented on the js  4 CARDS TOTAL ####HARDCODE##### -->
         <div class="card">
-          <img class="card-img-top" src="../misc/Images/cidade test image.jpg" style="height: 130px; width: 200px" alt="cidadeImg">
+          <img class="card-img-top" src="../misc/Images/cidade test image.jpg" style="height: 180px; width: 285px" alt="cidadeImg">
           <div class="card-body">
             <h4 class="card-title">Cidade</h4>
             <p class="card-text">Data Implementada: ##/##/####</p>
             <p class="card-text">Zona: Norte</p>
+            <button type="button" class="btn btn-primary"> Visitar Pagina</button>
+            heart
           </div>
         </div>
 
         <div class="card">
-            <img class="card-img-top" src="../misc/Images/cidade test image.jpg" style="height: 130px; width: 200px" alt="cidadeImg">
-            <div class="card-body">
-              <h4 class="card-title">Cidade</h4>
-              <p class="card-text">Data Implementada: ##/##/####</p>
-              <p class="card-text">Zona: Norte</p>
-            </div>
-          </div>
-
-        <div class="card">
-          <img class="card-img-top" src="../misc/Images/cidade test image.jpg" style="height: 130px; width: 200px" alt="cidadeImg">
+          <img class="card-img-top" src="../misc/Images/cidade test image.jpg" style="height: 180px; width: 285px" alt="cidadeImg">
           <div class="card-body">
             <h4 class="card-title">Cidade</h4>
             <p class="card-text">Data Implementada: ##/##/####</p>
             <p class="card-text">Zona: Norte</p>
-          </div>
-        </div>  
-
-        <div class="card">
-          <img class="card-img-top" src="../misc/Images/cidade test image.jpg" style="height: 130px; width: 200px" alt="cidadeImg">
-          <div class="card-body">
-            <h4 class="card-title">Cidade</h4>
-            <p class="card-text">Data Implementada: ##/##/####</p>
-            <p class="card-text">Zona: Norte</p>
+            <button type="button" class="btn btn-primary"> Visitar Pagina</button>
+            comment
+            
           </div>
         </div>
-       
+
+        <div class="card">
+          <img class="card-img-top" src="../misc/Images/cidade test image.jpg" style="height: 180px; width: 285px" alt="cidadeImg">
+          <div class="card-body">
+            <h4 class="card-title">Cidade</h4>
+            <p class="card-text">Data Implementada: ##/##/####</p>
+            <p class="card-text">Zona: Norte</p>
+            <button type="button" class="btn btn-primary"> Visitar Pagina</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="../misc/Images/cidade test image.jpg" style="height: 180px; width: 285px" alt="cidadeImg">
+          <div class="card-body">
+            <h4 class="card-title">Cidade</h4>
+            <p class="card-text">Data Implementada: ##/##/####</p>
+            <p class="card-text">Zona: Norte</p>
+            <button type="button" class="btn btn-primary"> Visitar Pagina</button>
+          </div>
+        </div>
+
+        
+        </div>
+        <!-- ####HARDCODE##### End of the cards Hardcode layout ####HARDCODE#####-->
         
       </div> 
       <!--######################## end of first ROW #########################################-->
@@ -128,9 +155,7 @@
       
       <div class="row justify-content-md-between align-self-center" style="padding: 2%">
       
-
-          <!--Card layout , witch will be inplemented -->
-         
+        <!-- ####HARDCODE##### Card layout , witch will be inplemented on the js , 4 CARDS TOTAL ####HARDCODE##### -->
         <div class="card btn-Hover">
           <button type="button" class="btn ">
             <div class="card-body rounded-lg">
@@ -171,7 +196,7 @@
             </div>
           </button>          
         </div>
-             
+                      <!-- ####HARDCODE##### End of the cards Hardcode layout ####HARDCODE#####-->
         
       </div> 
       
