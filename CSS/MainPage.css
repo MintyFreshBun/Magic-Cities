@@ -1,6 +1,6 @@
 /*######################## SIDEBAR BURGER/nav CODE HERE##############################  */
 #sideBurger ul { 
-    position: absolute; /* set a fixed position relative to the screen of the device */
+    position: fixed; /* set a fixed position relative to the screen of the device */
     right: -7%; /* position hidden from the screen nothing above the width */
     transition: 0.3s; /* hovver transsation */
     padding: 1%;
