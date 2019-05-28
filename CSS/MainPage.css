@@ -30,3 +30,11 @@
 }
 
 /*############################## Card moddiciations style ########################### */
+
+.btn-Hover :hover{
+    background-color: rgb(154, 172, 224);
+    mix-blend-mode: multiply;
+    transition: 0.3s;
+
+
+}
