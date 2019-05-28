@@ -1,4 +1,4 @@
-import User from "../Models/usersModel";
+import User from "../Models/usersModel.js";
 
 //Defines an array to save user Objects
 export let users=[]

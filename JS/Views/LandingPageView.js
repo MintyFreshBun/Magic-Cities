@@ -2,7 +2,7 @@ import{
     login,
     logout,
     register
-}from "../Controllers/usersController"
+}from "../Controllers/usersController.js"
 
 document.querySelector("#frmSignUp").addEventListener("submit", function (event) {
 
@@ -26,4 +26,21 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
     }
     //Prevenção da submissão do formulário
     event.preventDefault()
+})
+
+
+document.querySelector("#frmLogin").addEventListener("submit", function (event){
+
+    const loginResult= login(
+         document.querySelector("#usernameLogin").value,
+         document.querySelector("#passwordLogin").value
+    )
+    if(loginResult === true){
+       
+        alert(`Welcome ${sessionStorage.getItem("loggedUser")}`)
+    }else{
+        
+        alert("Username ou password está inválido. Tente novamente")
+    }
+
 })
