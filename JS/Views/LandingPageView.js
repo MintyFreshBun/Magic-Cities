@@ -1,6 +1,5 @@
 import{
     login,
-    logout,
     register
 }from "../Controllers/usersController.js"
 
@@ -20,6 +19,7 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
             $('#signupModal').modal('hide')
             //Present the authentication of the user
             alert(`Olá ${sessionStorage.getItem("loggedUser")}`)
+           
         }else{
             alert("Credenciais já existentes")
         }
@@ -35,9 +35,10 @@ document.querySelector("#frmLogin").addEventListener("submit", function (event){
          document.querySelector("#usernameLogin").value,
          document.querySelector("#passwordLogin").value
     )
+    event.preventDefault()
     if(loginResult === true){
-       
         alert(`Welcome ${sessionStorage.getItem("loggedUser")}`)
+        location.href = "HTML/MainPage.html";
     }else{
         
         alert("Username ou password está inválido. Tente novamente")
