@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/CatalogPage.css">
+  </head>
+  <body>
+    <!----------------------Navbar code (copy this part for the other pages and add modifications / TEMP MISSING COMPONETS FROM LOGIN SESSIONS AND JS)--------------------------------------------->
+    <!--Sidebar burger code apperence  -->
+    <div id="sideBurger">
+        <ul> <!--Current problem atm is making it responcive to diferent defices ad diferent smaller resolutions (ask teacher>-->
+          <a><img src="../misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_icon1.png"></a><br><br>
+          <a><img src="../misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_icon2.png"></a><br><br>
+          <a><img src="../misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_icon3-18.png"></a><br><br>
+        </ul>      
+      </div>
+      <!--mainnavbar code -->
+      <nav class="navbar navbar-expand-md navbar-light bg-primary justify-content-between ">
+  
+        <div class="col-md-2 justify-content-star d-inline-flex ">
+          <!--Add/create ID avater icons,make diferent ones for each rank-->
+          <!--Temp one atm-->
+          <img src="../misc/Images/DG_favicon-02.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">
+          <a class="navbar-brand text-white col-md-2" href="#">Bemvindo, Username!</a>
+        </div>
+        
+        <div class="justify-content-end d-inline-flex col-md-4 " >
+          <div class="col-md-2 align-self-center text-white  font-weight-bold" >Nivel</div>
+  
+          <div class="col-md-7 align-self-center" >
+            <div class="progress" style="height: 25px" > <!--the z-index not working, ask the teacher-->
+              
+              <div class="progress-bar bg-warning " role="progressbar" style="width: 50% ;"
+                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>  
+            </div>
+          </div>
+  
+          <div class="col-md-3 align-self-center">
+            <button type="button" class="btn btn-warning text-white">Log Out</button>
+          </div>
+        </div>            
+      </nav>
+
+      <!-----##################################### CATALOG PAGE CONTENTS  #############################################-->
+
+    <div class="container-fluid bg-Custom1 rounded-lg " style="width: 93%; margin-top: 2.7% ; margin-bottom: 2.7%; padding: 0.5%">
+        
+        <form class="form-inline align-self-center text-white" style="margin: 0% 2% 0% 2%" >
+            <div class="form-group">
+                <label for="sltGenre font-weight-bold">Zona: </label>
+                <select class="form-control m-2" name="" id="sltGenre">
+                    <option value="">Norte</option>
+                    <option value="Pop-Rock">Centro</option>
+                    <option value="Metal">Sul</option>
+                    <option value="Jazz">Arquipelagos</option>
+                </select>
+            </div>
+            <div class="form-group m-2">
+                <label for="txtBand font-weight-bold">Nome da ciade:</label>
+                <input id="txtBand" type="text" class="form-control m-2" />
+            </div>
+            <button id="btnFilter" type="button" class="btn btn-primary">
+                Procurar
+            </button>
+            <button id="btnSort" type="button" class="btn btn-primary m-2">
+                Organizar de A a Z
+            </button>
+        </form>
+
+        <div class="container-fruild bg-light rounded-lg" style="margin: 1% 2% 1% 2%">
+            <!--JS card inserter line-->
+            <div class="row justify-content-md-between align-self-center" id="myCatalog" style="padding: 3%">
+                
+                <!--Hard code of the card to pass it for jS-->
+                <div class="card btn-Hover">    
+                    <div class="card-body rounded-lg">
+                        <img class="rounded-lg" src="../misc/Images/cidade test image.jpg" style="height: 170px; width: 200px" alt="cidadeImg">
+                        <br><br>
+                        <h4 class="card-title">Cidade</h4>
+                        <p class="card-text">Data Implementada: ##/##/####</p>
+                        <p class="card-text">Zona: Norte</p>
+                        <button type="button" class="btn btn-primary"> Visitar Pagina</button>           
+                    </div>             
+                </div>             
+          
+
+                
+
+            </div>           
+
+        </div>
+    
+    </div>
+
+
+    
+      
+    <!-- Optional JavaScript -->
+    <script src="../JS/Views/CatalgPageView.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--################################### PAGE LAYOUT ################################################-->
+
+
+
+
+
+
+  </body>
+</html>
