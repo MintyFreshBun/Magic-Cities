@@ -31,7 +31,8 @@ function renderCatalog (filterName = "", filterGenre = ""){
                     <h4 class="card-title">Cidade</h4>
                     <p class="card-text">Data Implementada: </p>
                     <p class="card-text">Zona: </p>
-                    <button type="button" class="btn btn-primary view"> Visitar Pagina</button>           
+                    <button type="button" class="btn btn-primary view"> Visitar Pagina</button>
+                    <div> ## <img src="../misc/Images/favorite-heart-button.png" >        
                 </div>              
             </div>
         </div>
@@ -62,12 +63,7 @@ function renderCatalog (filterName = "", filterGenre = ""){
             result += `<div class="row">`
         }
         // Geração do card
-        result += `
-        <div class="col-sm-4">
-
-        </div>
-            
-        `
+        
         
         i++
         // Criação do fecho da linha

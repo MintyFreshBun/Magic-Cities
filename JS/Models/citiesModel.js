@@ -15,7 +15,7 @@ export default class city {
         this.map = map
     }
     
-    // Compara duas bandas pelo seu nome. Faz uma ordenação alfabética crescente
+    // Compare 2 cities. This is for the alphabetic order from A to Z
     static compare(cityA, cityB) {
         if (cityA.name < cityB.name)
             return -1;
