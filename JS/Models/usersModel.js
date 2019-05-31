@@ -7,5 +7,6 @@ export default class User {
         this.password = password
         this.xp = 0
         this.level = 0
+        this.maxlvl =100
     }
 }

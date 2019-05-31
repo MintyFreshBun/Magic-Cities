@@ -24,7 +24,7 @@ function updateNavbar(){
         </div>
 
         <div class="col-md-3 align-self-center">
-          <button type="button" class="btn btn-warning text-white">Log Out</button>
+          <button type="button" class="btn btn-warning text-white" id="logoutBtn">Log Out</button>
         </div>
       </div>            
         `
