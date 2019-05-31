@@ -26,3 +26,9 @@ if (localStorage.bands) {
 
 // ######################### Functions to be exported by the viewers and adding/manipulating the local storage data ###########################
 
+
+// city sorting fuction
+export function sortCities() {
+    cities.sort(City.compare)
+    localStorage.setItem("cities", JSON.stringify(cities))
+}
