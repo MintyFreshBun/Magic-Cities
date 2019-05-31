@@ -53,17 +53,21 @@
         
         <form class="form-inline align-self-center text-white" style="margin: 0% 2% 0% 2%" >
             <div class="form-group">
-                <label for="sltGenre font-weight-bold">Zona: </label>
-                <select class="form-control m-2" name="" id="sltGenre">
-                    <option value="">Norte</option>
-                    <option value="Pop-Rock">Centro</option>
-                    <option value="Metal">Sul</option>
-                    <option value="Jazz">Arquipelagos</option>
+                <label for="sltZone font-weight-bold">Zona: </label>
+                <select class="form-control m-2" name="" id="sltZone">
+                    <option value="">Todas as Cidades</option>
+                    <option value="Norte">Norte</option>
+                    <option value="Centro">Centro</option>
+                    <option value="Área Metropolitana de Lisboa">Área Metropolitana de Lisboa</option>
+                    <option value="Alentejo">Alentejo</option>
+                    <option value="Algarve">Algarve</option>
+                    <option value="Açores">Açores</option>
+                    <option value="Madeira">Madeira</option> 
                 </select>
             </div>
             <div class="form-group m-2">
-                <label for="txtBand font-weight-bold">Nome da ciade:</label>
-                <input id="txtBand" type="text" class="form-control m-2" />
+                <label for="txtCity font-weight-bold">Nome da ciade:</label>
+                <input id="txtCity" type="text" class="form-control m-2" />
             </div>
             <button id="btnFilter" type="button" class="btn btn-primary">
                 Procurar
