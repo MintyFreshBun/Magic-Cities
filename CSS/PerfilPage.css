@@ -1,0 +1,16 @@
+#bg{
+  background-color:lightblue;
+  height:100%;
+  width:auto;
+}
+#iconBorder{
+  background-color: blue;
+}
+
+#perfilIcon{
+  margin:10px;
+  background-color: purple;
+  max-width: 50%;
+  max-height: auto;  
+}
+
