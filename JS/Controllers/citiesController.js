@@ -28,7 +28,13 @@ if (localStorage.bands) {
 
 
 // city sorting fuction
-export function sortCities() {
-    cities.sort(City.compare)
+export function sortCities(order) {
+    if (order == "az"){
+        cities.sort(City.compareAZ)
+    }
+    else{
+        cities.sort(City.compareZA)
+    }
+    
     localStorage.setItem("cities", JSON.stringify(cities))
 }

@@ -19,8 +19,15 @@ function renderCatalog (filterName = "", filterZone = ""){
 
        
     for (const city of cities) {
-        // Aplicação do filtro (currently wont work due to not having the model and controler set so im giving some placeholders)
-        if ((filterName !== "" && !city.name.startsWith(filterName)) ||
+        // #############Aplicação do filtro (we need to fix the filter where lword seperation, like searching for Delgada works ) #######
+
+        // gets the cities name and turns it in to a lowercase
+        let cityLow = city.name;
+        cityLow = cityLow.toLowerCase();
+
+        //seperate the city's string name , if mre then 2 works
+
+        if ((filterName !== "" && !cityLow.includes(filterName)) ||
             (filterZone !== "" && city.zone !== filterZone)
         ) {
             continue;
@@ -36,7 +43,7 @@ function renderCatalog (filterName = "", filterZone = ""){
         <div class="col-md-3 ">
             <div class="card btn-Hover">    
                 <div class="card-body rounded-lg">
-                    <img class="card-img-top rounded-lg" src="${city.cover}">
+                    <img class="card-img-top rounded-lg img-Size" src="${city.cover}">
                     <br><br>
                     <h4 class="card-title font-weight-bold">${city.name}</h4>
                     <p class="card-text"> <spam class="font-weight-bold">Data Fundada:</spam> ${city.date} </p>
@@ -65,7 +72,7 @@ function renderCatalog (filterName = "", filterZone = ""){
     // adding all generated catalongs to the id myCatalog
     myCatalog.innerHTML = result
 
-    /* this is the code of the button to acess the cities page
+    /* this is the code of the button to acess the cities page, and we have to make sure the city un acessable if lower lvl
     // Making the buttons work
     const btnsCity = document.getElementsByClassName("view")
     for (const elem of btnsCity) {
@@ -78,10 +85,26 @@ function renderCatalog (filterName = "", filterZone = ""){
     
 }
 
-// Sorting catalog button fuction
+// Sorting catalog button fuction ( we have to do a special toggle where we CAN ORganize from A to Z then Z to A)
+let sortOrder = "az"; // variable that will decide the order
 
 document.querySelector("#btnSort").addEventListener("click", function () {
-    sortCities()
+//NOTE: we can add a variable where if its I then it will go for AZ, if J then its gonna go for ZA, starts whit az BY default
+//we will need also to do some JS css view modification on the button
+    const btnSort = document.querySelector("#btnSort");  
+
+    sortCities(sortOrder)
+    //after sort fuction, change the sort variable and the button
+    if(sortOrder == "az" ){
+        btnSort.innerText = "Organizar de Z a A";
+        sortOrder = "za";
+    }
+    else{
+        
+        btnSort.innerText = "Organizar de A a Z";
+        sortOrder = "az";
+    }
+    
     renderCatalog()
 })
 
@@ -89,7 +112,7 @@ document.querySelector("#btnSort").addEventListener("click", function () {
 // Filter catalog button fuction
 
 document.querySelector("#btnFilter").addEventListener("click", function () {
-    const txtCity = document.querySelector("#txtCity").value
+    const txtCity = document.querySelector("#txtCity").value.toLowerCase()
     const sltZone = document.querySelector("#sltZone").value
     // Chama a função responsável pela exibição do catálogo com os filtros respetivos
     renderCatalog(txtCity, sltZone)
