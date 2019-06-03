@@ -48,7 +48,7 @@ function renderCatalog (filterName = "", filterZone = ""){
                     <h4 class="card-title font-weight-bold">${city.name}</h4>
                     <p class="card-text"> <spam class="font-weight-bold">Data Fundada:</spam> ${city.date} </p>
                     <p class="card-text"> <spam class="font-weight-bold">Zona</spam>: ${city.zone} </p>
-                    <button type="button" class="btn btn-primary view"> Visitar Pagina</button>
+                    <button type="button" id="${city.name}" class="btn btn-primary view"> Visitar Pagina</button>
                     <div class="row" style="padding-top: 2%">
                         <div class="col"> ${city.faves} <img src="../misc/Images/favorite-heart-button.png" style="width: 20px; height: 20px;"></div>
                         <div class="col"> ${city.comments} <img src="../misc/Images/comment-black-oval-bubble-shape.png" style="width: 20px; height: 20px;"></div>
@@ -72,15 +72,15 @@ function renderCatalog (filterName = "", filterZone = ""){
     // adding all generated catalongs to the id myCatalog
     myCatalog.innerHTML = result
 
-    /* this is the code of the button to acess the cities page, and we have to make sure the city un acessable if lower lvl
+    //this is the code of the button to acess the cities page, and we have to make sure the city un acessable if lower lvl
     // Making the buttons work
     const btnsCity = document.getElementsByClassName("view")
     for (const elem of btnsCity) {
         elem.addEventListener("click", function () {
-            //setCurrentBand(this.id)
+            setCurrentCity(this.id)
         })
     }
-    */
+    
 
     
 }

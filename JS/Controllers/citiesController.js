@@ -38,3 +38,12 @@ export function sortCities(order) {
     
     localStorage.setItem("cities", JSON.stringify(cities))
 }
+
+// getting the cities name and setting it has current city
+export function setCurrentBand(txtCity) {
+    localStorage.setItem("city", txtCity)
+    location.href = "HTML/CityPage.html"
+}
+
+// getting the set curent city
+
