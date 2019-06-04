@@ -2,11 +2,11 @@
  * Classe que modela um utilizador
  */
 export default class User {
-    constructor(username, password, xp, level) {
+    constructor(username, password, xp, level, maxLvl, rank) {
         this.username = username
         this.password = password
-        this.xp = 0
-        this.level = 0
-        this.maxlvl =100
+        this.xp = xp
+        this.level = level
+        this.maxLvl =maxLvl
     }
 }

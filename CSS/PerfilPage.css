@@ -1,16 +1,36 @@
+
+
+
+
 #bg{
-  background-color:lightblue;
-  height:100%;
-  width:auto;
+  background-color:#60b2ff;
+  width: 93%; 
+  margin: 2.7; 
+  margin-top:2.7;
+  margin-bottom: 2.7;
+  padding: 0.5%
+}
+
+#bordering{
+  margin: 0% 2% 0% 2%;
+}
+#overalContainer{
+  margin-top:10%;
+  max-width: 50%;
+
+
 }
 #iconBorder{
   background-color: blue;
 }
 
+#perfilContainer{
+  margin: 2%;
+  background-color: white;
+}
+
 #perfilIcon{
-  margin:10px;
-  background-color: purple;
-  max-width: 50%;
-  max-height: auto;  
+ max-width: 100%;
+ max-height: auto;
 }
 

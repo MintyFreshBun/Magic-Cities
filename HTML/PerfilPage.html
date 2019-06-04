@@ -21,27 +21,52 @@
 <body>
        <!--mainnavbar code -->
 
-       <div class = "container rounded" id="bg">
-        <div class="container">
-          <div class="row">
-            <div class = "col-6" >
-                <img src="../misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_wizard.png" alt="..." class="rounded" id="perfilIcon">
+       <div class = "container-fluid rounded-lg" id="bg">
+         <div id="bordering">
+          <div class= "row bg-success">
+            <div class = "col-3" class="rounded" id="perfilContainer" >
+                <img src="../misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_wizard.png" alt="..."  id= "perfilIcon">
             </div>
-            <div class="col">
+            <div class="col-8 align-self-center  bg-warning">
+              <div class="row justify-content-center">
+                  <h1>Informação de Aprendiz</h1>
+              </div>
 
-              <h1>Aprendiz do vento</h1>
-              
-              <p>Nivel 2  rank#40</p> 
-             
+              <div class="row justify-content-center bg-success">
+                  <div class="col-1">
+                    <p id="nivel"></p>
+                  </div>
+                  <div class="col-1">
+                   <p id="rank"></p>
+                  </div>
+                </div>
+              <div class="row justify-content-center">
+                <div class="col-4">
+                  <div class="progress" style="height: 25px" >
+                    <div class="progress-bar  text-dark " id="progressBar" role="progressbar" style="width:50% ;"
+                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%
+                    </div>  
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        
           <div class="row">
               <h1 id="perfilName"></h1>
           </div>
           <div class="row">Idade</div>
           <div class="row">Porto</div>
+
+          <div class="row align-items-center">
+            <div class="col">
+              <h1>Aprendiz do vento</h1>
+            </div>
+          </div>
         </div>
       </div>
+        
+      
     
       
         

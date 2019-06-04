@@ -3,6 +3,7 @@ import{
     register
 }from "../Controllers/usersController.js"
 
+
 document.querySelector("#frmSignUp").addEventListener("submit", function (event) {
 
     const pass = document.querySelector("#passwordRegister").value
@@ -13,7 +14,11 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
     }else{
         const registerResult = register(
             document.querySelector("#usernameRegister").value,
-            document.querySelector("#passwordRegister").value)
+            document.querySelector("#passwordRegister").value,
+             0, // xp
+             1, // lvl
+             100,)// maxLvl
+
         if(registerResult == true){
             //Close modal window
             $('#signupModal').modal('hide')

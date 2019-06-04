@@ -12,14 +12,14 @@ function updateNavbar(){
         <a class="navbar-brand text-white col-md-2" href="#welcomeUser">Welcome ${sessionStorage.getItem("loggedUser")} !</a>
       </div>
       
-      <div class="justify-content-end d-inline-flex col-md-4 " >
-        <div class="col-md-2 align-self-center text-white  font-weight-bold" >Nivel</div>
+      <div class="justify-content-end d-inline-flex col-md-6 " >
+        <div class="col-md-2 align-self-center text-white  font-weight-bold" >Nivel ${sessionStorage.getItem("userLvl")}</div>
 
         <div class="col-md-7 align-self-center" >
           <div class="progress" style="height: 25px" > <!--the z-index not working, ask the teacher-->
             
-            <div class="progress-bar bg-warning " role="progressbar" style="width: 50% ;"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>  
+            <div class="progress-bar bg-warning text-dark " role="progressbar" style="width: ${sessionStorage.getItem("userXP")}% ;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${sessionStorage.getItem("userXP")}%</div>  
           </div>
         </div>
 

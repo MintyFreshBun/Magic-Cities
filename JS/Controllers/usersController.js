@@ -33,7 +33,7 @@ export function logout(){
 }
 
 // Function that registers a user(update of the key in SessionStorage)
-export function register(usernameRegister, passwordRegister){
+export function register(usernameRegister, passwordRegister, xp, level, maxLvl){
     let existUser = false
     for(const user of users){
         if(user.username === usernameRegister && user.password === passwordRegister){
@@ -41,9 +41,16 @@ export function register(usernameRegister, passwordRegister){
         }
     }
     if(!existUser){
-        users.push(new User(usernameRegister, passwordRegister))
+
+      
+
+        users.push(new User(usernameRegister, passwordRegister, xp , level, maxLvl))
         localStorage.setItem("users", JSON.stringify(users))
         sessionStorage.setItem("loggedUser", usernameRegister)
+        sessionStorage.setItem("userXP",xp)
+        sessionStorage.setItem("userLvl", level)
+        sessionStorage.setItem("maxLvl", maxLvl)
+        sessiolStorage.setItem("userRank", rank)
         return true
     }
     return false
