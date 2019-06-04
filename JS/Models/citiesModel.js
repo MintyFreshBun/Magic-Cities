@@ -15,10 +15,19 @@ export default class City {
     }
     
     // Compare 2 cities. This is for the alphabetic order from A to Z
-    static compare(cityA, cityB) {
+    static compareAZ(cityA, cityB) {
         if (cityA.name < cityB.name)
             return -1;
         if (cityA.name > cityB.name)
+            return 1;
+        return 0;
+    }
+
+    // Compare 2 cities. This is for the alphabetic order from Z to A
+    static compareZA(cityA, cityB) {
+        if (cityA.name > cityB.name)
+            return -1;
+        if (cityA.name < cityB.name)
             return 1;
         return 0;
     }

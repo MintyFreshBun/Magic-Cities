@@ -28,7 +28,22 @@ if (localStorage.bands) {
 
 
 // city sorting fuction
-export function sortCities() {
-    cities.sort(City.compare)
+export function sortCities(order) {
+    if (order == "az"){
+        cities.sort(City.compareAZ)
+    }
+    else{
+        cities.sort(City.compareZA)
+    }
+    
     localStorage.setItem("cities", JSON.stringify(cities))
 }
+
+// getting the cities name and setting it has current city
+export function setCurrentBand(txtCity) {
+    localStorage.setItem("city", txtCity)
+    location.href = "HTML/CityPage.html"
+}
+
+// getting the set curent city
+
