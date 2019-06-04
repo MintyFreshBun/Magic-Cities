@@ -9,12 +9,9 @@ if (localStorage.bands) {
     cities = JSON.parse(localStorage.cities)
 } else {
     // it wll set 3 cities for the first time aceseecing this application 
-    /* modify this whit the cities, acording to the models blueprint
-    const band1 = new Band("Muse", "Pop-Rock", "http://www.planckmachine.com/wp-content/uploads/2016/09/hysteria-muse-meaning-song.jpg", "The best band ever", "xxx")
-    const band2 = new Band("RadioHead", "Pop-Rock", "https://ep01.epimg.net/elpais/imagenes/2017/05/17/icon/1495017818_647155_1495125183_noticia_normal.jpg", "The best band ever", "xxx")
-    const band3 = new Band("James", "Pop-Rock", "http://ksassets.timeincuk.net/wp/uploads/sites/55/2013/01/2012JamesBandPress181212-2.jpg", "The best band ever", "xxx")
-    */
+    
    //comments are gonna be an array of objects whit username and the comment and date
+   // may need to modify/ add more data to the  3 cities has we progress
 
     const city1 = new City("Ponta Delgada", "Açores", "1546","31/5/2019","1","0","2","../IMG/Ponta-Delgada-cover.jpg")
     const city2 = new City("Porto","Norte","1112","31/5/2019","1","0","3","../IMG/Porto.jpg")
@@ -39,11 +36,19 @@ export function sortCities(order) {
     localStorage.setItem("cities", JSON.stringify(cities))
 }
 
-// getting the cities name and setting it has current city
-export function setCurrentBand(txtCity) {
+// getting the city's name and setting it has current city
+export function setCurrentCity(txtCity) {
     localStorage.setItem("city", txtCity)
     location.href = "HTML/CityPage.html"
 }
 
-// getting the set curent city
+// getting thethe city we set from the Citties list model
 
+export function getCurrentCity() {
+    const city = localStorage.getItem("city")
+    for (let i = 0; i < cities.length; i++) {
+        if (cities[i].name === city) {
+            return cities[i]
+        }
+    }
+}

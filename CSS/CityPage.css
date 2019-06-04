@@ -7,7 +7,7 @@
     width: 8%; 
        
     border-radius: 5px 0 0 5px; /* Rounded corners on the right sides*/
-    background-color: chartreuse; /*temp color - color pick the color from AI */
+    background-color: rgb(208, 21, 255); /*temp color - color pick the color from AI */
     z-index: 1;
     
 }
@@ -28,4 +28,10 @@
     margin-top: 2.7% ;
     margin-bottom: 2.7%;
     padding: 0.5%
+}
+
+.brasao-style{
+    width: 75%;
+    height: 75%;
+    background-color:#d9e5f7 ;
 }
