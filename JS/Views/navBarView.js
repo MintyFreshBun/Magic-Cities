@@ -1,4 +1,13 @@
+import{
+   logout} from "../Controllers/usersController.js"
+
 updateNavbar()
+
+document.querySelector("#logoutBtn").addEventListener("click", function(){
+  logout()
+  location.href = "../Index.html";
+})
+
 
 function updateNavbar(){
     if(sessionStorage.getItem("loggedUser")){
