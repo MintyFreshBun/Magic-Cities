@@ -1,0 +1,91 @@
+import Question from "../models/quizModel.js"
+
+// Define um array para guardar os objetos Question
+export let questions = []
+
+// Caso já exista uma chave questions na LocalStorage é carregado tudo para o array
+// Caso contrário são guardadas no array, vários objetos questions inseridos manualmente
+if (localStorage.questions) {
+    questions = JSON.parse(localStorage.questions)
+} else {
+    let questionsTempArray =[
+        [
+            "1", // id
+            "1", // level
+            "Bem vindo... narração", // narration
+            "ONDE E O PORTO CARAGO?", // description
+            [
+                "1",
+                "2", // responses
+                "3",
+                "4"
+            ],
+            "1", // correctResponse
+            "25" // points
+        ],
+
+        [
+            "2", // id
+            "1", // level
+            "Bem vindo... narração", // narration
+            "Descrição da pergunta#2.. etc", // description
+            [
+                "1",
+                "2", // responses
+                "3",
+                "4"
+            ],
+            "2", // correctResponse
+            "25" // points
+        ],
+
+        [
+            "3", // id
+            "1", // level
+            "Bem vindo... narração", // narration
+            "Descrição da pergunta#3.. etc", // description
+            [
+                "1",
+                "2", // responses
+                "3",
+                "4"
+            ],
+            "0", // correctResponse
+            "25" // points
+        ],
+
+        [
+            "4", // id
+            "1", // level
+            "Bem vindo... narração", // narration
+            "Descrição da pergunta#4.. etc", // description
+            [
+                "1",
+                "2", // responses
+                "3",
+                "4"
+            ],
+            "2", // correctResponse
+            "25" // points
+        ],
+        
+        
+    ];
+
+    console.log(questionsTempArray);
+
+    for (let i = 0; i < questionsTempArray.length; i++) {
+        let tempQuestion = new Question(
+            questionsTempArray[i][0],
+            questionsTempArray[i][1],
+            questionsTempArray[i][2],
+            questionsTempArray[i][3],
+            questionsTempArray[i][4],
+            questionsTempArray[i][5],
+            questionsTempArray[i][6]
+        )
+
+        questions.push(tempQuestion);
+    }
+    localStorage.setItem("questions", JSON.stringify(questions))
+}

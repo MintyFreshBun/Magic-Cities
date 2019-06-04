@@ -50,7 +50,6 @@ export function register(usernameRegister, passwordRegister, xp, level, maxLvl){
         sessionStorage.setItem("userXP",xp)
         sessionStorage.setItem("userLvl", level)
         sessionStorage.setItem("maxLvl", maxLvl)
-        sessiolStorage.setItem("userRank", rank)
         return true
     }
     return false
