@@ -12,7 +12,8 @@
 }
 
 #bordering{
-  margin: 0% 2% 0% 2%;
+  margin: 3%;
+  font-size: auto;
 }
 #overalContainer{
   margin-top:10%;

@@ -3,12 +3,13 @@ import{
 
 updateNavbar()
 
+//Logout button deletes current user info and sends the user back into the landing page
 document.querySelector("#logoutBtn").addEventListener("click", function(){
   logout()
   location.href = "../Index.html";
 })
 
-
+//Function builds a dynamic navBar that adds the name,xp and level of the user
 function updateNavbar(){
     if(sessionStorage.getItem("loggedUser")){
 

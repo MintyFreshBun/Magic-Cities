@@ -24,6 +24,8 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
             $('#signupModal').modal('hide')
             //Present the authentication of the user
             alert(`Olá ${sessionStorage.getItem("loggedUser")}`)
+            //Sends the user to the mainPage
+            location.href = "HTML/MainPage.html";
            
         }else{
             alert("Credenciais já existentes")
@@ -42,6 +44,7 @@ document.querySelector("#frmLogin").addEventListener("submit", function (event){
     )
     event.preventDefault()
     if(loginResult === true){
+          //Sends the user to the mainPage
         alert(`Welcome ${sessionStorage.getItem("loggedUser")}`)
         location.href = "HTML/MainPage.html";
     }else{
