@@ -1,6 +1,11 @@
 import { questions } from "../Controllers/quizController.js";
 
 
+
+// obter ID da questão mediante o nivel atual da criança
+
+
+renderQuestionNumber()
 function renderQuestionNumber(){
   const renderQuestionNumber = document.querySelector("#QuestionNumber")
   let result =`
@@ -8,15 +13,31 @@ function renderQuestionNumber(){
   `
   renderQuestionNumber.innerHTML = result 
 }
-renderQuestionNumber()
+
+renderQuestion()
 function renderQuestion(){
   const renderQuestion = document.querySelector("#QuestionText")
   let result = `
-  <p>${questions[0].description}</p>  
+  <p>${questions[0].description}</p>
+
   `
 renderQuestion.innerHTML = result 
 }
-renderQuestion()
+renderResponses()
+
+function renderResponses(id){
+  let i = 1
+  for (const question of questions) {
+    if (question.id == id){
+    for (const response of question.responses) {
+       document.querySelector("#Button"+i).innerHTML = response
+       i++
+    }
+  }
+} 
+  
+}
+
 
 
 
