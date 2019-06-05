@@ -13,7 +13,7 @@ if (localStorage.questions) {
             "1", // id
             "1", // level
             "Bem vindo... narração", // narration
-            "ONDE E O PORTO CARAGO?", // description
+            "Onde se situa a ESMAD?", // description
             [
                 "1",
                 "2", // responses
@@ -60,10 +60,10 @@ if (localStorage.questions) {
             "Bem vindo... narração", // narration
             "Descrição da pergunta#4.. etc", // description
             [
-                "1",
-                "2", // responses
-                "3",
-                "4"
+                "111",
+                "22", // responses
+                "33asda",
+                "4dsda"
             ],
             "2", // correctResponse
             "25" // points
@@ -72,8 +72,7 @@ if (localStorage.questions) {
         
     ];
 
-    console.log(questionsTempArray);
-
+    
     for (let i = 0; i < questionsTempArray.length; i++) {
         let tempQuestion = new Question(
             questionsTempArray[i][0],
