@@ -1,5 +1,4 @@
-import{
-   logout} from "../Controllers/usersController.js"
+import{logout} from "../Controllers/usersController.js"
 
 updateNavbar()
 
@@ -16,11 +15,11 @@ function updateNavbar(){
   
         document.querySelector("nav").innerHTML=`
         <div class="col-md-2 justify-content-star d-inline-flex ">
-        <!--Add/create ID avater icons,make diferent ones for each rank-->
-        <!--Temp one atm-->
-        <img src="../misc/Images/DG_favicon-02.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">
-        <a class="navbar-brand text-white col-md-2" href="#welcomeUser">Welcome ${sessionStorage.getItem("loggedUser")} !</a>
-      </div>
+          <!--Add/create ID avater icons,make diferent ones for each rank-->
+          <!--Temp one atm-->
+          <img src="../misc/Images/DG_favicon-02.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">
+          <a class="navbar-brand text-white col-md-2" href="#welcomeUser">Welcome ${sessionStorage.getItem("loggedUser")} !</a>
+        </div>
       
       <div class="justify-content-end d-inline-flex col-md-6 " >
         <div class="col-md-2 align-self-center text-white  font-weight-bold" >Nivel ${sessionStorage.getItem("userLvl")}</div>
