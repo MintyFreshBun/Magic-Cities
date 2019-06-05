@@ -8,9 +8,9 @@ export let users=[]
 if(localStorage.users){
     users = JSON.parse(localStorage.users)
 }else{
-    const user1= new User("JohnWink", "12345")
-    const user2= new User("Mint", "54321")
-    const user3= new User("Tiago", "15234")
+    const user1= new User("JohnWink", "12345", "0","1","100")
+    const user2= new User("Mint", "54321","0","1","100")
+    const user3= new User("Tiago", "15234","0","1","100")
     users.push(user1,user2,user3);
     localStorage.setItem("users", JSON.stringify(users))
 }
@@ -21,6 +21,9 @@ export function login(usernameLogin, passwordLogin){
     for(const user of users){
         if(user.username === usernameLogin && user.password == passwordLogin){
             sessionStorage.setItem("loggedUser", usernameLogin)
+            sessionStorage.setItem("userXP", user.xp)
+            sessionStorage.setItem("userLvl", user.level)
+            sessionStorage.setItem("maxLvl", user.maxLvl)
             existUser = true
         }
     }
@@ -41,9 +44,6 @@ export function register(usernameRegister, passwordRegister, xp, level, maxLvl){
         }
     }
     if(!existUser){
-
-      
-
         users.push(new User(usernameRegister, passwordRegister, xp , level, maxLvl))
         localStorage.setItem("users", JSON.stringify(users))
         sessionStorage.setItem("loggedUser", usernameRegister)
