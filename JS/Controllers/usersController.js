@@ -44,12 +44,12 @@ export function register(usernameRegister, passwordRegister, xp, level, maxLvl){
         }
     }
     if(!existUser){
-        users.push(new User(usernameRegister, passwordRegister, xp , level, maxLvl))
+        users.push(new User(usernameRegister, passwordRegister, xp , level, userQuestionId))
         localStorage.setItem("users", JSON.stringify(users))
         sessionStorage.setItem("loggedUser", usernameRegister)
         sessionStorage.setItem("userXP",xp)
         sessionStorage.setItem("userLvl", level)
-        sessionStorage.setItem("maxLvl", maxLvl)
+        sessionStorage.setItem("userQuestionId", userQuestionId)
         return true
     }
     return false

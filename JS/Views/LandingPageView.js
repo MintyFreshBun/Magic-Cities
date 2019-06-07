@@ -17,7 +17,7 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
             document.querySelector("#passwordRegister").value,
              0, // xp
              1, // lvl
-             100,)// maxLvl
+             0,)// userQuestionID
 
         if(registerResult == true){
             //Close modal window
