@@ -31,6 +31,10 @@
     width: 75%;
     height: 75%;
     background-color:#d9e5f7 ;
+    border-color: rgb(49, 51, 77);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px
 }
 
 #commentArea{
@@ -42,4 +46,14 @@
     border-radius: 4px;
     background-color: #edeaff;
     
+}
+
+#googleMap{    
+    width:100%;
+    max-height: 100%;
+    min-height: 400px;
+    border-color: rgb(49, 51, 77);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
 }
