@@ -23,7 +23,7 @@ export function login(usernameLogin, passwordLogin){
             sessionStorage.setItem("loggedUser", usernameLogin)
             sessionStorage.setItem("userXP", user.xp)
             sessionStorage.setItem("userLvl", user.level)
-            sessionStorage.setItem("maxLvl", user.maxLvl)
+            sessionStorage.setItem("userQuestionId", user.userQuestionId)
             existUser = true
         }
     }
