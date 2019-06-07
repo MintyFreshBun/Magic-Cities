@@ -1,29 +1,29 @@
 import { questions } from "../Controllers/quizController.js";
-import { User } from "../Models/usersModel.js";
+
 
 
 // obter ID da questão mediante o nivel atual da criança
-
+let userQuestionId = sessionStorage.getItem("userQuestionId")
 
 // fazer uma função que dê render a tudo
-renderCurrentQuestion()
-function renderCurrentQuestion(userQuestionId){
+renderCurrentQuestion(userQuestionId)
+function renderCurrentQuestion(){
   const renderQuestionNumber = document.querySelector("#QuestionNumber")
   let result =`
-  <p>${questions[id].id}</p>
+  <p>${questions[userQuestionId].id}</p>
   `
   renderQuestionNumber.innerHTML = result 
 
   const renderQuestion = document.querySelector("#QuestionText")
   let result2 = `
-  <p>${questions[id].description}</p>
+  <p>${questions[userQuestionId].description}</p>
   `
   renderQuestion.innerHTML = result2
   let i = 1
   for (const question of questions) {
-    if (question.id == id){
-    for (const response3 of question.responses) {
-       document.querySelector("#Button"+i).innerHTML = response3
+    if (question.id == userQuestionId){
+    for (const response of question.responses) {
+       document.querySelector("#Button"+i).innerHTML = response
        i++
     }
   }

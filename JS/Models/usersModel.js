@@ -7,6 +7,6 @@ export default class User {
         this.password = password
         this.xp = xp
         this.level = level
-        this.userQuestionId =userQuestionId
+        this.userQuestionId = userQuestionId
     }
 }
