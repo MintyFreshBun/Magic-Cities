@@ -50,7 +50,7 @@ function renderCatalog (filterName = "", filterZone = ""){
                     <p class="card-text"> <spam class="font-weight-bold">Zona</spam>: ${city.zone} </p>
                     <button type="button" id="${city.name}" class="btn btn-primary view"> Visitar Pagina</button>
                     <div class="row" style="padding-top: 2%">
-                        <div class="col"> ${city.faves} <img src="../misc/Images/favorite-heart-button.png" style="width: 20px; height: 20px;"></div>
+                        <div class="col"> ${city.faves} <img src="../misc/Images/favorite-heart-button-click.png" style="width: 20px; height: 20px;"></div>
                         <div class="col"> ${city.comments} <img src="../misc/Images/comment-black-oval-bubble-shape.png" style="width: 20px; height: 20px;"></div>
                         <div class="col font-weight-bold"> LV: ${city.level}</div>
                         
