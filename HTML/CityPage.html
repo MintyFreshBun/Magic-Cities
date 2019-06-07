@@ -22,41 +22,18 @@
       </div>
       <!--mainnavbar code ( temp stuff that needs to added fuctional stuff from the mainpage.html/js etc )-->
       <nav class="navbar navbar-expand-md navbar-light bg-primary justify-content-between ">
-  
-        <div class="col-md-2 justify-content-star d-inline-flex ">
-          <!--Add/create ID avater icons,make diferent ones for each rank-->
-          <!--Temp one atm-->
-          <img src="../misc/Images/DG_favicon-02.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">
-          <a class="navbar-brand text-white col-md-2" href="#">Bemvindo, Username!</a>
-        </div>
-        
-        <div class="justify-content-end d-inline-flex col-md-4 " >
-          <div class="col-md-2 align-self-center text-white  font-weight-bold" >Nivel</div>
-  
-          <div class="col-md-7 align-self-center" >
-            <div class="progress" style="height: 25px" > <!--the z-index not working, ask the teacher-->
-              
-              <div class="progress-bar bg-warning " role="progressbar" style="width: 50% ;"
-                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>  
-            </div>
-          </div>
-  
-          <div class="col-md-3 align-self-center">
-            <button type="button" class="btn btn-warning text-white">Log Out</button>
-          </div>
-        </div>            
-      </nav>
 
+      </nav>
       <!-----##################################### CITYPAGE CONTENTS  #############################################-->
     <!-- city information injection section-->
     <br>
     <div class="container-fluid bg-Custom1 rounded-lg " id="myCity">       
          
       <!--Hard code of the card to pass it for jS-->
-      <div class="row bg-warning justify-content-between ">
-        <div class="col-md-4 bg-danger">
+      <div class="row  justify-content-between ">
+        <div class="col-md-4 ">
 
-          <div class="row">
+          <div class="row" style="padding-left: 3%; padding-top: 2%">
             <img  class="rounded-lg brasao-style" src="../IMG/PDL-Brasao.png" >                
           </div>
           <br>
@@ -64,29 +41,46 @@
           <div class="row">
             <div class="col">
                 <h4>Ponta Delgada</h4><br>
-                <p>Data Fundada: </p>
-                <p>Zona: </p>
+                <p><span class="font-weight-bold">Data Fundada:</span> 1900</p>
+                <p><span class="font-weight-bold">Zona:</span> </p>
             </div>
             
           </div>
         </div>
 
-        <div class="col-md-6 bg-success">
-          map
+        <div class="col-md-6 " style="padding-top: 1%" >
+          <!-- GOOGLE Maps ZONE-->
+          <div id="googleMap"></div>
+
+          <script>
+          function myMap() {
+            var mapProp = {
+              center: new google.maps.LatLng(51.508742, -0.120850),
+              zoom: 5,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+          }
+        </script>
+
         </div>
 
       </div>
       <!--Second row-->
 
-      <div class="row bg-info justify-content-between">
-        <div class="col-md-4 bg-success">
-          <p>Nivel: </p>
-          <p>Addicionado: </p>              
+      <div class="row  justify-content-between">
+        <div class="col-md-4 ">
+          <p><span class="font-weight-bold">Nivel:</span> </p>
+          <p><span class="font-weight-bold">Addicionado:</span> </p>
+          <div class="row" style="padding-left: 3%">
+            <p><span class="font-weight-bold">Gostos: </span>0## </p> <br> <img src="../misc/Images/favorite-heart-button.png" style="width: 20px; height: 20px;">
+          </div>              
         </div>
         <br>
-        <div class="col-md-6 bg-danger" >
-          Short discript/ wiki link blabla adsadiawodhawhdajiodasdhoisahds
-          sdhuasdhowiiwahdlahsldhwaehawk
+        <div class="col-md-6 " >
+          
+          <p>Short discript/ wiki link blabla adsadiawodhawhdajiodasdhoisahds
+          sdhuasdhowiiwahdlahsldhwaehawk</p>
+          <a href="#">Pagina wiki da Cidade </a>
         </div>
 
 
@@ -96,22 +90,22 @@
 
       <!--image gallery, needs to be in a for cycle-->
 
-      <div class="row bg-danger rounded-lg"> 
+      <div class="row bg-primary rounded-lg" style="padding: 2%"> 
         
         <div class="col-md-3 ">              
-          <img  class="img-fluid" src="../IMG/PDL-picture1.jpg" style="max-width: 250px">              
+          <img  class="img-fluid " src="../IMG/PDL-picture1.jpg" >              
         </div>
 
         <div class="col-md-3">
-          <img class="img-fluid" src="../IMG/PDL-picture2.jpg" style="max-width: 250px">              
+          <img class="img-fluid " src="../IMG/PDL-picture2.jpg" >              
         </div>
 
         <div class="col-md-3" >
-          <img class="img-fluid" src="../IMG/PDL-picture3.jpg" style="max-width: 250px">              
+          <img class="img-fluid " src="../IMG/PDL-picture3.jpg" >              
         </div>
 
         <div class="col-md-3">
-          <img class="img-fluid" src="../IMG/PDL-picture4.png" style="max-width: 250px">              
+          <img class="img-fluid " src="../IMG/PDL-picture4.png">              
         </div>
 
       </div>
@@ -122,15 +116,41 @@
       <div class="row justify-content-center">
 
         <div class="container-fluid bg-primary  rounded-lg" style="width: 95%; padding-top:1%; padding-bottom: 1%">
+          <!--Comment injection-->
+          
+
+          
+          <div class="container-fluid bg-light rounded-lg " style="width: 95%; ">
+            <!--name and date row-->
+             <div class="row justify-content-between" >
+               <div class="col-2 font" style="font-weight: bold; padding-left: 5px; padding-right: 5px;">
+                <span>Name<span>
+               </div>
+ 
+               <div class="col-2 " style="padding-left: 5px; padding-right: 5px;">
+                 <span>Date</span>
+               </div>
+ 
+             </div>
+            <!-- the comment!-->
+             <div class="row " style="padding: 1%">
+               <span>THIS IS THE USERNAMES COMENT BLA BLA BLA</span>
+             </div>
+ 
+ 
+           </div>
+           <br>
+
+
           <!--Comment bubble section-->
           <div class="container-fluid bg-light rounded-lg " style="width: 95%; ">
            <!--name and date row-->
             <div class="row justify-content-between" >
-              <div class="col-2 bg-danger justify-content-center ">
-               <span>Name<span>
+              <div class="col-2 " style="font-weight: bold ;padding-left: 5px; padding-right: 5px;">                
+               <span class="justify-content-start">Name<span>
               </div>
 
-              <div class="col-2 bg-warning justify-content-center ">
+              <div class="col-2 " style="padding-left: 5px; padding-right: 5px;">
                 <span>Date</span>
               </div>
 
@@ -181,6 +201,9 @@
       
     <!-- Optional JavaScript -->
     <script type="module" src="../JS/Views/CityPageView.js"></script>
+    <script type="module" src="/JS/Views/navBarView.js"></script>
+    <!--GOOGLE MAPS LYBRARY-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9HEeniC2SRtX0XSe_DWPETuWn5oFU7es&callback=myMap"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
