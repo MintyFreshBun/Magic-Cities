@@ -36,7 +36,7 @@ export function logout(){
 }
 
 // Function that registers a user(update of the key in SessionStorage)
-export function register(usernameRegister, passwordRegister, xp, level, maxLvl){
+export function register(usernameRegister, passwordRegister, xp, level, userQuestionId){
     let existUser = false
     for(const user of users){
         if(user.username === usernameRegister && user.password === passwordRegister){
