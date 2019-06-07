@@ -30,10 +30,10 @@ if (localStorage.questions) {
             "Bem vindo... narração", // narration
             "Descrição da pergunta#2.. etc", // description
             [
-                "1",
-                "2", // responses
-                "3",
-                "4"
+                "c",
+                "b", // responses
+                "a",
+                "d"
             ],
             "2", // correctResponse
             "25" // points

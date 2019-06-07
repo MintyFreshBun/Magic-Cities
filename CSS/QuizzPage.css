@@ -27,7 +27,7 @@
 }
 
 body {
-    background-color: coral;
+    background-color:#fbc3b0;
 }
 
 #QuestionNumber {
@@ -41,7 +41,7 @@ body {
 }
 
 #QuestionBox {
-    background-color: lightcoral;
+    background-color:#e5a3a3;
 }
 #Buttons{
     text-align: center;

@@ -1,16 +1,15 @@
 import { questions } from "../Controllers/quizController.js";
 
-
-
 // obter ID da questão mediante o nivel atual da criança
 let userQuestionId = sessionStorage.getItem("userQuestionId")
 
 // fazer uma função que dê render a tudo
 renderCurrentQuestion(userQuestionId)
+
 function renderCurrentQuestion(){
   const renderQuestionNumber = document.querySelector("#QuestionNumber")
   let result =`
-  <p>${questions[userQuestionId].id}</p>
+  <p>Pergunta #${questions[userQuestionId].id}</p>
   `
   renderQuestionNumber.innerHTML = result 
 

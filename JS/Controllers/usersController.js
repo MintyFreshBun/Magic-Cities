@@ -49,7 +49,7 @@ export function register(usernameRegister, passwordRegister, xp, level, userQues
         sessionStorage.setItem("loggedUser", usernameRegister)
         sessionStorage.setItem("userXP",xp)
         sessionStorage.setItem("userLvl", level)
-        sessionStorage.setItem("userQuestionId", userQuestionId)
+        sessionStorage.setItem("userQuestionId",userQuestionId)
         return true
     }
     return false
