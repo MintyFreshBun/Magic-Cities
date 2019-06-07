@@ -15,12 +15,12 @@ if (localStorage.questions) {
             "Bem vindo... narração", // narration
             "Onde se situa a ESMAD?", // description
             [
-                "1",
-                "2", // responses
-                "3",
-                "4"
+                "Algarve",
+                "Lisboa", // responses  
+                "Braga",
+                "Vila do Conde"
             ],
-            "1", // correctResponse
+            "3", // correctResponse
             "25" // points
         ],
 

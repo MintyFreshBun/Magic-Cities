@@ -3,44 +3,32 @@ import { questions } from "../Controllers/quizController.js";
 
 
 // obter ID da questão mediante o nivel atual da criança
+let userQuestionId = sessionStorage.getItem("userQuestionId")
 
-
-renderQuestionNumber()
-function renderQuestionNumber(){
+// fazer uma função que dê render a tudo
+renderCurrentQuestion(userQuestionId)
+function renderCurrentQuestion(){
   const renderQuestionNumber = document.querySelector("#QuestionNumber")
   let result =`
-  <p>${questions[0].id}</p>  
+  <p>${questions[userQuestionId].id}</p>
   `
   renderQuestionNumber.innerHTML = result 
-}
 
-renderQuestion()
-function renderQuestion(){
   const renderQuestion = document.querySelector("#QuestionText")
-  let result = `
-  <p>${questions[0].description}</p>
-
+  let result2 = `
+  <p>${questions[userQuestionId].description}</p>
   `
-renderQuestion.innerHTML = result 
-}
-renderResponses()
-
-function renderResponses(id){
+  renderQuestion.innerHTML = result2
   let i = 1
   for (const question of questions) {
-    if (question.id == id){
+    if (question.id == userQuestionId){
     for (const response of question.responses) {
        document.querySelector("#Button"+i).innerHTML = response
        i++
     }
   }
-} 
-  
 }
-
-
-
-
+}
 
 
 document.getElementById("Button1").addEventListener("click", function () {
