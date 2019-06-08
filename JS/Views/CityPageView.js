@@ -33,4 +33,24 @@ btnHeart.addEventListener("click", function (){
 
 //############################ city information injection codes ############################
 //test
-document.querySelector("#cityName").innerHTML = `<span class="font-weight-bold">Data Fundada: </span>`;
+
+document.querySelector("#cityDate").innerHTML = `<span class="font-weight-bold">Data Fundada: ${city.date} </span>`;
+document.querySelector("#cityName").innerHTML = city.name;
+document.querySelector("#cityZone").innerHTML = `<span class="font-weight-bold">Zona: ${city.zone} </span>`;
+document.querySelector("#cityLevel").innerHTML = `<span class="font-weight-bold">Nivel: ${city.level} </span>`;
+document.querySelector("#cityUpload").innerHTML = `<span class="font-weight-bold">Addicionado: ${city.upload} </span>`;
+document.querySelector("#cityFave").innerHTML = `<span class="font-weight-bold">Gostos: </span>${city.faves} <button id="btn-Heart" type="button" class="btn btn-outline-danger">
+<img id="img-heart" src="../misc/Images/favorite-heart-button.png" style="width: 20px; height: 20px;">
+</button>`;
+document.querySelector("#cityDesc").innerHTML = city.desc;
+document.querySelector("#cityLink").href = city.link;
+
+
+
+
+
+
+//########################Galery pic injection js codes ##########################
+
+//####################comments inections codes#################################
+

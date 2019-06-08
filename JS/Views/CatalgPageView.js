@@ -1,7 +1,8 @@
 /* ################### Import section ################# */
 import{
     cities,
-    sortCities
+    sortCities,
+    setCurrentCity
 } from "../Controllers/citiesController.js"
 
 
@@ -73,7 +74,7 @@ function renderCatalog (filterName = "", filterZone = ""){
     myCatalog.innerHTML = result
 
     //this is the code of the button to acess the cities page, and we have to make sure the city un acessable if lower lvl
-    // Making the buttons work
+    // Making the buttons work, add a lvl rescriction whit an if codintion 
     const btnsCity = document.getElementsByClassName("view")
     for (const elem of btnsCity) {
         elem.addEventListener("click", function () {

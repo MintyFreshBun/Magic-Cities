@@ -39,7 +39,7 @@ export function sortCities(order) {
 // getting the city's name and setting it has current city
 export function setCurrentCity(txtCity) {
     localStorage.setItem("city", txtCity)
-    location.href = "HTML/CityPage.html"
+    location.href = "CityPage.html"
 }
 
 // getting thethe city we set from the Citties list model
