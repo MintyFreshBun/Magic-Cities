@@ -1,6 +1,6 @@
 
 
-
+//######################### Button fuctions ####################
 let buttonPerfil = document.getElementById("perfilButton"); 
 buttonPerfil.addEventListener("click", function(){
     window.location.href="PerfilPage.html"
@@ -10,4 +10,9 @@ buttonPerfil.addEventListener("click", function(){
 let quizButton = document.getElementById("quizButton"); 
 quizButton.addEventListener("click", function(){
     window.location.href="QuizPage.html"
+})
+
+let catalogButton = document.getElementById("btnCatalog"); 
+catalogButton.addEventListener("click", function(){
+    window.location.href="CatalogPage.html"
 })

@@ -12,8 +12,11 @@ if (localStorage.bands) {
     
    //comments are gonna be an array of objects whit username and the comment and date
    // may need to modify/ add more data to the  3 cities has we progress
+   // bigger data or an array of objects whit in an object are seperate then added to the city 
 
-    const city1 = new City("Ponta Delgada", "Açores", "1546","31/5/2019","1","0","2","../IMG/Ponta-Delgada-cover.jpg")
+
+
+    const city1 = new City("Ponta Delgada", "Açores", "1546","31/5/2019","1","0","2","../IMG/Ponta-Delgada-cover.jpg","../IMG/PDL-picture1.jpg","https://pt.wikipedia.org/wiki/Ponta_Delgada","Cidade central da Ilha São Miguel")
     const city2 = new City("Porto","Norte","1112","31/5/2019","1","0","3","../IMG/Porto.jpg")
     const city3 = new City("Lisboa","Área Metropolitana de Lisboa","1147","1/6/2019","1","0","1","../IMG/Lisboa.jpg")
     cities.push(city1,city2,city3)    
