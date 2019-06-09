@@ -5,16 +5,21 @@ export let cities = []
 
 // #### special checker, if there is a local storage of the cities on the computure, it will import it, if not it will create 3defaut cities in this case
 
-if (localStorage.bands) {
+if (localStorage.cities) {
     cities = JSON.parse(localStorage.cities)
 } else {
     // it wll set 3 cities for the first time aceseecing this application 
     
    //comments are gonna be an array of objects whit username and the comment and date
    // may need to modify/ add more data to the  3 cities has we progress
-   // bigger data or an array of objects whit in an object are seperate then added to the city 
+   // bigger data or an array of objects whit in an object are seperate then added to the city
 
+   //##################### Comments ########################
+   //##################### Gallery #########################
+   //######################### Descriptions ##########################
+   //############################ Coordinates (latitude, Longitude) ##########################
 
+// adding the information to the 3 cities
 
     const city1 = new City("Ponta Delgada", "Açores", "1546","31/5/2019","1","0","2","../IMG/Ponta-Delgada-cover.jpg","../IMG/PDL-picture1.jpg","https://pt.wikipedia.org/wiki/Ponta_Delgada","Cidade central da Ilha São Miguel")
     const city2 = new City("Porto","Norte","1112","31/5/2019","1","0","3","../IMG/Porto.jpg")
@@ -54,4 +59,37 @@ export function getCurrentCity() {
             return cities[i]
         }
     }
+}
+
+export function cityLike(txtName, keyLike){
+
+    if (keyLike == 1){
+
+        for (let i = 0; i < cities.length; i++) {
+            if (cities[i].name === txtName) {
+                cities[i].faves += 1;
+                localStorage.setItem("cities", JSON.stringify(cities))
+            }
+        }
+        
+        
+
+    }
+
+    else if(keyLike == 0){
+
+        for (let i = 0; i < cities.length; i++) {
+            if (cities[i].name === txtName) {
+                cities[i].faves -= 1;
+                localStorage.setItem("cities", JSON.stringify(cities))
+            }
+        }
+        
+        
+
+
+    }
+
+    
+
 }
