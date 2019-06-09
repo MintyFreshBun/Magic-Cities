@@ -45,7 +45,7 @@ export function register(usernameRegister, passwordRegister, xp, level, userQues
         }
     }
     if(!existUser){
-        users.push(new User(usernameRegister, passwordRegister, xp , level, userQuestionId))
+        users.push(new User(usernameRegister, passwordRegister, xp , level, userQuestionId,userLikes))
         localStorage.setItem("users", JSON.stringify(users))
         sessionStorage.setItem("loggedUser", usernameRegister)
         sessionStorage.setItem("userXP",xp)
@@ -57,4 +57,24 @@ export function register(usernameRegister, passwordRegister, xp, level, userQues
     return false
 }
 
+// fuction to add and remove userlikes
 
+
+export function userLikeAdd(cityTxt){
+
+    for (const user of users){
+        for (let i = 0; i < user.userLikes.length; i++) {
+            /*if (cities[i].name === txtName) {
+                cities[i].faves += 1;                
+                localStorage.setItem("cities", JSON.stringify(cities))
+            }*/
+        }
+
+    }
+    
+
+}
+
+export function userLikeRemove(cityTxt){
+    
+}

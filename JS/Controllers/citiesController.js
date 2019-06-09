@@ -67,7 +67,7 @@ export function cityLike(txtName, keyLike){
 
         for (let i = 0; i < cities.length; i++) {
             if (cities[i].name === txtName) {
-                cities[i].faves += 1;
+                cities[i].faves += 1;                
                 localStorage.setItem("cities", JSON.stringify(cities))
             }
         }

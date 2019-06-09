@@ -5,6 +5,11 @@ import {
     cityLike
 } from "../Controllers/citiesController.js"
 
+import{
+    userLikeAdd,
+    userLikeRemove
+} from "../Controllers/usersController.js"
+
 
 
 
@@ -52,11 +57,21 @@ document.querySelector("#cityLink").href = city.link;
 const imgHeart = document.getElementById("img-heart");
 const btnHeart = document.getElementById("btn-Heart");
 let keyswitch = 0;
+
+// check if the user has liked the city before, not allowing him to like more then 1 time (remember its gonna be an array of items, so its a for cycle)
+// if the user has liked it then the keyswitch will be 1 and the heart pic will be red
+for(const cityLike of sessionStorage.getItem("userLikes")){
+    if(city.name == cityLike){
+        imgHeart.src = "../misc/Images/favorite-heart-button-click.png";
+        keyswitch = 1
+
+    }
+}
+
+
 btnHeart.addEventListener("click", function (){
 
-    // check if the user has liked the city before, not allowing him to like more then 1 time (remember its gonna be an array of items, so its a for cycle)
-    if(){}
-
+    
     //key conditions to set what kind of like and alow to add and remove 1 like 
     if(keyswitch == 1){
         // this condition will remove the like
@@ -64,6 +79,7 @@ btnHeart.addEventListener("click", function (){
         keyswitch = 0
         // changing the information on the object, removing the city from the userLikes
         cityLike(city.name, keyswitch);
+        userLikeAdd(city.name);
         renderLikes();
         
     }
@@ -73,6 +89,7 @@ btnHeart.addEventListener("click", function (){
         keyswitch = 1
         // changing the information on the object
         cityLike(city.name, keyswitch);
+        userLikeRemove(city.name);
         renderLikes();
 
     }
