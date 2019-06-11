@@ -8,9 +8,9 @@ export let users=[]
 if(localStorage.users){
     users = JSON.parse(localStorage.users)
 }else{
-    const user1= new User("JohnWink", "12345", "0","1","0","")
-    const user2= new User("Mint", "54321","0","1","0","")
-    const user3= new User("Tiago", "15234","0","1","0","")
+    const user1= new User("JohnWink", "12345", "0","1","0"," ")
+    const user2= new User("Mint", "54321","0","1","0"," ")
+    const user3= new User("Tiago", "15234","0","1","0"," ")
     users.push(user1,user2,user3);
     localStorage.setItem("users", JSON.stringify(users))
 }
@@ -37,7 +37,7 @@ export function logout(){
 }
 
 // Function that registers a user(update of the key in SessionStorage)
-export function register(usernameRegister, passwordRegister, xp, level, userQuestionId){
+export function register(usernameRegister, passwordRegister, xp, level, userQuestionId,userLikes){
     let existUser = false
     for(const user of users){
         if(user.username === usernameRegister && user.password === passwordRegister){
@@ -51,7 +51,7 @@ export function register(usernameRegister, passwordRegister, xp, level, userQues
         sessionStorage.setItem("userXP",xp)
         sessionStorage.setItem("userLvl", level)
         sessionStorage.setItem("userQuestionId",userQuestionId)
-        sessionStorage.setItem("userLikes", user.userLikes)
+        sessionStorage.setItem("userLikes", userLikes)
         return true
     }
     return false
