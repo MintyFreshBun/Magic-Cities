@@ -11,7 +11,8 @@ import{
 } from "../Controllers/usersController.js"
 
 import{
-    comments
+    comments,
+    addComment
 
 } from "../Controllers/commentController.js"
 
@@ -58,7 +59,11 @@ function renderComment(){
     const myComment = document.querySelector("#commentView")
     let result = ""
     
+
     for (const comment of comments) {
+        //needs a filter of the current city
+
+
         result += `
                     <div class="container-fluid bg-light rounded-lg " style="width: 95%; ">
                         <!--name and date row-->
@@ -89,6 +94,20 @@ function renderComment(){
 }
 
 renderComment();
+
+// adding te comment 
+const btnComment = document.querySelector("#btn-comment");
+btnComment.addEventListener("click", function(){
+// when clicked it will fetch the session username, get the date and get te comment from the comment area then refresh
+const cityComment = city.name;
+const userComment = sessionStorage.getItem("loggedUser");
+const dateComment = ""; 
+const stringComment = document.querySelector("#commentArea");
+addComment(cityComment,userComment,dateComment,stringComment);
+renderComment();
+
+
+})
 
 
 
