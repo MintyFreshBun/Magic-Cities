@@ -10,7 +10,7 @@ if (localStorage.questions) {
 } else {
     let questionsTempArray =[
         [
-            "1", // id
+            "0", // id
             "1", // level
             "Bem vindo... narração", // narration
             "Onde se situa a ESMAD?", // description
@@ -25,7 +25,7 @@ if (localStorage.questions) {
         ],
 
         [
-            "2", // id
+            "1", // id
             "1", // level
             "Bem vindo... narração", // narration
             "Descrição da pergunta#2.. etc", // description
@@ -40,7 +40,7 @@ if (localStorage.questions) {
         ],
 
         [
-            "3", // id
+            "2", // id
             "1", // level
             "Bem vindo... narração", // narration
             "Descrição da pergunta#3.. etc", // description
@@ -55,7 +55,7 @@ if (localStorage.questions) {
         ],
 
         [
-            "4", // id
+            "3", // id
             "1", // level
             "Bem vindo... narração", // narration
             "Descrição da pergunta#4.. etc", // description
