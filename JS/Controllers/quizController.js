@@ -20,7 +20,7 @@ if (localStorage.questions) {
                 "Braga",
                 "Vila do Conde"
             ],
-            "3", // correctResponse
+            "4", //correctResponse
             "25" // points
         ],
 

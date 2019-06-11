@@ -9,7 +9,7 @@ renderCurrentQuestion(userQuestionId)
 function renderCurrentQuestion(){
   const renderQuestionNumber = document.querySelector("#QuestionNumber")
   let result =`
-  <p>Pergunta #${questions[userQuestionId +1].id}</p>
+  <p>Pergunta #${questions[userQuestionId].id}</p>
   `
   renderQuestionNumber.innerHTML = result 
 
