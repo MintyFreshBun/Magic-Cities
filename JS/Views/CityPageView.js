@@ -10,6 +10,11 @@ import{
     userLikeRemove
 } from "../Controllers/usersController.js"
 
+import{
+    comments
+
+} from "../Controllers/commentController.js"
+
 
 
 
@@ -50,11 +55,40 @@ document.querySelector("#cityLink").href = city.link;
 
 //####################comments inections codes#################################
 function renderComment(){
-    const myComment = document.querySelector("#myComment")
+    const myComment = document.querySelector("#commentView")
     let result = ""
-
     
+    for (const comment of comments) {
+        result += `
+                    <div class="container-fluid bg-light rounded-lg " style="width: 95%; ">
+                        <!--name and date row-->
+                        <div class="row justify-content-between" >
+                        <div class="col-2 font" style="font-weight: bold; padding-left: 5px; padding-right: 5px;">
+                            <span>${comment.username}<span>
+                        </div>
+            
+                        <div class="col-2 " style="padding-left: 5px; padding-right: 5px;">
+                            <span>${comment.date}</span>
+                        </div>
+            
+                        </div>
+                        <!-- the comment!-->
+                        <div class="row " style="padding: 1%">
+                        <span>${comment.comment}</span>
+                        </div>
+            
+            
+                    </div>
+                    <br>`
+
+    }
+    
+
+    myComment.innerHTML = result;            
+
 }
+
+renderComment();
 
 
 
@@ -65,14 +99,14 @@ let keyswitch = 0;
 
 // check if the user has liked the city before, not allowing him to like more then 1 time (remember its gonna be an array of items, so its a for cycle)
 // if the user has liked it then the keyswitch will be 1 and the heart pic will be red
+/*
 for(const cityLike of sessionStorage.getItem("userLikes")){
     if(city.name == cityLike){
         imgHeart.src = "../misc/Images/favorite-heart-button-click.png";
         keyswitch = 1
 
     }
-}
-
+}*/
 
 btnHeart.addEventListener("click", function (){
 

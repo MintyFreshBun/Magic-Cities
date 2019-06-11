@@ -47,7 +47,7 @@ function renderCatalog (filterName = "", filterZone = ""){
                     <img class="card-img-top rounded-lg img-Size" src="${city.cover}">
                     <br><br>
                     <h4 class="card-title font-weight-bold">${city.name}</h4>
-                    <p class="card-text"> <spam class="font-weight-bold">Data Fundada:</spam> ${city.date} </p>
+                    <p class="card-text"> <spam class="font-weight-bold">Ano Fundada:</spam> ${city.date} </p>
                     <p class="card-text"> <spam class="font-weight-bold">Zona</spam>: ${city.zone} </p>
                     <button type="button" id="${city.name}" class="btn btn-primary view"> Visitar Pagina</button>
                     <div class="row" style="padding-top: 2%">
