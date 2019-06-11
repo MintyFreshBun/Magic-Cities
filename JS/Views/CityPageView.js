@@ -49,11 +49,16 @@ document.querySelector("#cityLink").href = city.link;
 //########################Galery pic injection js codes ##########################
 
 //####################comments inections codes#################################
+function renderComment(){
+    const myComment = document.querySelector("#myComment")
+    let result = ""
+
+    
+}
 
 
 
-
-//####################### button Likes change and listeners ##################
+//####################### button Likes fucntions and listeners ##################
 const imgHeart = document.getElementById("img-heart");
 const btnHeart = document.getElementById("btn-Heart");
 let keyswitch = 0;
