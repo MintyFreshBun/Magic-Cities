@@ -51,10 +51,14 @@ function checkAnswer(answer) {
         alert("CERTO")
         // acrescentar 25 xp ao User quando acerta numa questão
         for (const user of users) {
-          if(user.username === sessionStorage.getItem("loggedUser")){
-            users.xp += 25;
+          if(user.username === sessionStorage("loggedUser")){
+            user.xp += 25
           }
-        }        
+        }
+
+        localStorage.setItem("users", users)
+  
+             
       } else {
         alert("ERRADO")
       }

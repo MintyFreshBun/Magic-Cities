@@ -37,3 +37,4 @@ document.querySelector("#logoutBtn").addEventListener("click", function(){
     logout()
     location.href = "../Index.html";
   })
+
