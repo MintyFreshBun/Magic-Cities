@@ -10,7 +10,7 @@ if(localStorage.users){
 }else{
     const user1= new User("JohnWink", "12345", "0","1","0"," ")
     const user2= new User("Mint", "54321","0","1","0"," ")
-    const user3= new User("Tiago", "15234","0","1","0"," ")
+    const user3= new User("Tiago", "123","0","1","0"," ")
     users.push(user1,user2,user3);
     localStorage.setItem("users", JSON.stringify(users))
 }

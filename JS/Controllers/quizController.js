@@ -8,7 +8,7 @@ export let questions = []
 if (localStorage.questions) {
     questions = JSON.parse(localStorage.questions)
 } else {
-    let questionsTempArray =[
+    let questionsTempArray = [
         [
             "0", // id
             "1", // level
@@ -20,7 +20,7 @@ if (localStorage.questions) {
                 "Braga",
                 "Vila do Conde"
             ],
-            "4", //correctResponse
+            3, //correctResponse
             "25" // points
         ],
 
@@ -35,7 +35,7 @@ if (localStorage.questions) {
                 "a",
                 "d"
             ],
-            "2", // correctResponse
+            2, // correctResponse
             "25" // points
         ],
 
@@ -50,7 +50,7 @@ if (localStorage.questions) {
                 "3",
                 "4"
             ],
-            "0", // correctResponse
+            0, // correctResponse
             "25" // points
         ],
 
@@ -65,9 +65,23 @@ if (localStorage.questions) {
                 "33asda",
                 "4dsda"
             ],
-            "2", // correctResponse
+            1, // correctResponse
             "25" // points
         ],
+        [
+            "6", // id
+            "1", // level
+            "Bem vindo... narraçãsdsdso", // narration
+            "Descrição da pergunta#4.. etc", // description
+            [
+                "111",
+                "22", // responses
+                "33asda",
+                "4dsda"
+            ],
+            1, // correctResponse
+            "25" // points
+        ]
         
         
     ];
@@ -88,3 +102,4 @@ if (localStorage.questions) {
     }
     localStorage.setItem("questions", JSON.stringify(questions))
 }
+
