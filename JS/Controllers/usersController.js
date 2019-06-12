@@ -74,6 +74,22 @@ export function userLikeAdd(cityTxt){
 
     }*/
 
+     
+
+    let newLikes =  sessionStorage.getItem("userLikes") + ";" + cityTxt;
+
+    sessionStorage.setItem("userLikes", newLikes);
+
+    
+    for (let i = 0; i < users.length; i++) {
+        //find the position of the user
+        if (users[i].username === sessionStorage.getItem("loggedUser")) {
+            // we knowthe possition of the user [i] so we will modify the users citylikes
+            users[i].userLikes = newLikes
+            
+        }
+    }
+
 
 
     
