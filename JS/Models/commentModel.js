@@ -10,5 +10,3 @@ export default class Comment {
     }        
         
 }
-
-// fuctions to sort the comments date order from most recent to oldest

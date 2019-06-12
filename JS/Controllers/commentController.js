@@ -10,7 +10,7 @@ if(localStorage.comments){
     comments = JSON.parse(localStorage.comments)
 }else{
     const comment1= new Comment("Ponta Delgada", "AnaBella", "15:45 8-6-2019","Quero visitar os Açores!")
-    const comment2= new Comment("Porto", "João14-6","17:25 13-6-2019","Cidade Linda, gosto muito!")
+    const comment2= new Comment("Porto", "João14-6","17:25 10-6-2019","Cidade Linda, gosto muito!")
     const comment3= new Comment("Lisboa", "JorgeBlaze ","16:31 9-6-2019","Que cidade tão grande e movimentada!")
     comments.push(comment1,comment2,comment3);
     localStorage.setItem("comments", JSON.stringify(comments))
@@ -49,10 +49,13 @@ export function currentDate(fulldate) {
 
 //####################### fuction to sort the comments by date ##############
 
-export function sortComment(){
-    // your gonna need to ask the teacher for help on this one, send an email 
-
-
+export function commentReverse(){
+    // sence the insertion of a new comment is always gonna be from old to new in the comments array of object 
+    //we want the new ones to be on the top, and the old at the bottom in the html view
+    //one solution is to reverse() the array before injecting to html and  after . 
+    
+    comments.reverse();
+    localStorage.setItem("comments", JSON.stringify(comments))
 
 }
 
