@@ -9,15 +9,15 @@ export let comments=[]
 if(localStorage.comments){
     comments = JSON.parse(localStorage.comments)
 }else{
-    const comment1= new Comment("Ponta Delgada", "AnaBella", "...","Quero visitar os Açores!")
-    const comment2= new Comment("Porto", "João14-6","...","Cidade Linda, gosto muito!")
-    const comment3= new Comment("Lisboa", "JorgeBlaze ","...","Que cidade tão grande e movimentada!")
+    const comment1= new Comment("Ponta Delgada", "AnaBella", "15:45 8-6-2019","Quero visitar os Açores!")
+    const comment2= new Comment("Porto", "João14-6","17:25 13-6-2019","Cidade Linda, gosto muito!")
+    const comment3= new Comment("Lisboa", "JorgeBlaze ","16:31 9-6-2019","Que cidade tão grande e movimentada!")
     comments.push(comment1,comment2,comment3);
     localStorage.setItem("comments", JSON.stringify(comments))
 }
 
 
-//########### fuctions to add a comment ########
+//########### fuctions to add a comment ##############
 
 export function addComment(cityName,userName,date,stringTxt){
     const newComment = new Comment (cityName,userName,date,stringTxt)
@@ -25,3 +25,34 @@ export function addComment(cityName,userName,date,stringTxt){
     localStorage.setItem("comments", JSON.stringify(comments))
 
 }
+
+//################# fuction to get the date ###################
+export function currentDate(fulldate) {
+    let today = new Date();
+
+    //fuction to add a 0 to minutes and months so it has a two digit format
+    function addZero(i){
+        if (i < 10) {
+            i = "0" + i;
+          }
+          return i;
+    }
+
+
+    let time = today.getHours() + ":" + addZero(today.getMinutes());
+    let date = +today.getDate()+'-'+ addZero((today.getMonth()+1))+'-'+today.getFullYear();
+    
+    fulldate =  time + " " + date ;
+
+    return fulldate;
+}
+
+//####################### fuction to sort the comments by date ##############
+
+export function sortComment(){
+    // your gonna need to ask the teacher for help on this one, send an email 
+
+
+
+}
+

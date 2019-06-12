@@ -63,7 +63,7 @@ export function register(usernameRegister, passwordRegister, xp, level, userQues
 export function userLikeAdd(cityTxt){
 
     // Probable solution is the whole thing be a string then split the string in to parts , push them in to an array, and from there add/remove the cities
-/*
+/*  scrap wip1 Note: in the object user, index:5 is the userlikes
     for (const user of users){
         for (let i = 0; i < (user.userLikes).length; i++) {
             if (cities[i].name === txtName) {
@@ -73,6 +73,9 @@ export function userLikeAdd(cityTxt){
         }
 
     }*/
+
+
+
     
 
 }
