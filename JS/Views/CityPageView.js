@@ -13,7 +13,8 @@ import{
 import{
     comments,
     addComment,
-    currentDate
+    currentDate,
+    commentReverse
 } from "../Controllers/commentController.js"
 
 
@@ -58,7 +59,8 @@ document.querySelector("#cityLink").href = city.link;
 function renderComment(){
     const myComment = document.querySelector("#commentView")
     let result = ""
-    
+    // reverse tthe order of the comments from new to old (the comments array are from old to new,)
+    commentReverse();
 
     for (const comment of comments) {
         //needs a filter of the current city
@@ -94,7 +96,8 @@ function renderComment(){
                     <br>`
 
     }
-    
+    //reverting back to normal order from old to new
+    commentReverse();
 
     myComment.innerHTML = result;            
 
