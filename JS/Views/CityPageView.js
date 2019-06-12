@@ -12,8 +12,8 @@ import{
 
 import{
     comments,
-    addComment
-
+    addComment,
+    currentDate
 } from "../Controllers/commentController.js"
 
 
@@ -63,7 +63,14 @@ function renderComment(){
     for (const comment of comments) {
         //needs a filter of the current city
 
+        const currentCity = city.name;
 
+        if (currentCity !== "" && !comment.cityname.startsWith(currentCity))
+         {
+            continue;
+        }
+
+        //after the filter is applyed it will insert in the catalog
         result += `
                     <div class="container-fluid bg-light rounded-lg " style="width: 95%; ">
                         <!--name and date row-->
@@ -98,13 +105,20 @@ renderComment();
 // adding te comment 
 const btnComment = document.querySelector("#btn-comment");
 btnComment.addEventListener("click", function(){
-// when clicked it will fetch the session username, get the date and get te comment from the comment area then refresh
-const cityComment = city.name;
-const userComment = sessionStorage.getItem("loggedUser");
-const dateComment = ""; 
-const stringComment = document.querySelector("#commentArea");
-addComment(cityComment,userComment,dateComment,stringComment);
-renderComment();
+
+    
+    // when clicked it will fetch the session username, get the date and get te comment from the comment area then refresh
+    const cityComment = city.name;
+    const userComment = sessionStorage.getItem("loggedUser");
+    //get the current date in hh:mm dd-mm-yyyy  (need to add a fucntion that add a 0 for when its less then 10 )
+    let fullDate = "";
+    const dateComment = currentDate(fullDate); 
+    //getting the value of the textArea so we can add to the comment object bundle
+    const stringComment = document.querySelector("#commentArea").value;   
+    addComment(cityComment,userComment,dateComment,stringComment);
+    //after the comment is added it will sort the comments by date 
+
+    renderComment();
 
 
 })
