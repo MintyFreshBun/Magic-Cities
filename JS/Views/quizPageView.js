@@ -1,10 +1,15 @@
 import { questions } from "../Controllers/quizController.js";
 import { users } from "../Controllers/usersController.js";
+import {updateNavbar} from "../Views/navBarView.js"
+
+//criação da navbar
+updateNavbar()
 
 // obter ID da questão mediante o nivel atual da criança
 let userQuestionId = sessionStorage.getItem("userQuestionId")
 
 // fazer uma função que dê render a tudo
+
 renderCurrentQuestion()
 
 /**
@@ -51,13 +56,29 @@ function checkAnswer(answer) {
         alert("CERTO")
         // acrescentar 25 xp ao User quando acerta numa questão
         for (const user of users) {
-          if(user.username === sessionStorage("loggedUser")){
+          if(user.username === sessionStorage.getItem("loggedUser")){
+            if(user.xp >= 75){
+              user.xp = 0
+              user.level += 1
+
+              sessionStorage.setItem("userLvl", user.level)
+              sessionStorage.setItem("userXP", JSON.stringify(user.xp))
+
+              alert("Parabéns! Passas-te para o próximo nível!")
+            }else{
+
+            
             user.xp += 25
+            sessionStorage.setItem("userXP", JSON.stringify(user.xp))
+            }
           }
         }
 
-        localStorage.setItem("users", users)
-  
+       
+        localStorage.setItem("users", JSON.stringify(users))
+
+        //update da navbar
+        updateNavbar()
              
       } else {
         alert("ERRADO")

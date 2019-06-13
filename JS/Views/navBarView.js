@@ -2,14 +2,11 @@ import{logout} from "../Controllers/usersController.js"
 
 updateNavbar()
 
-//Logout button deletes current user info and sends the user back into the landing page
-document.querySelector("#logoutBtn").addEventListener("click", function(){
-  logout()
-  location.href = "../Index.html";
-})
 
-//Function builds a dynamic navBar that adds the name,xp and level of the user
-function updateNavbar(){
+//funcão cria uma navBar dinâmica que adiciona nome, xp e level do user
+export function updateNavbar(){
+
+
     if(sessionStorage.getItem("loggedUser")){
 
   
@@ -37,5 +34,10 @@ function updateNavbar(){
         </div>
       </div>            
         `
+  //Butão Logout dá delete à informação do user do momento e manda o user de volta à landingPage
+  document.querySelector("#logoutBtn").addEventListener("click", function(){
+  logout()
+  location.href = "../Index.html";
+})
     }
 }
