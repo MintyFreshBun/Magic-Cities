@@ -30,7 +30,7 @@ const city = getCurrentCity()
 
 //############################ city information injection codes ############################
 //test
-
+document.querySelector("#imgBrasao").src = city.brasao;
 document.querySelector("#cityDate").innerHTML = `<span class="font-weight-bold">Data Fundada: ${city.date} </span>`;
 document.querySelector("#cityName").innerHTML = city.name;
 document.querySelector("#cityZone").innerHTML = `<span class="font-weight-bold">Zona: ${city.zone} </span>`;
@@ -58,7 +58,8 @@ document.querySelector("#cityLink").href = city.link;
 //####################comments inections codes#################################
 function renderComment(){
     const myComment = document.querySelector("#commentView")
-    let result = ""
+    let result = "";
+    let comCount = 0;
     // reverse tthe order of the comments from new to old (the comments array are from old to new,)
     commentReverse();
 
@@ -69,7 +70,10 @@ function renderComment(){
 
         if (currentCity !== "" && !comment.cityname.startsWith(currentCity))
          {
+             // if comment fount then add to the counter
+             comCount += 1;
             continue;
+
         }
 
         //after the filter is applyed it will insert in the catalog
@@ -98,6 +102,8 @@ function renderComment(){
     }
     //reverting back to normal order from old to new
     commentReverse();
+    // add the counter to the cities.commentlocal storage
+    
 
     myComment.innerHTML = result;            
 
@@ -119,9 +125,10 @@ btnComment.addEventListener("click", function(){
     //getting the value of the textArea so we can add to the comment object bundle
     const stringComment = document.querySelector("#commentArea").value;   
     addComment(cityComment,userComment,dateComment,stringComment);
-    //after the comment is added it will sort the comments by date 
+    //after the comment is added it will render the comments
 
     renderComment();
+    
 
 
 })
