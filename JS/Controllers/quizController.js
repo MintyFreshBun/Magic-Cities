@@ -12,15 +12,15 @@ if (localStorage.questions) {
         [
             "0", // id
             "1", // level
-            "Bem vindo... narração", // narrative
-            "Onde se situa a ESMAD?", // description
+            "Enquanto caminhas o distrito  de Viana do Castelo, deparas-te com um camponês, desorientado e confuso, sem saber para onde ir. Ele tem uma carta para ser enviada para Valdevez, mas não conhece o nome completo da cidade", // narrative
+            "Qual o nome complete desta cidade?", // description
             [
-                "Algarve",
-                "Lisboa", // responses  
-                "Braga",
-                "Vila do Conde"
+                "Arcos de Valdevez",
+                "Prcos de Valdevez", // responses  
+                "Correntes de Valdevez",
+                "Braga de Valdevez"
             ],
-            3, //correctResponse
+            1, //correctResponse
             "25" // points
         ],
 
