@@ -54,32 +54,45 @@ function checkAnswer(answer) {
            
       if(answer == question.correctResponse) {
         alert("CERTO")
-        // acrescentar 25 xp ao User quando acerta numa questão
+
+       
+        
+
+        // acrescentar 25 xp ao User quando acerta numa questão e mover para a próxima pergunta
         for (const user of users) {
+
+          
+          user.userQuestionId += 1
+          sessionStorage.setItem("userQuestionId", JSON.stringify(user.userQuestionId))
+
           if(user.username === sessionStorage.getItem("loggedUser")){
             if(user.xp >= 75){
               user.xp = 0
               user.level += 1
+              
+              
 
               sessionStorage.setItem("userLvl", user.level)
               sessionStorage.setItem("userXP", JSON.stringify(user.xp))
+         
 
               alert("Parabéns! Passas-te para o próximo nível!")
             }else{
-
-            
             user.xp += 25
             sessionStorage.setItem("userXP", JSON.stringify(user.xp))
+     
             }
           }
         }
 
-       
+        
         localStorage.setItem("users", JSON.stringify(users))
-
+       
         //update da navbar
         updateNavbar()
-             
+        //update das perguntas
+        renderCurrentQuestion()
+        location.reload();
       } else {
         alert("ERRADO")
       }
