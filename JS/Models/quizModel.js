@@ -2,7 +2,7 @@ export default class Question {
     constructor(
         id,
         level,
-        narration,
+        narrative,
         description,
         responses,
         correctResponse,
@@ -10,7 +10,7 @@ export default class Question {
     ) {
         this.id = id
         this.level = level
-        this.narration = narration
+        this.narrative = narrative
         this.description = description
         this.responses = responses
         this.correctResponse = correctResponse

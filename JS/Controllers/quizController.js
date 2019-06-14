@@ -12,7 +12,7 @@ if (localStorage.questions) {
         [
             "0", // id
             "1", // level
-            "Bem vindo... narração", // narration
+            "Bem vindo... narração", // narrative
             "Onde se situa a ESMAD?", // description
             [
                 "Algarve",
@@ -27,7 +27,7 @@ if (localStorage.questions) {
         [
             "1", // id
             "1", // level
-            "Bem vindo... narração", // narration
+            "Bem vindo... narração", // narrative
             "Descrição da pergunta#2.. etc", // description
             [
                 "c",
@@ -42,7 +42,7 @@ if (localStorage.questions) {
         [
             "2", // id
             "1", // level
-            "Bem vindo... narração", // narration
+            "Bem vindo... narração", // narrative
             "Descrição da pergunta#3.. etc", // description
             [
                 "1",
@@ -57,7 +57,7 @@ if (localStorage.questions) {
         [
             "3", // id
             "1", // level
-            "Bem vindo... narração", // narration
+            "Bem vindo... narração", // narrative
             "Descrição da pergunta#4.. etc", // description
             [
                 "111",
@@ -71,7 +71,7 @@ if (localStorage.questions) {
         [
             "6", // id
             "1", // level
-            "Bem vindo... narraçãsdsdso", // narration
+            "Bem vindo... narraçãsdsdso", // narrative
             "Descrição da pergunta#4.. etc", // description
             [
                 "111",
