@@ -63,22 +63,12 @@ export function register(usernameRegister, passwordRegister, xp, level, userQues
 export function userLikeAdd(cityTxt){
 
     // Probable solution is the whole thing be a string then split the string in to parts , push them in to an array, and from there add/remove the cities
-/*  scrap wip1 Note: in the object user, index:5 is the userlikes
-    for (const user of users){
-        for (let i = 0; i < (user.userLikes).length; i++) {
-            if (cities[i].name === txtName) {
-                cities[i].faves += 1;                
-                localStorage.setItem("cities", JSON.stringify(cities))
-            }
-        }
-
-    }*/
-
-     
-
+  //scrap wip1 Note: in the object user, index:5 is the userlikes
+    
     let newLikes =  sessionStorage.getItem("userLikes") + ";" + cityTxt;
 
     sessionStorage.setItem("userLikes", newLikes);
+    
 
     
     for (let i = 0; i < users.length; i++) {
@@ -89,13 +79,31 @@ export function userLikeAdd(cityTxt){
             
         }
     }
+    sessionStorage.setItem("userLikes", JSON.stringify(newLikes))
 
-
-
-    
+    localStorage.setItem("users", JSON.stringify(users))
 
 }
 
 export function userLikeRemove(cityTxt){
+    //to remove the like we must get the city like string, then remove the city name, after that we save the changed data
+    let baseLikes = sessionStorage.getItem("userLikes");
+    let cityRemove = ';' + cityTxt;
+    let newLikes = baseLikes.replace(cityRemove,'');
+
+    for (let i = 0; i < users.length; i++) {
+        //find the position of the user
+        if (users[i].username === sessionStorage.getItem("loggedUser")) {
+            // we knowthe possition of the user [i] so we will modify the users citylikes
+            users[i].userLikes = newLikes
+            
+        }
+    }
+
+    sessionStorage.setItem("userLikes", JSON.stringify(users.userLikes))
+
+    localStorage.setItem("users", JSON.stringify(users))
+    
     
 }
+

@@ -135,15 +135,22 @@ let keyswitch = 0;
 
 // check if the user has liked the city before, not allowing him to like more then 1 time (remember its gonna be an array of items, so its a for cycle)
 // if the user has liked it then the keyswitch will be 1 and the heart pic will be red
-/*
-for(const cityLike of sessionStorage.getItem("userLikes")){
-    if(city.name == cityLike){
-        imgHeart.src = "../misc/Images/favorite-heart-button-click.png";
+
+//fuction to check if the user has liked it and alter the buttons like setting
+function likeChecker(){
+    // if condition, if the user has liked this then set keyswitch=1, if not then leave it has default keyswitch=0
+    let strLikes = sessionStorage.getItem("userLikes");
+    let checker = strLikes.includes(city.name);
+    if(checker == true){
         keyswitch = 1
+        imgHeart.src = "../misc/Images/favorite-heart-button-click.png";
 
     }
-}*/
 
+}
+likeChecker();
+
+// fuctions on the like button 
 btnHeart.addEventListener("click", function (){
 
     
@@ -154,7 +161,7 @@ btnHeart.addEventListener("click", function (){
         keyswitch = 0
         // changing the information on the object, removing the city from the userLikes
         cityLike(city.name, keyswitch);
-        userLikeAdd(city.name);
+        userLikeRemove(city.name);
         renderLikes();
         
     }
@@ -164,9 +171,8 @@ btnHeart.addEventListener("click", function (){
         keyswitch = 1
         // changing the information on the object
         cityLike(city.name, keyswitch);
-        userLikeRemove(city.name);
+        userLikeAdd(city.name);
         renderLikes();
-
     }
     
 });
