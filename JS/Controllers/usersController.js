@@ -8,10 +8,10 @@ export let users=[]
 if(localStorage.users){
     users = JSON.parse(localStorage.users)
 }else{
-    const user1= new User("JohnWink", "12345", "0","1","0"," ","0")
-    const user2= new User("Mint", "54321","0","1","0"," ","0")
-    const user3= new User("Tiago", "123","0","1","0"," ","0")
-    const user4= new User("admin", "admin","0","1","0"," ","1")
+    const user1= new User("JohnWink", "12345", "0","1","0"," ","false")
+    const user2= new User("Mint", "54321","0","1","0"," ","false")
+    const user3= new User("Tiago", "123","0","1","0"," ","false")
+    const user4= new User("admin", "admin","0","1","0"," ","true")
     users.push(user1,user2,user3,user4);
     localStorage.setItem("users", JSON.stringify(users))
 }
@@ -55,7 +55,7 @@ export function register(usernameRegister, passwordRegister, xp, level, userQues
         sessionStorage.setItem("userLvl", level)
         sessionStorage.setItem("userQuestionId",userQuestionId)
         sessionStorage.setItem("userLikes", userLikes)
-        sessionStorage.setItem("admin", user.admin)
+        sessionStorage.setItem("admin", admin)
         return true
     }
     return false

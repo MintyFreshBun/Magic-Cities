@@ -15,7 +15,7 @@ updateNavbar()
 let userQuestionId = sessionStorage.getItem("userQuestionId")
 
 // fazer uma função que dê render a tudo
-
+renderCurrentQuestion()
 renderNarrative()
 
 /**
