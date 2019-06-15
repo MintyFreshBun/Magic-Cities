@@ -16,7 +16,6 @@ let userQuestionId = sessionStorage.getItem("userQuestionId")
 
 // fazer uma função que dê render a tudo
 
-
 renderNarrative()
 
 /**
@@ -25,6 +24,7 @@ renderNarrative()
 function renderCurrentQuestion() {
   for (const question of questions) {
     if (question.id == userQuestionId) {
+
       // Nº da pergunta
       document.querySelector("#QuestionNumber").innerHTML = `<p>Pergunta #${+question.id+1}</p>`
       // Narração
@@ -62,19 +62,15 @@ function renderNarrative() {
       console.log(question.id)
       console.log(userQuestionId)
       console.log(question.narrative)
-      document.querySelector("#QuestionText").innerHTML = `<p>${question.narrative}</p>
+      document.querySelector("#QuestionText").innerHTML = `<p style="font-size:30px">${question.narrative}</p>
             
-      <button type="button" onclick="show()" style="float: right" class="btn btn-primary btn-lg resp">Click me</button>`
-      
+      <button type="button" onclick="${renderCurrentQuestion()}" style="float: center" class="btn btn-primary btn-lg resp">Clica aqui para o ajudar</button>`
+
     }
   }
 
 }
 
-function show() {
-  document.querySelector("#Buttons").style.visibility = "visible"
-  renderCurrentQuestion()
-}
 
 /**
  * 
