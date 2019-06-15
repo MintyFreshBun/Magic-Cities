@@ -36,9 +36,9 @@ if (localStorage.cities) {
 
 // adding the information to the 3 cities
 
-    const city1 = new City("Ponta Delgada", "Açores", "1546","31/5/2019","1","0","0","../IMG/Ponta-Delgada-cover.jpg","../IMG/PDL-Brasao.png","https://pt.wikipedia.org/wiki/Ponta_Delgada","Cidade central da Ilha São Miguel"," ",pdlLati,pdlLong)
-    const city2 = new City("Porto","Norte","1112","31/5/2019","1","0","0","../IMG/Porto.jpg","../IMG/Porto-Brasao.png","https://pt.wikipedia.org/wiki/Porto","Cidate Linda e boa para visitar"," ",prtLati,prtLong)
-    const city3 = new City("Lisboa","Área Metropolitana de Lisboa","1147","1/6/2019","1","0","0","../IMG/Lisboa.jpg","../IMG/LSB-Brasao.png" ,"https://pt.wikipedia.org/wiki/Lisboa","Cidade Grande e metropolitana e Capital"," ",lsdLati,lsdLong)
+    const city1 = new City("Ponta Delgada", "Açores", "1546","31/5/2019",1,1,0,0,"../IMG/Ponta-Delgada-cover.jpg","../IMG/PDL-Brasao.png","https://pt.wikipedia.org/wiki/Ponta_Delgada","Cidade central da Ilha São Miguel"," ",pdlLati,pdlLong)
+    const city2 = new City("Porto","Norte","1112","31/5/2019",2,1,0,0,"../IMG/Porto.jpg","../IMG/Porto-Brasao.png","https://pt.wikipedia.org/wiki/Porto","Cidate Linda e boa para visitar"," ",prtLati,prtLong)
+    const city3 = new City("Lisboa","Área Metropolitana de Lisboa","1147","1/6/2019",3,1,0,0,"../IMG/Lisboa.jpg","../IMG/LSB-Brasao.png" ,"https://pt.wikipedia.org/wiki/Lisboa","Cidade Grande e metropolitana e Capital"," ",lsdLati,lsdLong)
     cities.push(city1,city2,city3)    
     localStorage.setItem("cities", JSON.stringify(cities))
 }
@@ -46,8 +46,8 @@ if (localStorage.cities) {
 
 // ######################### Functions to be exported by the viewers and adding/manipulating the local storage data ###########################
 
-
-// city sorting fuction
+//###########################Filter Fuctions####################
+// city sorting  by AZ and ZA fuctions
 export function sortCities(order) {
     if (order == "az"){
         cities.sort(City.compareAZ)
@@ -59,7 +59,31 @@ export function sortCities(order) {
     localStorage.setItem("cities", JSON.stringify(cities))
 }
 
-// getting the city's name and setting it has current city
+// city sorting by most Liked
+export function sortLikes(){
+    cities.sort(City.compareLikes)
+    localStorage.setItem("cities", JSON.stringify(cities))
+}
+
+// city sorting by most commented
+export function sortComments(){
+    cities.sort(City.compareComment)
+    localStorage.setItem("cities", JSON.stringify(cities))
+}
+
+export function sortRecent(){
+    cities.sort(City.compareRecent)
+    localStorage.setItem("cities", JSON.stringify(cities))
+}
+
+
+
+
+
+
+
+
+//####################### getting the city's name and setting it has current city#########################
 export function setCurrentCity(txtCity) {
     localStorage.setItem("city", txtCity)
     location.href = "CityPage.html"

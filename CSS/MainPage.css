@@ -26,10 +26,23 @@
 
 /*############################## Card moddiciations style ########################### */
 
-.btn-Hover :hover{
-    background-color: rgb(154, 172, 224);
-    
-    transition: 0.3s;
+.bg-Custom1{
+    background-color: #60b2ff;
+    width: 93%;
+    margin-top: 2.7% ;
+    margin-bottom: 2.7%;
+    padding: 0.5%
+}
+
+/*############################## Card moddiciations style( classes whit a second word cap are non bootstrap ones) ########################### */
+
+.btn-Hover{
+    background-color: #90c9ff;
+}
+
+.img-Size{
+    max-width: 220px;
+    min-height: 170px
 
 
 }
