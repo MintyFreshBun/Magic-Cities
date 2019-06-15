@@ -16,3 +16,5 @@ let catalogButton = document.getElementById("btnCatalog");
 catalogButton.addEventListener("click", function(){
     window.location.href="CatalogPage.html"
 })
+
+//##################Top card cities fuctions ######################
