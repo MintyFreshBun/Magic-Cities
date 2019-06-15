@@ -2,7 +2,8 @@
  //######################## IMPORT and getting the set city item #######
 import {
     getCurrentCity,
-    cityLike
+    cityLike,
+    cities
 } from "../Controllers/citiesController.js"
 
 import{
@@ -70,10 +71,7 @@ function renderComment(){
 
         if (currentCity !== "" && !comment.cityname.startsWith(currentCity))
          {
-             // if comment fount then add to the counter
-             comCount += 1;
             continue;
-
         }
 
         //after the filter is applyed it will insert in the catalog
@@ -98,11 +96,16 @@ function renderComment(){
             
                     </div>
                     <br>`
+        comCount += 1;
 
     }
     //reverting back to normal order from old to new
     commentReverse();
     // add the counter to the cities.commentlocal storage
+    console.log(comCount);
+
+    city.comments = comCount;
+    localStorage.setItem("cities", JSON.stringify(cities));
     
 
     myComment.innerHTML = result;            
@@ -125,7 +128,8 @@ btnComment.addEventListener("click", function(){
     //getting the value of the textArea so we can add to the comment object bundle
     const stringComment = document.querySelector("#commentArea").value;   
     addComment(cityComment,userComment,dateComment,stringComment);
-    //after the comment is added it will render the comments
+    //after the comment is added it will render the comments and clean the comment area
+    document.querySelector("#commentArea").value = "";
 
     renderComment();
     

@@ -47,27 +47,27 @@ export default class City {
 
     //########### Most Liked Filter
     static compareLikes(cityA, cityB) {
-        if (cityA.faves < cityB.faves)
-            return -1;
         if (cityA.faves > cityB.faves)
+            return -1;
+        if (cityA.faves < cityB.faves)
             return 1;
         return 0;
     }
 
     //############ Most Commented Filter
     static compareComment(cityA, cityB) {
-        if (cityA.comments < cityB.comments)
-            return -1;
         if (cityA.comments > cityB.comments)
+            return -1;
+        if (cityA.comments < cityB.comments)
             return 1;
         return 0;
     }
 
     //########### Most Recent
     static compareRecent(cityA, cityB) {
-        if (cityA.iddate < cityB.iddate)
-            return -1;
         if (cityA.iddate > cityB.iddate)
+            return -1;
+        if (cityA.iddate < cityB.iddate)
             return 1;
         return 0;
     }

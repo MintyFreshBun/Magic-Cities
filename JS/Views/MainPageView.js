@@ -30,9 +30,12 @@ catalogButton.addEventListener("click", function(){
 //##################Top card cities fuctions ######################
 
 function renderTops(filterType = ""){
+
+    
     const myTops = document.querySelector("#myTopcards")
     let result = ""
     let i = 0 // we only want to show the top 4 cards
+    myTops.innerHTML = result // try to clear the top has a test first
 
     for (const city of cities) {
         // ############# appled filter will sort tops (if conditions)   #######
@@ -78,9 +81,7 @@ function renderTops(filterType = ""){
 
 
     }
-
-    // after the filter sort the cities back to AZ(optional)
-    sortCities("az")
+    
 
 
     // adding all generated catalongs to the id myCatalog
@@ -105,5 +106,7 @@ renderTops()
 document.querySelector("#btnFilter").addEventListener("click", function () {
     const txtFilter = document.querySelector("#sltFilter").value;    
     // render the top cards whit the filter type choosen
-    renderCatalog(txtFilter)
+    renderTops(txtFilter)
+    renderTops(txtFilter)
+     // for some reason atm theres a bug where the first card doesnt update and a second button press is needed so im running the render a second time for the time being
 })
