@@ -18,7 +18,8 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
              0, // xp
              1, // lvl
              0,// userQuestionID
-             " ",) // userLikes
+             " ",// userLikes
+             false,)//Admin check
 
         if(registerResult == true){
             //Close modal window

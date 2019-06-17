@@ -23,7 +23,7 @@ export function addComment(cityName,userName,date,stringTxt){
     const newComment = new Comment (cityName,userName,date,stringTxt)
     comments.push(newComment);
     localStorage.setItem("comments", JSON.stringify(comments))
-
+    
 }
 
 //################# fuction to get the date ###################

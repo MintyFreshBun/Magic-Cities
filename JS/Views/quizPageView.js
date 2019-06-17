@@ -1,6 +1,12 @@
-import { questions } from "../Controllers/quizController.js";
-import { users } from "../Controllers/usersController.js";
-import {updateNavbar} from "../Views/navBarView.js"
+import {
+  questions
+} from "../Controllers/quizController.js";
+import {
+  users
+} from "../Controllers/usersController.js";
+import {
+  updateNavbar
+} from "../Views/navBarView.js"
 
 //criação da navbar
 updateNavbar()
@@ -9,17 +15,20 @@ updateNavbar()
 let userQuestionId = sessionStorage.getItem("userQuestionId")
 
 // fazer uma função que dê render a tudo
-
 renderCurrentQuestion()
+renderNarrative()
 
 /**
  * Função que renderiza a questão atual
  */
-function renderCurrentQuestion() {  
+function renderCurrentQuestion() {
   for (const question of questions) {
-    if (question.id == userQuestionId){
+    if (question.id == userQuestionId) {
+
       // Nº da pergunta
-      document.querySelector("#QuestionNumber").innerHTML = `<p>Pergunta #${question.id}</p>`
+      document.querySelector("#QuestionNumber").innerHTML = `<p>Pergunta #${+question.id+1}</p>`
+      // Narração
+
       // Questão
       document.querySelector("#QuestionText").innerHTML = `<p>${question.description}</p>`
       // Respostas
@@ -29,20 +38,39 @@ function renderCurrentQuestion() {
         result += `<button id="${i}" type="button" class="btn btn-primary btn-lg resp">${response}</button>`
         result += `<div class="row"><hr></div>`
         i++
-      }      
+      }
       document.querySelector("#Buttons").innerHTML = result
+      document.querySelector("#Buttons").style.visibility = "hidden"
     }
-  } 
-  
-  // Obter 4 botõoes
+  }
+
+
+  // Obter 4 botões
   const buttons = document.getElementsByClassName("resp")
   for (const button of buttons) {
-    button.addEventListener("click", function() {
+    button.addEventListener("click", function () {
       checkAnswer(this.id)
-    })  
+    })
   }
-  
+
 }
+
+function renderNarrative() {
+  for (const question of questions) {
+    if (question.id == userQuestionId) {
+      // Narração
+      console.log(question.id)
+      console.log(userQuestionId)
+      console.log(question.narrative)
+      document.querySelector("#QuestionText").innerHTML = `<p style="font-size:30px">${question.narrative}</p>
+            
+      <button type="button" onclick="${renderCurrentQuestion()}" style="float: center" class="btn btn-primary btn-lg resp">Clica aqui para o ajudar</button>`
+
+    }
+  }
+
+}
+
 
 /**
  * 
@@ -50,9 +78,9 @@ function renderCurrentQuestion() {
  */
 function checkAnswer(answer) {
   for (const question of questions) {
-    if (question.id == userQuestionId){ 
-           
-      if(answer == question.correctResponse) {
+    if (question.id == userQuestionId) {
+
+      if (answer == question.correctResponse) {
         alert("CERTO")
 
        
@@ -64,9 +92,9 @@ function checkAnswer(answer) {
           
           user.userQuestionId += 1
           sessionStorage.setItem("userQuestionId", JSON.stringify(user.userQuestionId))
-
           if(user.username === sessionStorage.getItem("loggedUser")){
             if(user.xp >= 75){
+
               user.xp = 0
               user.level += 1
               
@@ -83,11 +111,10 @@ function checkAnswer(answer) {
      
             }
           }
-        }
 
-        
+        }
         localStorage.setItem("users", JSON.stringify(users))
-       
+
         //update da navbar
         updateNavbar()
         //update das perguntas
@@ -95,18 +122,16 @@ function checkAnswer(answer) {
         location.reload();
       } else {
         alert("ERRADO")
+
       }
+      break
     }
 
   }
 
 }
 
-
-
 // incrementar o userQuestionId sempre que o User acerta numa questão
-
-//userQuestionId++
-sessionStorage.setItem("userQuestionId", userQuestionId)
-
-// chamar a função renderCurrentQuestion para renderizar a proxima pergunta quando o User acerta numa questão
+// userQuestionId++
+// Chamar a função renderCurrentQuestion para renderizar a proxima pergunta quando o User acerta numa questão
+// renderCurrentQuestion()
