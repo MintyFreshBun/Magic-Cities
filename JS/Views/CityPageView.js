@@ -40,6 +40,7 @@ document.querySelector("#cityUpload").innerHTML = `<span class="font-weight-bold
 document.querySelector("#cityFave").innerHTML = `<span class="font-weight-bold ">Gostos: </span><span id="renderFave">${city.faves}</span> <button id="btn-Heart" type="button" class="btn btn-outline-danger">
 <img id="img-heart" src="../misc/Images/favorite-heart-button.png" style="width: 20px; height: 20px;">
 </button>`;
+document.querySelector("#googleMap").src = city.map;
 //sence likes change whit the button it will need to be in a render fuction
 function renderLikes(){
     document.querySelector("#renderFave").innerHTML = `${city.faves}`;
