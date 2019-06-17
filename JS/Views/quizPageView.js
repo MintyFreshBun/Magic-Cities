@@ -16,7 +16,7 @@ let userQuestionId = sessionStorage.getItem("userQuestionId")
 
 // fazer uma função que dê render a tudo
 renderCurrentQuestion()
-renderNarrative()
+//renderNarrative()
 
 /**
  * Função que renderiza a questão atual
@@ -30,6 +30,7 @@ function renderCurrentQuestion() {
       // Narração
 
       // Questão
+      document.querySelector("#narrativeBox").innerHTML= question.narrative
       document.querySelector("#QuestionText").innerHTML = `<p>${question.description}</p>`
       // Respostas
       let i = 0
@@ -40,7 +41,7 @@ function renderCurrentQuestion() {
         i++
       }
       document.querySelector("#Buttons").innerHTML = result
-      document.querySelector("#Buttons").style.visibility = "hidden"
+    //document.querySelector("#Buttons").style.visibility = "hidden"
     }
   }
 
@@ -55,7 +56,7 @@ function renderCurrentQuestion() {
 
 }
 
-function renderNarrative() {
+/*function renderNarrative() {
   for (const question of questions) {
     if (question.id == userQuestionId) {
       // Narração
@@ -70,7 +71,7 @@ function renderNarrative() {
   }
 
 }
-
+*/
 
 /**
  * 
@@ -81,10 +82,20 @@ function checkAnswer(answer) {
     if (question.id == userQuestionId) {
 
       if (answer == question.correctResponse) {
-        alert("CERTO")
+        //Correct popup button
+        Swal.fire({
+          type: 'success',
+          title: 'Certo! :D',
+          text: 'Parabéns! Agora para a próxima pergunta!',
+          buttons:{ confirm:"Próxima pergunta"
 
-       
-        
+          },
+       // It halts page reload until the "ok" button is clicked
+        }).then(val =>{
+          if(val){
+            location.reload()
+          }
+        })
 
         // acrescentar 25 xp ao User quando acerta numa questão e mover para a próxima pergunta
         for (const user of users) {
@@ -119,9 +130,13 @@ function checkAnswer(answer) {
         updateNavbar()
         //update das perguntas
         renderCurrentQuestion()
-        location.reload();
+        
       } else {
-        alert("ERRADO")
+        Swal.fire({
+          type: 'error',
+          title: 'Errado :(',
+          text: 'Boa sorte para a próxima!',
+        })
 
       }
       break
