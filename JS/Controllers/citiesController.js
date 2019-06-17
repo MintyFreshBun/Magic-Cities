@@ -35,7 +35,8 @@ if (localStorage.cities) {
    const vdcLong = -8.747849;
 
    //Funchal (nivel 5)
-
+   const fncLati = 32.660606; 
+   const fncLong = -16.924918;
 
 
 
@@ -44,11 +45,10 @@ if (localStorage.cities) {
     const city1 = new City("Ponta Delgada", "Açores", "1546","31/5/2019",1,1,0,0,"../IMG/Ponta-Delgada-cover.jpg","../IMG/PDL-Brasao.png","https://pt.wikipedia.org/wiki/Ponta_Delgada","Cidade central da Ilha São Miguel"," ",pdlLati,pdlLong)
     const city2 = new City("Porto","Norte","1112","31/5/2019",2,1,0,0,"../IMG/Porto.jpg","../IMG/Porto-Brasao.png","https://pt.wikipedia.org/wiki/Porto","Cidade Linda e boa para visitar"," ",prtLati,prtLong)
     const city3 = new City("Lisboa","Área Metropolitana de Lisboa","1147","1/6/2019",3,1,0,0,"../IMG/Lisboa.jpg","../IMG/LSB-Brasao.png" ,"https://pt.wikipedia.org/wiki/Lisboa","Cidade Grande e metropolitana e Capital"," ",lsdLati,lsdLong)
-    const city4 = new City("Vila do Conde","Norte","1988","31/6/2019",4,2,0,0,"../IMG/Vdc-cover.jpg","../IMG/VDC-Brasao.png","https://pt.wikipedia.org/wiki/Vila_do_Conde","Cidade perto do mar!"," ",vdcLati,vdcLong) 
-    const city5 = new City()
-
+    const city4 = new City("Vila do Conde","Norte","1988","17/6/2019",4,2,0,0,"../IMG/Vdc-cover.jpg","../IMG/VDC-Brasao.png","https://pt.wikipedia.org/wiki/Vila_do_Conde","Cidade perto do mar!"," ",vdcLati,vdcLong) 
+    const city5 = new City("Funchal","Madeira","1508","17/6/2019",5,5,0,0,"../IMG/Funchal-cover.jpg","../IMG/FNC-Brasao.png","https://pt.wikipedia.org/wiki/Funchal","Cidade principal da ilha da Madeia"," ",fncLati,fncLong)
     
-    cities.push(city1,city2,city3,city4)    
+    cities.push(city1,city2,city3,city4,city5)    
     localStorage.setItem("cities", JSON.stringify(cities))
 }
 
@@ -105,6 +105,16 @@ export function getCurrentCity() {
     for (let i = 0; i < cities.length; i++) {
         if (cities[i].name === city) {
             return cities[i]
+        }
+    }
+}
+
+export function getCurrentLvl(txtcity){
+//look up the city's index position on the object class 
+    for (let i = 0; i < cities.length; i++) {
+        if (cities[i].name === txtcity) {
+            //once found , return the cities lvl
+            return cities[i].level;
         }
     }
 }

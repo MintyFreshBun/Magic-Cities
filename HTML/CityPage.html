@@ -50,17 +50,10 @@
 
         <div class="col-md-6 " style="padding-top: 1%" >
           <!--################### GOOGLE Maps ZONE##################################-->
-          <div id="googleMap"></div> <!--It gets iffy when i bring this fuction to the javascripts i will have to try tomorrow   -->
+          <div id="googleMap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25239.416897237556!2d-25.696059305736423!3d37.74485415493512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb432acc76b00e97%3A0x765580f24e6fc416!2sPonta+Delgada!5e0!3m2!1spt-PT!2spt!4v1560768945950!5m2!1spt-PT!2spt" width="650px"  height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div> <!--It gets iffy when i bring this fuction to the javascripts i will have to try tomorrow   -->
 
-          <script>
-          function myMap() {
-            var mapProp = {
-              center: new google.maps.LatLng(37.73333, -25.66667),
-              zoom: 12,
-            };
-            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-          }
-        </script>
         <!--######################### END OF GOOGLE MAPS API#####################################-->
 
         </div>
@@ -163,7 +156,7 @@
     <script type="module" src="../JS/Views/CityPageView.js"></script>
     <script type="module" src="/JS/Views/navBarView.js"></script>
     <!--GOOGLE MAPS LYBRARY-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9HEeniC2SRtX0XSe_DWPETuWn5oFU7es&callback=myMap"></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9HEeniC2SRtX0XSe_DWPETuWn5oFU7es&callback=myMap"></script>-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
