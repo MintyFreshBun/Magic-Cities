@@ -1,11 +1,11 @@
 //################# Import section ###############
 import{
     cities,    
-    setCurrentCity,
-    sortCities,
+    setCurrentCity,    
     sortComments,
     sortLikes,
-    sortRecent
+    sortRecent,
+    getCurrentLvl
 } from "../Controllers/citiesController.js"
 
 
@@ -92,7 +92,12 @@ function renderTops(filterType = ""){
     const btnsCity = document.getElementsByClassName("view")
     for (const elem of btnsCity) {
         elem.addEventListener("click", function () {
-            setCurrentCity(this.id)
+            if(sessionStorage.getItem("userLvl") == getCurrentLvl(this.id)){
+                setCurrentCity(this.id)
+            }
+            else{
+                alert("O seu Nivel e' demasiado baixo! Joga quizzes para ganhares XP e aumentar o seu nivel!")
+            }
         })
     }
     

@@ -2,7 +2,7 @@
  * class model of a city
  */
 export default class City {
-    constructor(name, zone, date,upload, iddate, level, comments, faves,cover,brasao,link,desc,gallery,latitude,longitude) {
+    constructor(name, zone, date,upload, iddate, level, comments, faves,cover,brasao,link,desc,gallery,map) {
         this.name = name
         this.zone = zone
         this.date = date
@@ -16,8 +16,7 @@ export default class City {
         this.link = link
         this.desc = desc
         this.gallery = gallery
-        this.latitude = latitude
-        this.longitude = longitude
+        this.map = map       
         
         
     }
