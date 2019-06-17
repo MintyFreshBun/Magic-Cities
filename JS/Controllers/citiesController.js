@@ -28,10 +28,10 @@ if (localStorage.cities) {
    
    //Lisboa
    const lsbMap = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99580.03468299573!2d-9.230243382264508!3d38.743605703601276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331a61e4f33b%3A0x400ebbde49036d0!2sLisboa!5e0!3m2!1spt-PT!2spt!4v1560771869288!5m2!1spt-PT!2spt";
-   //Vila do Conde (nivel 2)
+   //Vila do Conde 
    const vdcMap = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23958.92354587857!2d-8.761721148313045!3d41.35527832307782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24441d30f3cc2b%3A0xf35fd2261be6b72f!2sVila+do+Conde!5e0!3m2!1spt-PT!2spt!4v1560771902551!5m2!1spt-PT!2spt";
    
-   //Funchal (nivel 5)
+   //Funchal (nivel 2)
    const fncMap = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53743.643668332144!2d-16.95969009006523!3d32.660036787752205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fc3501f8bab%3A0xffd84d2c15cda139!2sFunchal!5e0!3m2!1spt-PT!2spt!4v1560771763998!5m2!1spt-PT!2spt";
 
 
@@ -41,8 +41,8 @@ if (localStorage.cities) {
     const city1 = new City("Ponta Delgada", "Açores", "1546","31/5/2019",1,1,0,0,"../IMG/Ponta-Delgada-cover.jpg","../IMG/PDL-Brasao.png","https://pt.wikipedia.org/wiki/Ponta_Delgada","Cidade central da Ilha São Miguel"," ",pdlMap)
     const city2 = new City("Porto","Norte","1112","31/5/2019",2,1,0,0,"../IMG/Porto.jpg","../IMG/Porto-Brasao.png","https://pt.wikipedia.org/wiki/Porto","Cidade Linda e boa para visitar"," ",prtMap)
     const city3 = new City("Lisboa","Área Metropolitana de Lisboa","1147","1/6/2019",3,1,0,0,"../IMG/Lisboa.jpg","../IMG/LSB-Brasao.png" ,"https://pt.wikipedia.org/wiki/Lisboa","Cidade Grande e metropolitana e Capital"," ",lsbMap)
-    const city4 = new City("Vila do Conde","Norte","1988","17/6/2019",4,2,0,0,"../IMG/Vdc-cover.jpg","../IMG/VDC-Brasao.png","https://pt.wikipedia.org/wiki/Vila_do_Conde","Cidade perto do mar!"," ",vdcMap) 
-    const city5 = new City("Funchal","Madeira","1508","17/6/2019",5,5,0,0,"../IMG/Funchal-cover.jpg","../IMG/FNC-Brasao.png","https://pt.wikipedia.org/wiki/Funchal","Cidade principal da ilha da Madeia"," ",fncMap)
+    const city4 = new City("Vila do Conde","Norte","1988","17/6/2019",4,1,0,0,"../IMG/Vdc-cover.jpg","../IMG/VDC-Brasao.png","https://pt.wikipedia.org/wiki/Vila_do_Conde","Cidade perto do mar!"," ",vdcMap) 
+    const city5 = new City("Funchal","Madeira","1508","17/6/2019",5,2,0,0,"../IMG/Funchal-cover.jpg","../IMG/FNC-Brasao.png","https://pt.wikipedia.org/wiki/Funchal","Cidade principal da ilha da Madeia"," ",fncMap)
     
     cities.push(city1,city2,city3,city4,city5)    
     localStorage.setItem("cities", JSON.stringify(cities))
