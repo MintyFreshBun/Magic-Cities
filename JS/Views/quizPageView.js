@@ -128,7 +128,7 @@ function checkAnswer(answer) {
 
         //update da navbar
         updateNavbar()
-        //update das perguntas
+        //Chamar a função renderCurrentQuestion para renderizar a proxima pergunta quando o User acerta numa questão
         renderCurrentQuestion()
         
       } else {
@@ -148,5 +148,5 @@ function checkAnswer(answer) {
 
 // incrementar o userQuestionId sempre que o User acerta numa questão
 // userQuestionId++
-// Chamar a função renderCurrentQuestion para renderizar a proxima pergunta quando o User acerta numa questão
+// 
 // renderCurrentQuestion()

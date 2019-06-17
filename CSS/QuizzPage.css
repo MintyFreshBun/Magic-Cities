@@ -55,3 +55,12 @@ body {
     font-size: 30px;
     text-align: center;
 }
+
+#narrativeBox{
+    background-color:#e5a3a3;
+    border-radius: 12px;
+    margin:5%
+}
+#narrativeBox.p{
+    margin: 2%
+}
