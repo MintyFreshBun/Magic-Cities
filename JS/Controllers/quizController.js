@@ -12,28 +12,28 @@ if (localStorage.questions) {
         [
             "0", // id
             "1", // level
-            "Enquanto caminhas o distrito  de Viana do Castelo, deparas-te com um camponês, desorientado e confuso, sem saber para onde ir. Ele tem uma carta para ser enviada para Valdevez, mas não conhece o nome completo da cidade", // narrative
-            "Qual o nome complete desta cidade?", // description
+            "Enquanto caminhas pelo norte de portugal, deparas-te com um camponês, desorientado e confuso, sem saber para onde ir. Ele tem uma carta para ser enviada para uma cidade, mas não conhece o nome completo. Só sabe que começa por vila...e que foi fundada em 1988", // narrative
+            "Qual o nome completo desta cidade?", // description
             [
-                "Arcos de Valdevez",
-                "Prcos de Valdevez", // responses  
-                "Correntes de Valdevez",
-                "Braga de Valdevez"
+                "Vila do Conde",
+                "Vila do Minho", // responses  
+                "Vila do Camponês",
+                "Vila do Tejo"
             ],
-            1, //correctResponse
+            0, //correctResponse
             "25" // points
         ],
 
         [
             "1", // id
             "1", // level
-            "Bem vindo... narração", // narrative
-            "Descrição da pergunta#2.. etc", // description
+            "Segues sul, continuando ainda no norte do país e acabas uma cidade cheia de cores com o Rio Douro atravessando esta. Mas também lá, vagueiam pessoas confusas, cheias de dúvidas sobre aonde estão. Vês um placar com a data da fundação: ano 1112", // narrative
+            "Qual é o nome desta cidade?", // description
             [
-                "c",
-                "b", // responses
-                "a",
-                "d"
+                "Coimbra",
+                "Braga", // responses
+                "Porto",
+                "Lisboa",
             ],
             2, // correctResponse
             "25" // points
@@ -42,44 +42,44 @@ if (localStorage.questions) {
         [
             "2", // id
             "1", // level
-            "Bem vindo... narração", // narrative
-            "Descrição da pergunta#3.. etc", // description
+            "Continuas para sul e encontras-te agora no centro do país. Vês vários mercadores à procura do que devia ser a capital. Mais uma vês procuras pistas e descobres que esta foi fundada no ano 1147", // narrative
+            "Qual o nome desta cidade?", // description
             [
-                "1",
-                "2", // responses
-                "3",
-                "4"
+                "Porto",
+                "Lisboa", // responses
+                "Setúbal",
+                "Tejo"
             ],
-            0, // correctResponse
+            1, // correctResponse
             "25" // points
         ],
 
         [
             "3", // id
             "1", // level
-            "Bem vindo... narração", // narrative
-            "Descrição da pergunta#4.. etc", // description
+            "Encontras um portal que te leva para uma das ilhas dos açores. Encontras-te agora numa praia com pescadores que se preparavam para pescar, mas agora não sabiam se estavam no lugar certo. Vêm ter contigo para perguntar aonde estão. Sabem que estão num lugar chamado de ponta, mas não sabem o resto. Mais pistas que descobres levam-te a concluir que esta cidade foi fundada no ano 1546", // narrative
+            "Qual o nome desta cidade?", // description
             [
-                "111",
-                "22", // responses
-                "33asda",
-                "4dsda"
+                "Ponte do Lima",
+                "Ponta do Minho", // responses
+                "Ponta de Setúbal",
+                "Ponta Delgada"
             ],
-            1, // correctResponse
+            3, // correctResponse
             "25" // points
         ],
         [
             "6", // id
             "1", // level
-            "Bem vindo... narraçãsdsdso", // narrative
-            "Descrição da pergunta#4.. etc", // description
+            "Voltas ao portal de onde vieste mas não voltas-te ao continente. Continuas numa das ilhas, desta vez numa das ilhas da Madeira. Sabes que estás na capital deste arquipélago. Várias pessoas vêm ter contigo para lhes dizeres aonde estão e porque estão rodeadas pelo mar. As tuas pistas indicam que esta cidade foi fundada no ano de 1508", // narrative
+            "Qual o nome desta cidade?", // description
             [
-                "111",
-                "22", // responses
-                "33asda",
-                "4dsda"
+                "Funchal",
+                "Camacha", // responses
+                "Deserta grande",
+                "Porto Santo"
             ],
-            1, // correctResponse
+            0, // correctResponse
             "25" // points
         ]
         
