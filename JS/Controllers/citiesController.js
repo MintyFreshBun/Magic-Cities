@@ -84,15 +84,19 @@ export function sortRecent(){
 // fuctions to add and Remove cities
 
 //Add city
-export function addCity(txtCity,txtLevel,sltZone,txtDate,txtCover,txtBrasao,txtMap,txtLink,txtDescription,txtImg1,txtImg2,txtImg3){
+export function addCity(txtCity){
+    // current note issuies, at the view you have to put them in seperate parts and then check if each individual part is orrect her in order 
     let existCity = false
     //search if the city already exists
     for (const city of cities) {
-        if ((city.name).toLowerCase() === txtCity.toLowerCase()) {
+
+        
+        if (city.name === txtCity) {            
             existCity = true
         }
     }
     if (!existCity) {
+        /*
         //if the city doesnt exists then it will push all the information in to the cities object
         //default information , idDate , likes, comments count, upload date,
         const idDate = cities.length + 1;
@@ -102,7 +106,7 @@ export function addCity(txtCity,txtLevel,sltZone,txtDate,txtCover,txtBrasao,txtM
         const galleryStr = txtImg1 + "," + txtImg2 + "," + txtImg3;
         cities.push(new City(txtCity, sltZone, txtDate, upload, idDate,txtLevel,comments,faves,txtCover,txtBrasao,txtLink,txtDescription,galleryStr,txtMap))
         localStorage.setItem("cities", JSON.stringify(cities))
-        //add a sweet alert 2
+        //add a sweet alert 2*/
 
         Swal.fire({            
             title:'Cidade adicionada!',
@@ -113,7 +117,7 @@ export function addCity(txtCity,txtLevel,sltZone,txtDate,txtCover,txtBrasao,txtM
           }).then((result) => {
             if (result.value) {
                 // Goes back to the Cities catalog to check the newly added city
-                location.href = "HTML/CatalogPage.html"
+                location.href = "CatalogPage.html"
             }
         })
         
