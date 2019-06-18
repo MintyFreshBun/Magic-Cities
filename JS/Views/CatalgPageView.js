@@ -81,7 +81,7 @@ function renderCatalog (filterName = "", filterZone = ""){
         elem.addEventListener("click", function () {
             //in condition where, if the user is too low it doesnt allow to go to the cities page and a promp will show warning the player
             //ask the teacher on this part , im thinking a fuction to find the cities possition sence we DO have the cities name in the buttions id 
-            if(sessionStorage.getItem("userLvl") == getCurrentLvl(this.id)){
+            if(sessionStorage.getItem("userLvl") >= getCurrentLvl(this.id)){
                 setCurrentCity(this.id)
             }
             else{
