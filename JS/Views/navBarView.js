@@ -17,8 +17,10 @@ export function updateNavbar(){
           <img src="../misc/Images/DG_favicon-02.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">
           `
           document.querySelector("#userContainer").innerHTML +=`<img src="../misc/Images/DG_favicon-02.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
-          document.querySelector("#userContainer").innerHTML +=`<a class="navbar-brand text-white col-md-2" href="#welcomeUser">Welcome ${sessionStorage.getItem("loggedUser")} !</a>
-        </div>
+          document.querySelector("#userContainer").innerHTML +=`<a class="navbar-brand text-white col-md-2" href="#welcomeUser">Welcome ${sessionStorage.getItem("loggedUser")} !</a>`
+
+       
+          document.querySelector("nav").innerHTML +=`</div>
       
       <div class="justify-content-end d-inline-flex col-md-6 " >
         <div class="col-md-2 align-self-center text-white  font-weight-bold" >Nivel ${sessionStorage.getItem("userLvl")}</div>
