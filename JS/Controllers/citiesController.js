@@ -160,6 +160,19 @@ function currentDate() {
     return fulldate;
 }
 
+//#### fuction to remove a city
+
+export function removeCity(txtCity){
+    //sweet alrt confirmation
+    for (let i = 0; i < cities.length; i++) {
+        if (cities[i].name === txtCity) {
+            cities.splice(i, 1)
+        }
+    }
+    localStorage.setItem("cities", JSON.stringify(cities))
+
+}
+
 
 
 

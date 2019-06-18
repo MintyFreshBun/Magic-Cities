@@ -3,7 +3,8 @@ import{
     cities,
     sortCities,
     setCurrentCity,
-    getCurrentLvl
+    getCurrentLvl,
+    removeCity
 } from "../Controllers/citiesController.js"
 
 
@@ -116,9 +117,7 @@ function renderCatalog (filterName = "", filterZone = ""){
               }).then((result) => {
                 if (result.value) {
                     /// add the export fuction to remove ( add in the code once the add cities is done ) 
-
-
-
+                    removeCity(this.id);
 
                   Swal.fire(
                     'Removida!',
