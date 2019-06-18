@@ -81,6 +81,10 @@ export function sortRecent(){
     localStorage.setItem("cities", JSON.stringify(cities))
 }
 
+// fuctions to add and Remove cities
+
+
+
 
 
 
