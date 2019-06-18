@@ -49,24 +49,24 @@
                 <p class="lead">Adicionar uma Nova Cidade</p>
                 <hr class="my-2">
                 <p>
-                    <form id="frmAddQuestion">
+                    <form id="frmAddCity">
                         <div class="row">
                             <div class="form-group col-6">
-                                <label for="txtNome">Nome da Cidade</label>
-                                <input type="text" class="form-control" id="txtQuestion" required>
+                                <label for="txtName">Nome da Cidade</label>
+                                <input type="text" class="form-control" id="txtName" required>
                             </div>
                             
                             <div class="form-group col-3">
-                                <label for="txtNome">Nivel</label>
-                                <input type="text" class="form-control" id="txtQuestion" required>
+                                <label for="txtLevel">Nivel</label>
+                                <input type="text" class="form-control" id="txtLevEl" required>
                             </div>  
 
                         </div>
                         
                         <div class="row">
                             <div class="form-group col-5">
-                                <label for="txtQuestion">Zona</label>
-                                <select class="form-control" id="exampleFormControlSelect1" required>
+                                <label for="sltZone">Zona</label>
+                                <select class="form-control" id="sltZone" required>
                                     <option>Norte</option>
                                     <option>Centro</option>
                                     <option>Área Metropolitana de Lisboa</option>
@@ -77,48 +77,50 @@
                                 </select>
                             </div>
                             <div class="form-group col-4">
-                                <label for="txtNome">Data de Reconhecimento</label>
-                                <input type="text" class="form-control" id="txtQuestion" required>
+                                <label for="txtDate">Data de Reconhecimento</label>
+                                <input type="text" class="form-control" id="txtDate" required>
                             </div>
                         </div>                       
 
                         <!-- SRC da cover--> 
                         <div class="form-group ">
-                            <label for="txtNome">Link da Image da cidade </label>
-                            <input type="text" class="form-control" id="txtQuestion" required>
+                            <label for="txtCover">Link da Image da cidade </label>
+                            <input type="text" class="form-control" id="txtCover" required>
                         </div>
 
                         <!-- SRC do brasaor--> 
                         <div class="form-group ">
-                            <label for="txtNome">Link da Image do brasão </label>
-                            <input type="text" class="form-control" id="txtQuestion" required>
+                            <label for="txtBrasao">Link da Image do brasão </label>
+                            <input type="text" class="form-control" id="txtBrasao" required>
                         </div>
                         
                         <!-- Imformation on how to get the map src and map src--> 
                         <div class="form-group ">
-                            <label for="txtNome">src do mapa </label>
-                            <p>Informaçao</p>
-                            <input type="text" class="form-control" id="txtQuestion" required>
+                            <label for="txtMap">Source do mapa </label>
+                            <p style="color:lightslategray">
+                                (Pode obter o source do mapa atravez do google maps, em "partilhar", em "imcorporar o mapa", e copiar o "src" do link. )
+                            </p>
+                            <input type="text" class="form-control" id="txtMap" required>
                         </div>
 
                         <!-- Link wiki--> 
                         <div class="form-group ">
-                            <label for="txtNome">Link da pagina Wiki ou equivalente </label>
-                            <input type="text" class="form-control" id="txtQuestion" required>
+                            <label for="txtLink">Link da pagina Wiki ou equivalente </label>
+                            <input type="text" class="form-control" id="txtLink" required>
                         </div>
 
                         <!-- Description-->
                         <div class="form-group ">
-                            <label for="txtNome">Descrição da Cidade </label>
-                            <input type="textarea" class="form-control" id="txtQuestion" required>
+                            <label for="txtDescription">Descrição da Cidade </label>
+                            <textarea class="form-control" id="txtDescription" rows="3"></textarea>
                         </div> 
 
                         <!-- Galleria srcs  and info (size req) ( need to add/fix the gallery on the model and controolls and get it to work)-->
                         <div class="form-group ">
-                            <label for="txtNome"> Imagesn da Galeria </label>
-                            <input type="textarea" class="form-control" id="txtQuestion" required> <br>
-                            <input type="textarea" class="form-control" id="txtQuestion" > <br>
-                            <input type="textarea" class="form-control" id="txtQuestion" > <br>
+                            <label for="txtImg"> Imagesn da Galeria </label>
+                            <input type="text" class="form-control" placeholder="Imagem 1..." id="txtImg1" required> <br>
+                            <input type="text" class="form-control" placeholder="Imagem 2..." id="txtImg2" required > <br>
+                            <input type="text" class="form-control" placeholder="Imagem 3..." id="txtImg3" required> <br>
                         </div> 
 
 
@@ -138,6 +140,7 @@
 
     <!-- Optional JavaScript -->
     <script type="module" src="/JS/Views/navBarView.js"></script>
+    <script type="module" src="/JS/Views/AddCityView.js"></script>
     <!--SweetAlert connection-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="sweetalert2.all.min.js"></script>

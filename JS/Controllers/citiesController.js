@@ -83,6 +83,72 @@ export function sortRecent(){
 
 // fuctions to add and Remove cities
 
+//Add city
+export function addCity(txtCity,txtLevel,sltZone,txtDate,txtCover,txtBrasao,txtMap,txtLink,txtDescription,txtImg1,txtImg2,txtImg3){
+    let existCity = false
+    //search if the city already exists
+    for (const city of cities) {
+        if (city.name === txtCity) {
+            existCity = true
+        }
+    }
+    if (!existCity) {
+        //if the city doesnt exists then it will push all the information in to the cities object
+        //default information , idDate , likes, comments count, upload date,
+        const idDate = cities.length + 1;
+        const faves = 0;
+        const comments = 0 ;
+        const upload = currentDate();
+        const galleryStr = txtImg1 + "," + txtImg2 + "," + txtImg3;
+        cities.push(new City(txtCity, sltZone, txtDate, upload, idDate,txtLevel,comments,faves,txtCover,txtBrasao,txtLink,txtDescription,galleryStr,txtMap))
+        localStorage.setItem("cities", JSON.stringify(cities))
+        //add a sweet alert 2
+
+        Swal.fire({            
+            title:'Cidade adicionada!',
+            text:`${txtCity}  foi adicionada.`,            
+            type: 'success',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Sim, Remova!'
+          }).then((result) => {
+            if (result.value) {
+                // Goes back to the Cities catalog to check the newly added city
+                location.href = "HTML/CatalogPage.html"
+            }
+        })
+        
+        
+    } else {
+        Swal.fire({
+            title:'..oops.',
+            text:`${txtCity} ja existe.`,            
+            type:'error'
+          })        
+    }
+
+}
+
+//## fuction to get the current date of creation
+function currentDate() {
+    let fulldate = "";
+    let today = new Date();
+
+    //fuction to add a 0 to minutes and months so it has a two digit format
+    function addZero(i){
+        if (i < 10) {
+            i = "0" + i;
+          }
+          return i;
+    }
+
+
+    let time = today.getHours() + ":" + addZero(today.getMinutes());
+    let date = +today.getDate()+'-'+ addZero((today.getMonth()+1))+'-'+today.getFullYear();
+    
+    fulldate =  time + " " + date ;
+
+    return fulldate;
+}
 
 
 

@@ -147,7 +147,7 @@ if(sessionStorage.getItem("admin") == true){
 }
 
 document.querySelector(".form-Class").addEventListener("click", function () {
-    location.href = "AddCityBackOfficePage.html"
+    location.href = "AddCityPage.html"
 })
 
 
