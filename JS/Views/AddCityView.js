@@ -7,10 +7,7 @@ document.querySelector("#frmAddCity").addEventListener("submit", function (event
     // Invocação a função importada do fx main.js chamada addBand
     console.log("submission clicked")
     addCity(
-        document.querySelector("#txtName").value
-        )
-    // Prevent the submition of the form
-    /*,
+        document.querySelector("#txtName").value,
         document.querySelector("#txtLevel").value,
         document.querySelector("#sltZone").value,
         document.querySelector("#txtDate").value,
@@ -21,7 +18,12 @@ document.querySelector("#frmAddCity").addEventListener("submit", function (event
         document.querySelector("#txtDescription").value,
         document.querySelector("#txtImg1").value,
         document.querySelector("#txtImg2").value,
-        document.querySelector("#txtImg3").value*/
+        document.querySelector("#txtImg3").value
+
+        )
+    // Prevent the submition of the form
+    /*,
+        */
 
     event.preventDefault()
 })

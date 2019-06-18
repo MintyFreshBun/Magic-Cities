@@ -84,19 +84,25 @@ export function sortRecent(){
 // fuctions to add and Remove cities
 
 //Add city
-export function addCity(txtCity){
+export function addCity(txtCity,txtLevel,sltZone,txtDate,txtCover,txtBrasao,txtMap,txtLink,txtDescription,txtImg1,txtImg2,txtImg3){
     // current note issuies, at the view you have to put them in seperate parts and then check if each individual part is orrect her in order 
     let existCity = false
+    let citynew = txtCity;
+    citynew = citynew.toLowerCase();
     //search if the city already exists
     for (const city of cities) {
 
+        let cityLow = city.name;        
+        cityLow = cityLow.toLowerCase();
         
-        if (city.name === txtCity) {            
+
+        
+        if (cityLow == citynew) {            
             existCity = true
         }
     }
     if (!existCity) {
-        /*
+        
         //if the city doesnt exists then it will push all the information in to the cities object
         //default information , idDate , likes, comments count, upload date,
         const idDate = cities.length + 1;
