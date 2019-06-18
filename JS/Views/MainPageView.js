@@ -92,7 +92,7 @@ function renderTops(filterType = ""){
     const btnsCity = document.getElementsByClassName("view")
     for (const elem of btnsCity) {
         elem.addEventListener("click", function () {
-            if(sessionStorage.getItem("userLvl") == getCurrentLvl(this.id)){
+            if(sessionStorage.getItem("userLvl") >= getCurrentLvl(this.id)){
                 setCurrentCity(this.id)
             }
             else{
