@@ -88,7 +88,7 @@ export function addCity(txtCity,txtLevel,sltZone,txtDate,txtCover,txtBrasao,txtM
     let existCity = false
     //search if the city already exists
     for (const city of cities) {
-        if (city.name === txtCity) {
+        if ((city.name).toLowerCase() === txtCity.toLowerCase()) {
             existCity = true
         }
     }
