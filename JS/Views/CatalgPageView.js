@@ -9,7 +9,7 @@ import{
 
 
 
-/* ######################### Fucntion CALLER  section ################### */
+/* ######################### Fucntion CALLER  section when entering the first time ################### */
 renderCatalog()
 
 /* ########################### Fuction code section ######################## */
@@ -50,7 +50,15 @@ function renderCatalog (filterName = "", filterZone = ""){
                     <h4 class="card-title font-weight-bold">${city.name}</h4>
                     <p class="card-text"> <spam class="font-weight-bold">Ano Fundada:</spam> ${city.date} </p>
                     <p class="card-text"> <spam class="font-weight-bold">Zona</spam>: ${city.zone} </p>
-                    <button type="button" id="${city.name}" class="btn btn-primary view"> Visitar Pagina</button>
+
+                    <div class="row" style="padding-top: 2%">
+                        <div class="col"><button type="button" id="${city.name}" class="btn btn-primary view"> Visitar Pagina</button></div>`
+                        if(sessionStorage.getItem("admin") == true){ // if the user is an admin thne the remove button will show
+                            result+= `<div class="col"><button type="button" id="${city.name}" class="btn btn-danger remove"> Remover</button></div>`
+                        }
+                                            
+                    result+=`</div>
+
                     <div class="row" style="padding-top: 2%">
                         <div class="col"> ${city.faves} <img src="../misc/Images/favorite-heart-button-click.png" style="width: 20px; height: 20px;"></div>
                         <div class="col"> ${city.comments} <img src="../misc/Images/comment-black-oval-bubble-shape.png" style="width: 20px; height: 20px;"></div>
@@ -92,8 +100,60 @@ function renderCatalog (filterName = "", filterZone = ""){
     }
     
 
+    // fuction of the Remove button
+    const btnsRemove = document.getElementsByClassName("remove")
+    for (const elem of btnsRemove) {
+        elem.addEventListener("click", function () {             
+            // will need a sweet  alert to confirm the awnser
+            Swal.fire({
+                title: 'Tem a certeza?',
+                text: "A cidade vai ser removida!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, Remova!'
+              }).then((result) => {
+                if (result.value) {
+                    /// add the export fuction to remove ( add in the code once the add cities is done ) 
+
+
+
+
+                  Swal.fire(
+                    'Removida!',
+                    'A ciade foi removida.',
+                    'success'
+                  )
+                  renderCatalog();                  
+                }
+              })
+              
+
+
+            
+        })
+    }
+
     
 }
+
+// adding the add city button if admin == true and its fuctions
+if(sessionStorage.getItem("admin") == true){
+    document.querySelector(".form-Class").innerHTML += `<button type="button" class="btn btn-primary m-2">
+    Adicionar Cidade
+    </button>`
+
+}
+
+document.querySelector(".form-Class").addEventListener("click", function () {
+    location.href = "AddCityPage.html"
+})
+
+
+// add the 
+
+
 
 // Sorting catalog button fuction ( we have to do a special toggle where we CAN ORganize from A to Z then Z to A)
 let sortOrder = "az"; // variable that will decide the order
