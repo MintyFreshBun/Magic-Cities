@@ -10,7 +10,12 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
     const confirmPass = document.querySelector("#passwordRegisterConfirm").value
 
     if(pass!==confirmPass){
-        alert("As passwords Têm de ser iguais")
+        Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'As passwords Têm de ser iguais',
+          })
+      
     }else{
         const registerResult = register(
             document.querySelector("#usernameRegister").value,
@@ -25,12 +30,21 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
             //Close modal window
             $('#signupModal').modal('hide')
             //Present the authentication of the user
-            alert(`Olá ${sessionStorage.getItem("loggedUser")}`)
-            //Sends the user to the mainPage
-            location.href = "HTML/MainPage.html";
+            Swal.fire(`Olá ${sessionStorage.getItem("loggedUser")}`).then(val =>{
+                if(val){
+                    //Sends the user to the mainPage
+                    location.href = "HTML/MainPage.html";
+                }
+              })
+            
+            
            
         }else{
-            alert("Credenciais já existentes")
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Credenciais já existentes',
+              })
         }
     }
     //Prevenção da submissão do formulário
@@ -47,11 +61,19 @@ document.querySelector("#frmLogin").addEventListener("submit", function (event){
     event.preventDefault()
     if(loginResult === true){
           //Sends the user to the mainPage
-        alert(`Welcome ${sessionStorage.getItem("loggedUser")}`)
-        location.href = "HTML/MainPage.html";
-    }else{
+          Swal.fire(`Olá ${sessionStorage.getItem("loggedUser")}`).then(val =>{
+            if(val){
+                location.href = "HTML/MainPage.html";
+            }
+          })
         
-        alert("Username ou password está inválido. Tente novamente")
+    }else{
+        Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Username ou password está inválido. Tenta novamente',
+          })
+        
     }
 
 })

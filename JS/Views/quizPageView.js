@@ -30,7 +30,7 @@ function renderCurrentQuestion() {
       // Narração
 
       // Questão
-      document.querySelector("#narrativeBox").innerHTML= question.narrative
+      document.querySelector("#narrativeBox").innerHTML= `<p>${question.narrative}</p>`
       document.querySelector("#QuestionText").innerHTML = `<p>${question.description}</p>`
       // Respostas
       let i = 0
@@ -82,20 +82,8 @@ function checkAnswer(answer) {
     if (question.id == userQuestionId) {
 
       if (answer == question.correctResponse) {
-        //Correct popup button
-        Swal.fire({
-          type: 'success',
-          title: 'Certo! :D',
-          text: 'Parabéns! Agora para a próxima pergunta!',
-          buttons:{ confirm:"Próxima pergunta"
-
-          },
-       // It halts page reload until the "ok" button is clicked
-        }).then(val =>{
-          if(val){
-            location.reload()
-          }
-        })
+        
+        
 
         // acrescentar 25 xp ao User quando acerta numa questão e mover para a próxima pergunta
         for (const user of users) {
@@ -115,11 +103,37 @@ function checkAnswer(answer) {
               sessionStorage.setItem("userXP", JSON.stringify(user.xp))
          
 
-              alert("Parabéns! Passas-te para o próximo nível!")
+              Swal.fire({
+                type: 'success',
+                title: `Nivel ${user.level}`,
+                text: 'Parabéns! Passas-te de nível!',
+                buttons:{ confirm:"Próxima pergunta"
+      
+                },
+             // It halts page reload until the "ok" button is clicked
+              }).then(val =>{
+                if(val){
+                  location.reload()
+                }
+              })
             }else{
             user.xp += 25
             sessionStorage.setItem("userXP", JSON.stringify(user.xp))
-     
+          
+          //Correct popup button
+            Swal.fire({
+              type: 'success',
+              title: 'Certo! :D',
+              text: 'Parabéns! Agora para a próxima pergunta!',
+              buttons:{ confirm:"Próxima pergunta"
+    
+              },
+           // It halts page reload until the "ok" button is clicked
+            }).then(val =>{
+              if(val){
+                location.reload()
+              }
+            })
             }
           }
 
@@ -145,8 +159,3 @@ function checkAnswer(answer) {
   }
 
 }
-
-// incrementar o userQuestionId sempre que o User acerta numa questão
-// userQuestionId++
-// 
-// renderCurrentQuestion()
