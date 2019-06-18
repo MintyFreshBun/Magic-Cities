@@ -31,6 +31,12 @@ function updateNavbar(){
         `
     }
 }
+if(sessionStorage.getItem("admin") === "true"){
+  document.querySelector("#sideColumn").innerHTML=`<button type="button" class="btn btn-danger" id="manageQuestionBtn">Manage Questions</button>`
+  document.querySelector("#manageQuestionBtn").addEventListener("click", function(){
+    location.href="../HTML/manageQuestionBackOffice.html"
+  })
+}
 
 //Logout button deletes current user info and sends the user back into the landing page
 document.querySelector("#logoutBtn").addEventListener("click", function(){
