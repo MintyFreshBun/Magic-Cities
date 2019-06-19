@@ -45,18 +45,18 @@
     
         <div class="container-fluid">
             <div class="jumbotron">
-                <h1 class="display-3">Nova questao</h1>
-                <p class="lead">Adicionar uma nova questao</p>
+                <h1 class="display-3">Nova Pergunta</h1>
+                <p class="lead">Adicionar uma nova pergunta</p>
                 <hr class="my-2">
                 <p>
                     <form id="frmAddQuestion">
                         <div class="form-group">
-                            <label for="txtDescription">Narração</label>
-                            <textarea class="form-control" id="txtDescription" rows="3"></textarea>
+                            <label for="txtNarrative">Narração</label>
+                            <textarea class="form-control" id="txtNarrative" rows="3"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="txtQuestion">Descrição da Pergunta</label>
-                            <input type="text" class="form-control" id="txtQuestion" required>
+                            <label for="txtDescription">Descrição da Pergunta</label>
+                            <input type="text" class="form-control" id="txtDescription" required>
                         </div>
                         <div class="form-group">
                                 <label for="firstAnswer">Primeira Resposta</label>
@@ -74,6 +74,7 @@
                                 <label for="fourthAnswer">Quarta Resposta</label>
                                 <input type="text" class="form-control" id="fourthAnswer" required>
                             </div>
+                            
                             <div class="form-row">
                                     <div class="form-group col-sm-3">
                                         <label for="correctAnswer">Resposta correta</label>
@@ -85,8 +86,12 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="questionLevel">Nível da Pergunta</label>
+                                    <input type="text" class="form-control" id="questionLevel" required>
+                                </div>
                         
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <input type="submit" class="btn btn-primary"></input>
                         <button type="reset" class="btn btn-danger">Reset</button>
                     </form>
     

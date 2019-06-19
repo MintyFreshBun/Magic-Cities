@@ -69,14 +69,14 @@ if (localStorage.questions) {
             "25" // points
         ],
         [
-            "6", // id
-            "1", // level
+            "4", // id
+            "2", // level
             "Voltas ao portal de onde vieste mas não voltas-te ao continente. Continuas numa das ilhas, desta vez numa das ilhas da Madeira. Sabes que estás na capital deste arquipélago. Várias pessoas vêm ter contigo para lhes dizeres aonde estão e porque estão rodeadas pelo mar. As tuas pistas indicam que esta cidade foi fundada no ano de 1508", // narrative
             "Qual o nome desta cidade?", // description
             [
                 "Funchal",
                 "Camacha", // responses
-                "Deserta grande",
+                "Deserta Grande",
                 "Porto Santo"
             ],
             0, // correctResponse
@@ -103,3 +103,36 @@ if (localStorage.questions) {
     localStorage.setItem("questions", JSON.stringify(questions))
 }
 
+export function removeQuestion(questionId){
+    for (let i = 0; i < questions.length; i++) {
+        if (questions[i].id === questionId) {
+            questions.splice(i, 1)
+        }
+    }
+    localStorage.setItem("questions", JSON.stringify(questions))
+}
+
+export function addQuestion(){
+const points = 25/*correctAnswer, txtNarrative, txtDescription, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, questionLevel*/
+const id = question.length;
+/*/
+const responses=[
+    firstAnswer,secondAnswer,thirdAnswer,fourthAnswer
+]*/
+/*
+questions.push(id,questionLevel,txtNarrative,txtDescription,responses,correctAnswer,points)
+localStorage.setItem("questions", JSON.stringify(questions))*/
+alert("Pergunta adicionada com sucesso!")
+/*Swal.fire({            
+    title:'Pergunta adicionada',         
+    type: 'success',
+    confirmButtonColor: '#3085d6',
+    confirmButtonText: 'OK!'
+  }).then((result) => {
+    if (result.value) {
+        // Goes back to the Cities catalog to check the newly added city
+        location.href = "manageQuestionBackOffice.html"
+    }
+})
+*/
+}
