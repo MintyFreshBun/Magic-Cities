@@ -123,7 +123,7 @@ function renderCatalog (filterName = "", filterZone = ""){
 
                   Swal.fire(
                     'Removida!',
-                    'A ciade foi removida.',
+                    'A cidade foi removida.',
                     'success'
                   )
                   renderCatalog();                  
