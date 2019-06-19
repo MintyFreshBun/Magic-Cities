@@ -112,27 +112,27 @@ export function removeQuestion(questionId){
     localStorage.setItem("questions", JSON.stringify(questions))
 }
 
-export function addQuestion(){
-const points = 25/*correctAnswer, txtNarrative, txtDescription, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, questionLevel*/
-const id = question.length;
-/*/
-const responses=[
-    firstAnswer,secondAnswer,thirdAnswer,fourthAnswer
-]*/
-/*
-questions.push(id,questionLevel,txtNarrative,txtDescription,responses,correctAnswer,points)
-localStorage.setItem("questions", JSON.stringify(questions))*/
-alert("Pergunta adicionada com sucesso!")
-/*Swal.fire({            
-    title:'Pergunta adicionada',         
-    type: 'success',
-    confirmButtonColor: '#3085d6',
-    confirmButtonText: 'OK!'
-  }).then((result) => {
-    if (result.value) {
-        // Goes back to the Cities catalog to check the newly added city
-        location.href = "manageQuestionBackOffice.html"
-    }
-})
-*/
+export function addQuestion(correctAnswer, txtNarrative, txtDescription, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, questionLevel){
+    
+    const points = 25;
+    const id = questions.length;
+    
+    const responses=[
+        firstAnswer,secondAnswer,thirdAnswer,fourthAnswer
+    ]
+    questions.push(new Question(id,questionLevel,txtNarrative,txtDescription,responses,correctAnswer,points))
+    localStorage.setItem("questions", JSON.stringify(questions))
+    console.log("entered")
+    Swal.fire({            
+        title:'Pergunta adicionada',         
+        type: 'success',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK!'
+    }).then((result) => {
+        if (result.value) {
+            // Goes back to the Cities catalog to check the newly added city
+            location.href = "manageQuestionBackOffice.html"
+        }
+    })
+    
 }
