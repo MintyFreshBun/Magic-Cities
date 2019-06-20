@@ -6,13 +6,13 @@ export let sugestions=[]
 // In case a user object exists in LocalStorage, this one is loaded into the array
 //Otherwise, they are saved into the array with several objects User are inserted manualy
 //question whit date now is the format it wil present, in the end it will effect the sorting date
-if(localStorage.comments){
+if(localStorage.sugestions){
     sugestions = JSON.parse(localStorage.sugestions)
 }else{
     //change the user names
-    const sugestion1= new Sugestion("Adicione Ponta Delgada", "AnaBella", "15:45 8-6-2019",1)
-    const sugestion2= new Sugestion("Adicione Lagoa", "João14-6","17:25 9-6-2019",2)
-    const sugestion3= new Sugestion("Nao gosto do site!", "JorgeBlaze ","16:31 10-6-2019",3)
+    const sugestion1= new Sugestion("Adicione Ponta Delgada", "Mint", "15:45 8-6-2019",1)
+    const sugestion2= new Sugestion("Adicione Lagoa", "Luis","17:25 9-6-2019",2)
+    const sugestion3= new Sugestion("Nao gosto do site!", "joao","16:31 10-6-2019",3)
     sugestions.push(sugestion1,sugestion2,sugestion3);
     localStorage.setItem("sugestions", JSON.stringify(sugestions))
 }

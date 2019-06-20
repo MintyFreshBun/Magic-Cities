@@ -4,6 +4,8 @@ import {
 } from "../Controllers/sugestionController.js"
 
 
+
+//###########sectionfor the user part of the suggestion page !
 //button fuction and sweet alert
 
 const btnSugestion = document.querySelector("#btnSugest")
@@ -17,3 +19,8 @@ btnSugestion.addEventListener("click", function(){
     
 
 })
+
+
+
+/// ##############addmin sujection page part
+const adminview = document.querySelector("#adminview")
