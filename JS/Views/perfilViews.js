@@ -85,13 +85,22 @@ document.querySelector("#frmNewPass").addEventListener("submit",function(event){
 
       //Checks if the inputted passwords match
       if(document.querySelector("#changePassword").value== document.querySelector("#changePasswordConfirm").value){
+       if(document.querySelector("#changePasswordConfirm").value !== ""){
+        const pass = document.querySelector("#changePasswordConfirm").value
         //adds new password to user
-        newPass(document.querySelector("#changePasswordConfirm"))
-        localStorage.setItem("users", JSON.stringify(users))
+        newPass(pass)
         Swal.fire({
           type: 'success',
           text: 'As passwords foram mudadas com sucesso!',
         })
+      }else{
+        Swal.fire({
+          type: 'error',
+          title: 'Oops...',
+          text: 'Por favor preencha os campos vazios',
+          footer: 'Tente novamente!'
+        })
+      }
       }else{
 
         Swal.fire({
