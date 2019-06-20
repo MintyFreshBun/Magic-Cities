@@ -59,33 +59,36 @@
         <br>        
         <div class="row  align-self-center" style="padding: 2%">
             <!-- ############### HAARDCODE FOR JS INJECTION######## -->
-
-            
-
-            <h2>Tem alguma cidade em mente? Mandanos uma sujestão! </h2>
-
-            
-
-            
-                <div class="row  justify-content-between" style="width: 96%">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3 class="text-white ">
+                    Tem alguma sugestão para uma cidade? Envianos uma mensagem!
+                  </h3>
+                  <br>
+                  <div class="row">
                     <div class="col-md-10">
-                        <textarea id="sugestionArea" placeholder="Escreva a sua sujestão..." row="3" col="50" ></textarea>
+                     <textarea id="txtSugestion" placeholder="Escreva a sua sujestão..." style="width:100%; height: 100px " ></textarea>
                     </div>
-            
                     <div class="col-md-2 align-self-center">
-                        <button id="btn-sugest" type="button" class="btn btn-primary btn-lg">Enviar!</button>
+                       <button type="button" id="btnSugest" class="btn btn-lg btn-primary rounded-lg">Enviar</button>
                     </div>
-                    
-                    </div>
-
-            
-
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
     </div>
 
       
     <!-- Optional JavaScript -->
     <script type="module" src="/JS/Views/navBarView.js"></script>
+    <script type="module" src="/JS/Views/SugestionPageView.js"></script>
+    <!--SweetAlert 2 scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
