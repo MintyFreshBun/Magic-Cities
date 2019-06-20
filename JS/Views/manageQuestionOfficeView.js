@@ -1,8 +1,11 @@
-import{questions,removeQuestion}from "../Controllers/quizController.js"
+import{questions,removeQuestion,quizzSorting}from "../Controllers/quizController.js"
 
  
 
 function renderQuestions(){
+  //Sorting the qizzes id before doing the injection
+    quizzSorting()
+
     const questionBox= document.querySelector("#questionBox")
     let result = "";
     let wrong = "";
