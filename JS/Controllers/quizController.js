@@ -103,6 +103,11 @@ if (localStorage.questions) {
     localStorage.setItem("questions", JSON.stringify(questions))
 }
 
+
+
+
+//############################### Back oFFICE fuctions
+//############# Removing a question
 export function removeQuestion(questionId){
     for (let i = 0; i < questions.length; i++) {
         if (questions[i].id == questionId) {
@@ -110,8 +115,22 @@ export function removeQuestion(questionId){
         }
     }
     localStorage.setItem("questions", JSON.stringify(questions))
+
+    quizzSorting()
+
+    //after removing we need to reaasign all the questions ID's so we dont havea  gap
+
+    for (let i = 0; i < questions.length; i++) {
+        questions[i].id = i + 1        
+    }
+    localStorage.setItem("questions", JSON.stringify(questions))
+
+
+
+
 }
 
+//############# adding a new question 
 export function addQuestion(correctAnswer, txtNarrative, txtDescription, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, questionLevel){
     
     const points = 25;
@@ -134,5 +153,15 @@ export function addQuestion(correctAnswer, txtNarrative, txtDescription, firstAn
             location.href = "manageQuestionBackOffice.html"
         }
     })
+    quizzSorting()
+
     
+}
+
+
+//############ Sorting quizzes by adding new ids
+
+export function quizzSorting(){
+    questions.sort(Question.compareId)
+    localStorage.setItem("questions", JSON.stringify(questions))
 }
