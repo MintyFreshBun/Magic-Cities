@@ -119,7 +119,7 @@ export function addCity(txtCity,txtLevel,sltZone,txtDate,txtCover,txtBrasao,txtM
             text:`${txtCity}  foi adicionada.`,            
             type: 'success',
             confirmButtonColor: '#3085d6',
-            confirmButtonText: 'Sim, Remova!'
+            confirmButtonText: 'Ok!'
           }).then((result) => {
             if (result.value) {
                 // Goes back to the Cities catalog to check the newly added city
