@@ -1,5 +1,5 @@
-import{logout} from "../Controllers/usersController.js"
-import{newPass} from "../Controllers/usersController.js";
+import{logout, newPass} from "../Controllers/usersController.js"
+
 
 
 document.querySelector("#nivel").innerHTML=`Nivel: ${sessionStorage.getItem("userLvl")}`
@@ -84,7 +84,7 @@ if(sessionStorage.getItem("admin") === "true"){
 document.querySelector("#frmNewPass").addEventListener("submit",function(event){
 
       //Checks if the inputted passwords match
-      if(document.querySelector("#changePassword")== document.querySelector("#changePasswordConfirm")){
+      if(document.querySelector("#changePassword").value== document.querySelector("#changePasswordConfirm").value){
         //adds new password to user
         newPass(document.querySelector("#changePasswordConfirm"))
         localStorage.setItem("users", JSON.stringify(users))

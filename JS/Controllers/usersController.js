@@ -104,6 +104,14 @@ export function userLikeRemove(cityTxt){
             
         }
     }
+
+    sessionStorage.setItem("userLikes", JSON.stringify(users.userLikes))
+
+    localStorage.setItem("users", JSON.stringify(users))
+    
+    
+}
+
 export function newPass(pass){
     for(const user of users){
         if(user.username === sessionStorage.getItem("loggedUser")){
@@ -112,10 +120,3 @@ export function newPass(pass){
         }
     }
 }
-    sessionStorage.setItem("userLikes", JSON.stringify(users.userLikes))
-
-    localStorage.setItem("users", JSON.stringify(users))
-    
-    
-}
-
