@@ -105,7 +105,7 @@ if (localStorage.questions) {
 
 export function removeQuestion(questionId){
     for (let i = 0; i < questions.length; i++) {
-        if (questions[i].id === questionId) {
+        if (questions[i].id == questionId) {
             questions.splice(i, 1)
         }
     }
