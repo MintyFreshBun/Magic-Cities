@@ -53,12 +53,25 @@
 
 #perfilContainer{
   margin: 2%;
-  background-color: white;
 }
 
 #perfilIcon{
  max-width: 100%;
  max-height: auto;
+}
+
+#infoCard{
+  border-radius: 12px;
+  background-color: #4e6efa;
+}
+#infoContainer{
+  border-radius:12px;
+  background-color: #60b2ff;
+  
+}
+
+#lvlRank{
+  font-size: 20px;
 }
 
 

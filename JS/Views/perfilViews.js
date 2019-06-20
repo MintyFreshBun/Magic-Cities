@@ -1,7 +1,10 @@
 import{logout} from "../Controllers/usersController.js"
+import {
+  users
+} from "../Controllers/usersController.js";
 
-document.querySelector("#perfilName").innerHTML=` Aprendiz ${sessionStorage.getItem("loggedUser")}`
-document.querySelector("#nivel").innerHTML=`Nivel ${sessionStorage.getItem("userLvl")}`
+
+document.querySelector("#nivel").innerHTML=`Nivel: ${sessionStorage.getItem("userLvl")}`
 document.querySelector("#rank").innerHTML=`Rank: ${sessionStorage.getItem("userRank")}`
 
 //XP progress bar
@@ -10,6 +13,47 @@ document.querySelector("#progressBar").innerHTML=sessionStorage.getItem("userXP"
 
 
 
+// Avatar pic and tittle
+if(sessionStorage.getItem("userLvl")< 5){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileNatureApren.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Aprendiz ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 10){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileEarthApren.png" class="rounded-lg border-secondary" id="perfilIcon"">`
+  document.querySelector("#perfilName").innerHTML=` Aprendiz ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 15){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileWaterApren.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Aprendiz ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 20){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileFireApren.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Aprendiz ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 25){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileNatureSorc.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Sacerdote ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 30){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileEarthSorc.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Sacerdote ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 35){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileWaterSorc.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Sacerdote ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 40){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileFireSorc.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Sacerdote ${sessionStorage.getItem("loggedUser")}` 
+}else if(sessionStorage.getItem("userLvl")< 45){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileNatureWiz.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Mestre ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 50){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileEarthWiz.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Mestre ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 55){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileWaterWiz.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Mestre ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 60){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileFireWiz.png" class="rounded-lg border-secondary" id="perfilIcon">` 
+  document.querySelector("#perfilName").innerHTML=` Mestre ${sessionStorage.getItem("loggedUser")}`
+}else if(sessionStorage.getItem("userLvl")< 65){
+  document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileGrandWiz.png" class="rounded-lg border-secondary" id="perfilIcon">`
+  document.querySelector("#perfilName").innerHTML=` Grande Mestre ${sessionStorage.getItem("loggedUser")}` 
+}
 
 updateNavbar()
 
@@ -37,6 +81,35 @@ if(sessionStorage.getItem("admin") === "true"){
     location.href="../HTML/manageQuestionBackOffice.html"
   })
 }
+
+
+document.querySelector("#frmNewPass").addEventListener("click",function(){
+  for(const user of users){
+    //Locates user
+    if(user.username === sessionStorage.getItem("loggedUser")){
+      //Checks if the inputted passwords match
+      if(document.querySelector("#changePassword")=== document.querySelector("#changePasswordConfirm")){
+        //adds new password to user
+        user.password = document.querySelector("#changePasswordConfirm")
+        localStorage.setItem("users", JSON.stringify(users))
+        Swal.fire({
+          type: 'success',
+          text: 'As passwords foram mudadas com sucesso!',
+        })
+      }else{
+
+        Swal.fire({
+          type: 'error',
+          title: 'Oops...',
+          text: 'As passwords não são iguais',
+          footer: 'Tente novamente!'
+        })
+
+      }
+     
+    }
+  }
+})
 
 //Logout button deletes current user info and sends the user back into the landing page
 document.querySelector("#logoutBtn").addEventListener("click", function(){

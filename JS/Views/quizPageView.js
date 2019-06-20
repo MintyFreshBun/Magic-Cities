@@ -56,22 +56,6 @@ function renderCurrentQuestion() {
 
 }
 
-/*function renderNarrative() {
-  for (const question of questions) {
-    if (question.id == userQuestionId) {
-      // Narração
-      console.log(question.id)
-      console.log(userQuestionId)
-      console.log(question.narrative)
-      document.querySelector("#QuestionText").innerHTML = `<p style="font-size:30px">${question.narrative}</p>
-            
-      <button type="button" onclick="${renderCurrentQuestion()}" style="float: center" class="btn btn-primary btn-lg resp">Clica aqui para o ajudar</button>`
-
-    }
-  }
-
-}
-*/
 
 /**
  * 

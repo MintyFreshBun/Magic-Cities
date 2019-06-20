@@ -16,7 +16,33 @@ export function updateNavbar(){
           <!--Temp one atm-->
           <img src="../misc/Images/DG_favicon-02.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">
           `
-          document.querySelector("#userContainer").innerHTML +=`<img src="../misc/Images/DG_favicon-02.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          if(sessionStorage.getItem("userLvl")< 5){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileNatureApren.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          }else if(sessionStorage.getItem("userLvl")< 10){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileEarthApren.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          }else if(sessionStorage.getItem("userLvl")< 15){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileWaterApren.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          }else if(sessionStorage.getItem("userLvl")< 20){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileFireApren.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          }else if(sessionStorage.getItem("userLvl")< 25){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileNatureSorc.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          }else if(sessionStorage.getItem("userLvl")< 30){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileEarthSorc.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          }else if(sessionStorage.getItem("userLvl")< 35){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileWaterSorc.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          }else if(sessionStorage.getItem("userLvl")< 40){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileFireSorc.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">` 
+          }else if(sessionStorage.getItem("userLvl")< 45){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileNatureWiz.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          }else if(sessionStorage.getItem("userLvl")< 50){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileEarthWiz.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          }else if(sessionStorage.getItem("userLvl")< 55){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileWaterWiz.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
+          }else if(sessionStorage.getItem("userLvl")< 60){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileFireWiz.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">` 
+          }else if(sessionStorage.getItem("userLvl")< 65){
+            document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileGrandWiz.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">` 
+          }
           document.querySelector("#userContainer").innerHTML +=`<a class="navbar-brand text-white col-md-2" href="#welcomeUser">Welcome ${sessionStorage.getItem("loggedUser")} !</a>`
 
        
