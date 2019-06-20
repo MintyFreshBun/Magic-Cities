@@ -111,6 +111,9 @@ export function userLikeRemove(cityTxt){
     
     
 }
+export function correctQuestion(){
+    
+}
 
 export function newPass(pass){
     for(const user of users){

@@ -73,7 +73,7 @@ function checkAnswer(answer) {
         for (const user of users) {
 
           
-          user.userQuestionId += 1
+          user.userQuestionId =+ 1
           sessionStorage.setItem("userQuestionId", JSON.stringify(user.userQuestionId))
           if(user.username === sessionStorage.getItem("loggedUser")){
             if(user.xp >= 75){
@@ -101,7 +101,7 @@ function checkAnswer(answer) {
                 }
               })
             }else{
-            user.xp += 25
+            user.xp =+ 25
             sessionStorage.setItem("userXP", JSON.stringify(user.xp))
           
           //Correct popup button
