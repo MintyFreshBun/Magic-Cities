@@ -11,4 +11,13 @@ export default class User {
         this.userLikes = userLikes
         this.admin = admin
     }
+
+    
+    static compareUserLevel(userA, userB) {
+        if (userA.level > userB.level)
+            return -1;
+        if (userA.level < userB.level)
+            return 1;
+        return 0;
+    }
 }

@@ -117,7 +117,8 @@
         
 
         <div class="card btn-Hover">
-          <button type="button" class="btn ">
+          <!-- Rank Modal trigger button-->
+          <button type="button" class="btn " id="rankBtn" data-toggle="modal" data-target="#rankModal">
             <div class="card-body">
               <img class="rounded-lg" src="../IMG/iconPages/RankTableIcon.png" style="height: 170px; width: 200px" alt="cidadeImg">
               <br><br>
@@ -133,6 +134,67 @@
 
 
   </div>
+  
+  <!-- Rank Modal -->
+  <div class="modal fade" id="rankModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Feiticeiros top 4</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Lugar</th>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Nível</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">#1</th>
+                      <td id="usernameFirst">Mark</td>
+                      <td id="levelFirst">20</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">#2</th>
+                      <td id="usernameSecond">Jacob</td>
+                      <td id="levelSecond">10</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">#3</th>
+                      <td id="usernameThird">Larry</td>
+                      <td id="levelThird">5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">#4</th>
+                        <td id="usernameFourth">Larry</td>
+                        <td id="levelFourth">1</td>
+                      </tr>
+                  </tbody>
+                </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $('#exampleModal').on('show.bs.modal', event => {
+      var button = $(event.relatedTarget);
+      var modal = $(this);
+      // Use above variables to manipulate the DOM
+      
+    });
+  </script>
 
       
     <!-- Optional JavaScript -->

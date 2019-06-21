@@ -8,6 +8,8 @@ import{
     getCurrentLvl
 } from "../Controllers/citiesController.js"
 
+import{userSorting,users}from "../Controllers/usersController.js"
+
 
 
 //######################### Button fuctions ####################
@@ -119,3 +121,26 @@ document.querySelector("#btnFilter").addEventListener("click", function () {
     renderTops(txtFilter)
      // for some reason atm theres a bug where the first card doesnt update and a second button press is needed so im running the render a second time for the time being
 })
+
+document.querySelector("#rankBtn").addEventListener("click", function(){
+    // sort user levels
+    userSorting()
+    document.querySelector("#usernameFirst").innerHTML = users[1].username
+    document.querySelector("#levelFirst").innerHTML = users[1].level
+
+    document.querySelector("#usernameSecond").innerHTML = users[2].username
+    document.querySelector("#levelSecond").innerHTML = users[2].level
+
+    document.querySelector("#usernameThird").innerHTML = users[3].username
+    document.querySelector("#levelThird").innerHTML = users[3].level
+
+    document.querySelector("#usernameFourth").innerHTML = users[4].username
+    document.querySelector("#levelFourth").innerHTML = users[4].level
+
+  
+
+
+
+})
+
+
