@@ -64,9 +64,9 @@ function checkAnswer(answer) {
     if (question.id == userQuestionId) {
 
       if (answer == question.correctResponse) {
+        
         //Update do user
         updateUser()
-
         //update da navbar
         updateNavbar()
         //Chamar a função renderCurrentQuestion para renderizar a proxima pergunta quando o User acerta numa questão
