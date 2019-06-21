@@ -123,3 +123,60 @@ export function newPass(pass){
         }
     }
 }
+
+export function updateUser(){
+      // acrescentar 25 xp ao User quando acerta numa questão e mover para a próxima pergunta
+      for (const user of users) {
+
+          
+        user.userQuestionId += 1
+        sessionStorage.setItem("userQuestionId", user.userQuestionId)
+        if(user.username === sessionStorage.getItem("loggedUser")){
+          if(user.xp >= 75){
+
+            user.xp = 0
+            user.level += 1
+            
+            
+
+            sessionStorage.setItem("userLvl", user.level)
+            sessionStorage.setItem("userXP", user.xp)
+       
+
+            Swal.fire({
+              type: 'success',
+              title: `Nivel ${user.level}`,
+              text: 'Parabéns! Passas-te de nível!',
+              buttons:{ confirm:"Próxima pergunta"
+    
+              },
+           // It halts page reload until the "ok" button is clicked
+            }).then(val =>{
+              if(val){
+                location.reload()
+              }
+            })
+          }else{
+          user.xp += 25
+          sessionStorage.setItem("userXP", user.xp)
+        
+        //Correct popup button
+          Swal.fire({
+            type: 'success',
+            title: 'Certo! :D',
+            text: 'Parabéns! Agora para a próxima pergunta!',
+            buttons:{ confirm:"Próxima pergunta"
+  
+            },
+         // It halts page reload until the "ok" button is clicked
+          }).then(val =>{
+            if(val){
+              location.reload()
+            }
+          })
+          }
+        }
+
+      }
+      localStorage.setItem("users", JSON.stringify(users))
+}
