@@ -26,9 +26,9 @@ function renderCurrentQuestion() {
       // Nº da pergunta
       document.querySelector("#QuestionNumber").innerHTML = `<p>Pergunta #${+question.id+1}</p>`
       // Narração
-
-      // Questão
       document.querySelector("#narrativeBox").innerHTML= `<p>${question.narrative}</p>`
+
+      // Questão      
       document.querySelector("#QuestionText").innerHTML = `<p>${question.description}</p>`
       // Respostas
       let i = 0
@@ -64,9 +64,9 @@ function checkAnswer(answer) {
     if (question.id == userQuestionId) {
 
       if (answer == question.correctResponse) {
+        
         //Update do user
         updateUser()
-
         //update da navbar
         updateNavbar()
         //Chamar a função renderCurrentQuestion para renderizar a proxima pergunta quando o User acerta numa questão
