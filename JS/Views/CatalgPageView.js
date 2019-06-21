@@ -54,7 +54,7 @@ function renderCatalog (filterName = "", filterZone = ""){
 
                     <div class="row" style="padding-top: 2%">
                         <div class="col"><button type="button" id="${city.name}" class="btn btn-primary view"> Visitar Pagina</button></div>`
-                        if(sessionStorage.getItem("admin")){ 
+                        if(sessionStorage.getItem("admin") == "true"){ 
                             console.log("if entered")
                             // if the user is an admin thne the remove button will show
                             result+= `<div class="col"><button type="button" id="${city.name}" class="btn btn-danger remove"> Remover</button></div>`
@@ -140,14 +140,15 @@ function renderCatalog (filterName = "", filterZone = ""){
 }
 
 // adding the add city button if admin == true and its fuctions
-if(sessionStorage.getItem("admin")){
-    document.querySelector(".form-Class").innerHTML += `<button type="button" class="btn btn-primary m-2">
+
+if(sessionStorage.getItem("admin")=="true"){
+    document.querySelector(".form-group").innerHTML += `<button type="button" id="btnAddCity"class="btn btn-primary m-2">
     Adicionar Cidade
     </button>`
 
 }
 
-document.querySelector(".form-Class").addEventListener("click", function () {
+document.querySelector("#btnAddCity").addEventListener("click", function () {
     location.href = "AddCity.html"
 })
 
