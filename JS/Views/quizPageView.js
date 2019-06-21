@@ -73,8 +73,8 @@ function checkAnswer(answer) {
         for (const user of users) {
 
           
-          user.userQuestionId =+ 1
-          sessionStorage.setItem("userQuestionId", JSON.stringify(user.userQuestionId))
+          user.userQuestionId += 1
+          sessionStorage.setItem("userQuestionId", user.userQuestionId)
           if(user.username === sessionStorage.getItem("loggedUser")){
             if(user.xp >= 75){
 
@@ -84,7 +84,7 @@ function checkAnswer(answer) {
               
 
               sessionStorage.setItem("userLvl", user.level)
-              sessionStorage.setItem("userXP", JSON.stringify(user.xp))
+              sessionStorage.setItem("userXP", user.xp)
          
 
               Swal.fire({
@@ -101,8 +101,8 @@ function checkAnswer(answer) {
                 }
               })
             }else{
-            user.xp =+ 25
-            sessionStorage.setItem("userXP", JSON.stringify(user.xp))
+            user.xp += 25
+            sessionStorage.setItem("userXP", user.xp)
           
           //Correct popup button
             Swal.fire({

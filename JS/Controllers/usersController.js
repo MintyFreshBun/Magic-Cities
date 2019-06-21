@@ -8,10 +8,10 @@ export let users=[]
 if(localStorage.users){
     users = JSON.parse(localStorage.users)
 }else{
-    const user1= new User("JohnWink", "12345", "0","1","0"," ","false")
-    const user2= new User("Mint", "54321","0","1","0"," ","false")
-    const user3= new User("Tiago", "123","0","1","0"," ","false")
-    const user4= new User("admin", "admin","0","1","0"," ","true")
+    const user1= new User("JohnWink", "12345", "0","10","0"," ","false")
+    const user2= new User("Mint", "54321","0","1","20"," ","false")
+    const user3= new User("Tiago", "123","0","1","30"," ","false")
+    const user4= new User("admin", "admin","0","60","0"," ","true")
     users.push(user1,user2,user3,user4);
     localStorage.setItem("users", JSON.stringify(users))
 }
