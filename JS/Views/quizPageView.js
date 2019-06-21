@@ -28,9 +28,9 @@ function renderCurrentQuestion() {
       // Nº da pergunta
       document.querySelector("#QuestionNumber").innerHTML = `<p>Pergunta #${+question.id+1}</p>`
       // Narração
-
-      // Questão
       document.querySelector("#narrativeBox").innerHTML= `<p>${question.narrative}</p>`
+
+      // Questão      
       document.querySelector("#QuestionText").innerHTML = `<p>${question.description}</p>`
       // Respostas
       let i = 0
