@@ -189,4 +189,20 @@ btnHeart.addEventListener("click", function (){
     
 });
 
-//#################### GOOGLE MAPS API SCRPTS ############################## (ask the teacher about putting the script here)
+//#################### cities gallery html injection ##############################
+
+const cityGallery = document.querySelector("#cityGallery")
+let galleryHtml = "";
+
+for(const image of city.gallery){
+    galleryHtml += `
+    <div class="col-md-3">
+        <img class="img-fluid " src=${image}>              
+    </div>`;
+    
+
+}
+
+cityGallery.innerHTML = galleryHtml;
+
+

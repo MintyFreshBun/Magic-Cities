@@ -186,3 +186,40 @@ export function userSorting(){
     localStorage.setItem("users", JSON.stringify(users))
 }
 
+
+//################ giving level up to the users for good sugestions
+
+export function userSugestionUp(userName){
+  //finding the position of the user on the object array
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].username === userName) {
+    //when found, give a lvl up to the user and stringafy
+      users[i].xp = 0
+      users[i].level += 1    
+
+
+      
+    }
+  }
+  localStorage.setItem("users", JSON.stringify(users))
+  
+}
+
+
+//#### takes the users sugestuon bonus by taking 1 lvl 
+
+export function userSugestionDown(userName){
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].username === userName) {
+      //if the user's lvl is 1 then nothing happens, if not then take a lvl and stringafy
+      
+        users[i].xp = 0
+        users[i].level -= 1
+
+      
+    }
+  }
+  localStorage.setItem("users", JSON.stringify(users))
+
+}
+
