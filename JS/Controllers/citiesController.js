@@ -47,14 +47,74 @@ if (localStorage.cities) {
        "https://www.visitportugal.com/sites/default/files/styles/encontre_detalhe_poi_destaque/public/mediateca/VilaConde_Marginal-Praia_CMVC_660x371.jpg?itok=gV1xXSqP"
     ]
 
+   //Braga 
+   const brgGallery =[
+       "https://r-ec.bstatic.com/images/hotel/max1024x768/155/155755371.jpg",
+       "https://www.cm-braga.pt/archive/img/sbv_braga04.jpg",
+       "https://ominho.pt/wp-content/uploads/2018/04/Cidade-de-Braga-Turismo.jpg"
+   ]
+
+   //Coimbra
+   const cbrGallery =[
+       "https://i2.wp.com/ncultura.pt/wp-content/uploads/2018/04/capa-8.jpg?fit=1500%2C640&ssl=1",
+       "https://www.ambitur.pt/wp-content/uploads/ViewCoimbraHotelOslo-e1546598610390-770x439_c.jpg",
+       "https://i2.wp.com/www.vortexmag.net/wp-content/uploads/2017/11/35194527144_aef015cf8e_k-e1509809110460.jpg?fit=1200%2C831&ssl=1"
+   ]
+
+  
+
    //Funchal
    const fncGallery = [
        "https://www.madeira-web.com/images/madeira-web/3-places/31-funchal-a.jpg",
        "https://agencia.ecclesia.pt/portal/wp-content/uploads/2018/02/funchal.jpg",
        "https://jornaleconomico.sapo.pt/wp-content/uploads/2017/09/Funchal-Foto-CMF.jpg?w=610&h=381&q=60&compress=auto,format&fit=crop"
     ]
+    
+    //Figueira da Foz
+    const figGallery =[
+        "https://i.ytimg.com/vi/DP14WMxLTHk/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/aOLeTnVVnkw/hqdefault.jpg",
+        "https://pumpkin.pt/wp-content/uploads/2013/06/figueira-da-foz.jpg"
+    ]
+
+    //Horta
+    const hrtGallery = [
+        "https://www.caf-faial.com/wp-content/uploads/2016/04/a-9.jpg",
+        "http://www.portugal-live.net/images/stories/rotators/places_do_see/azores/horta/03.jpg",
+        "https://cdn-images.rtp.pt/icm/images/fd/fdeac7a21d6dbe8991b2d69a823bea5a?1200&rect=0,30,620,340"
+    ]
+    
+    //Guara (lvl3)
+    const grdGallery = [
+        "https://www.visitportugal.com/sites/default/files/styles/encontre_detalhe_poi_destaque/public/mediateca/Guarda_ARPTCentro_660x371.jpg?itok=yu7u14Nm",
+        "https://beira.pt/diretorio/wp-content/uploads/sites/14/2015/07/Se-Catedral-da-Guarda-750x400.jpg",
+        "https://www.mundoportugues.pt/wp-content/uploads/sites/3/2018/07/guarda19.jpg"
+    ]
+
+   // Evora
+   const evrGallery = [
+       "https://www.visitportugal.com/sites/default/files/styles/encontre_detalhe_poi_destaque/public/mediateca/Evora-SeCatedral-Shutterstock-Fotoeventis-Visit3.jpg?itok=OwjUsJeR",
+       "https://www.visitevora.net/wp-content/uploads/2018/05/visitar-evora-660x330.jpg",
+       "https://d1oe1fd4hqfth9.cloudfront.net/wp-content/uploads/slid_Pra%C3%A7a-do-Giraldo.jpg"
+   ]
+
+
+
+   //portimao (lvl4)
+
+   const ptmGallery = [
+       "https://www.visitportimao.com/pt/get_image.php?img=ffe162cb24d817381e7988cc40a0d1710f4a8990.jpg",
+       "https://portugal-103ca.kxcdn.com/wp-content/uploads/2019/05/Praia-da-Rocha-Portimao-Algarve-Portugal.jpg",
+       "https://d1oe1fd4hqfth9.cloudfront.net/wp-content/uploads/Praria-da-Rocha.jpg"
+   ]
 
    //############################ Google map scr (there long so we keep them in variable to keep it short) ##########################
+    //braga
+    const brgMap = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d766330.2724520763!2d-8.224827416503912!3d41.38543269213305!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24febc6cf5d867%3A0xbc5d054162d1e218!2sBraga!5e0!3m2!1spt-PT!2spt!4v1561317649831!5m2!1spt-PT!2spt"
+
+    //coimbra
+    const cbrMap = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194951.56067281085!2d-8.55635841176482!3d40.228675510852526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f9144aacd16d%3A0x634564477b42a6b9!2sCoimbra!5e0!3m2!1spt-PT!2spt!4v1561318787577!5m2!1spt-PT!2spt"
+
    //Ponta Delgada
    const pdlMap = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25239.416897237556!2d-25.696059305736423!3d37.74485415493512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb432acc76b00e97%3A0x765580f24e6fc416!2sPonta+Delgada!5e0!3m2!1spt-PT!2spt!4v1560768945950!5m2!1spt-PT!2spt";
    //Porto
@@ -68,24 +128,39 @@ if (localStorage.cities) {
    //#### LVL 2 cities
    //Funchal (nivel 2)
    const fncMap = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53743.643668332144!2d-16.95969009006523!3d32.660036787752205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605fc3501f8bab%3A0xffd84d2c15cda139!2sFunchal!5e0!3m2!1spt-PT!2spt!4v1560771763998!5m2!1spt-PT!2spt";
+   //Figueira da foz
+   const figMap = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97580.60550727215!2d-8.906874792926441!3d40.15578230058868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2237e03def9c41%3A0x878e2298dda9f4de!2sFigueira+da+Foz!5e0!3m2!1spt-PT!2spt!4v1561319216091!5m2!1spt-PT!2spt"
 
+   //Horta
+   const hrtMap ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24967.684345867125!2d-28.654339495077235!3d38.53467769618925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb478ad7f06d385f%3A0x35e81c36998de709!2sHorta!5e0!3m2!1spt-PT!2spt!4v1561319696658!5m2!1spt-PT!2spt"
+
+   //Guarda (lvl3)
+   const grdMap ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d388102.6156819805!2d-7.5302129200552645!3d40.540447254531166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3cfac48ff6c653%3A0x400ebbde4903500!2sGuarda!5e0!3m2!1spt-PT!2spt!4v1561320184862!5m2!1spt-PT!2spt"
+
+   // Evora
+   const evrMap ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99821.9618430467!2d-7.981049092710526!3d38.569799332204546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19e4df3883139d%3A0xa6ad8a31c3bdef6c!2zw4l2b3Jh!5e0!3m2!1spt-PT!2spt!4v1561321127462!5m2!1spt-PT!2spt"
+
+   //portimao (lvl4)
+   const ptmMap ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101723.05696257732!2d-8.60531908496227!3d37.180141787737426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1b28eca9242961%3A0x93fcc923718014e1!2zUG9ydGltw6Nv!5e0!3m2!1spt-PT!2spt!4v1561321662980!5m2!1spt-PT!2spt"
 
 
 // adding the information to the 3 cities
 
     const city1 = new City("Ponta Delgada", "Açores", "1546","31/5/2019",1,1,0,0,"../IMG/Ponta-Delgada-cover.jpg","../IMG/PDL-Brasao.png","https://pt.wikipedia.org/wiki/Ponta_Delgada","Cidade central da Ilha São Miguel",pdlGallery,pdlMap)
-    const city2 = new City("Porto","Norte","1112","31/5/2019",2,1,0,0,"../IMG/Porto.jpg","../IMG/Porto-Brasao.png","https://pt.wikipedia.org/wiki/Porto","Cidade Linda e boa para visitar",pdlGallery,prtMap)
+    const city2 = new City("Porto","Norte","1112","31/5/2019",2,1,0,0,"../IMG/Porto.jpg","../IMG/Porto-Brasao.png","https://pt.wikipedia.org/wiki/Porto","Cidade Linda e boa para visitar",prtGallery,prtMap)
     const city3 = new City("Lisboa","Área Metropolitana de Lisboa","1147","1/6/2019",3,1,0,0,"../IMG/Lisboa.jpg","../IMG/LSB-Brasao.png" ,"https://pt.wikipedia.org/wiki/Lisboa","Cidade Grande e metropolitana e Capital",lsbGallery,lsbMap)
     const city4 = new City("Vila do Conde","Norte","1988","17/6/2019",4,1,0,0,"../IMG/Vdc-cover.jpg","../IMG/VDC-Brasao.png","https://pt.wikipedia.org/wiki/Vila_do_Conde","Cidade perto do mar!",vdcGallery,vdcMap) 
     const city5 = new City("Funchal","Madeira","1508","17/6/2019",5,2,0,0,"../IMG/Funchal-cover.jpg","../IMG/FNC-Brasao.png","https://pt.wikipedia.org/wiki/Funchal","Cidade principal da ilha da Madeia",fncGallery,fncMap)
-    const city6 = new City()
-    const city7 = new City()
-    const city8 = new City()
-    const city9 = new City()
-    const city10 = new City()
+    const city6 = new City("Braga","Norte","1070","23/6/2019",6,1,0,0,"https://upload.wikimedia.org/wikipedia/commons/3/3f/Se_Catedral_de_Braga.jpg","https://upload.wikimedia.org/wikipedia/commons/2/25/BRG.png","https://pt.wikipedia.org/wiki/Braga","Em 2019 foi eleita o segundo Melhor Destino Europeu do ano.",brgGallery,brgMap)
+    const city7 = new City("Coimbra","Norte","1080","23/6/2019",7,1,0,0,"https://upload.wikimedia.org/wikipedia/commons/3/38/Almedina-CCBY.jpg","https://upload.wikimedia.org/wikipedia/commons/7/76/CBR.png","https://pt.wikipedia.org/wiki/Coimbra","É considerada uma das mais importantes cidades portuguesas!",cbrGallery,cbrMap)
+    const city8 = new City("Figueira da foz","Centro","1882","23/6/2019",8,2,0,0,"https://upload.wikimedia.org/wikipedia/commons/6/66/PacosdoConcelho.jpg","https://upload.wikimedia.org/wikipedia/commons/3/39/FIG.png","https://pt.wikipedia.org/wiki/Figueira_da_Foz","Foi conhecida como *Rainha das Praias de Portugal*",figGallery,figMap)
+    const city9 = new City("Horta","Açores","1833","23/6/2019",9,2,0,0,"https://upload.wikimedia.org/wikipedia/commons/4/4f/Cidhorta.jpg","https://upload.wikimedia.org/wikipedia/commons/e/e1/HRT.png","https://pt.wikipedia.org/wiki/Horta","Uma cidade portuguesa com cerca de 8800 habitantes da Região Autónoma dos Açores.",hrtGallery,hrtMap)
+    const city10 = new City("Guarda","Centro","1199","23/6/2019",10,3,0,0,"https://upload.wikimedia.org/wikipedia/commons/8/84/GuardaCathedral2.jpg","https://upload.wikimedia.org/wikipedia/commons/0/0e/GRD.png","https://pt.wikipedia.org/wiki/Guarda","Toda a região é marcada pelo granito, pelo clima contrastado de montanha e pelo seu ar puro e frio que permite a cura e manufatura de fumeiro e queijaria de altíssima qualidade.",grdGallery,grdMap)
+    const city11 = new City("Évora","Alentejo","1165","23/6/2019",11,3,0,0,"https://upload.wikimedia.org/wikipedia/commons/9/98/Evora-RomanTemple.jpg","https://upload.wikimedia.org/wikipedia/commons/f/fb/COA_of_%C3%89vora_municipality_%28Portugal%29.png","https://pt.wikipedia.org/wiki/%C3%89vora","O seu centro histórico bem-preservado é um dos mais ricos em monumentos de Portugal",evrGallery,evrMap)
+    const city12 = new City("Portimão","Algarve","1924","23/6/2019",12,4,0,0,"https://upload.wikimedia.org/wikipedia/commons/3/38/Apartment_buildings_at_Praia_da_Rocha%2C_Portim%C3%A3o.jpg","https://upload.wikimedia.org/wikipedia/commons/8/80/COA_of_Portim%C3%A3o_municipality_%28Portugal%29.png","https://pt.wikipedia.org/wiki/Portim%C3%A3o","O centro da cidade está situado a cerca de 2 km do mar e é um centro importante de pesca e turismo.",ptmGallery,ptmMap)
 
     
-    cities.push(city1,city2,city3,city4,city5)    
+    cities.push(city1,city2,city3,city4,city5,city6,city7,city8,city9,city10,city11,city12)    
     localStorage.setItem("cities", JSON.stringify(cities))
 }
 

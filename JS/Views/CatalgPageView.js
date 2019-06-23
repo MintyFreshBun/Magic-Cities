@@ -145,12 +145,12 @@ if(sessionStorage.getItem("admin")=="true"){
     document.querySelector(".form-group").innerHTML += `<button type="button" id="btnAddCity"class="btn btn-primary m-2">
     Adicionar Cidade
     </button>`
-
-}
-
 document.querySelector("#btnAddCity").addEventListener("click", function () {
     location.href = "AddCity.html"
 })
+}
+
+
 
 
 // add the 
