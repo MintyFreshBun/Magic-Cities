@@ -3,7 +3,7 @@ import{logout, newPass} from "../Controllers/usersController.js"
 
 
 document.querySelector("#nivel").innerHTML=`Nivel: ${sessionStorage.getItem("userLvl")}`
-document.querySelector("#rank").innerHTML=`Rank: ${sessionStorage.getItem("userRank")}`
+
 
 //XP progress bar
 document.querySelector("#progressBar").style.width=sessionStorage.getItem("userXP") + "%"
