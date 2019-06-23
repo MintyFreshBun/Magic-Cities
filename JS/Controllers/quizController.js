@@ -27,6 +27,21 @@ if (localStorage.questions) {
         [
             "1", // id
             "1", // level
+            "Caminhando pelas terras do norte encontras uma cidade antiga, rodeada por uma grande muralha. Verificas que esta foi fundada no ano 1070. Um dos soldados na muralha encontra-se confuso e pergunta-te em que cidade está.", // narrative
+            "Qual o nome desta cidade?", // description
+            [
+                "Silves",
+                "Braga", // responses
+                "Bragança",
+                "Guarda"
+            ],
+            1, // correctResponse
+            "25" // points
+        ],
+
+        [
+            "2", // id
+            "1", // level
             "Segues para sul, continuando ainda no norte do país e acabas numa cidade cheia de cores, nesta, atravessa o Rio Douro. Mas também lá, vagueiam pessoas confusas, cheias de dúvidas sobre onde estão. Vês um placar com a data da fundação: ano 1112", // narrative
             "Qual é o nome desta cidade?", // description
             [
@@ -38,10 +53,118 @@ if (localStorage.questions) {
             2, // correctResponse
             "25" // points
         ],
+        [
+            "3", // id
+            "1", // level
+            "Chegas a uma cidade universitária. Lá reparas em vários estudantes confusos. Eles rodeiam-te e atiram várias perguntas sobre aonde estão. Enquando procuras por pistas, descobres que esta cidade foi fundada no ano 1080", // narrative
+            "Qual o nome desta cidade?", // description
+            [
+                "Chaves",
+                "Covilhã", // responses
+                "Coimbra",
+                "Ermesinde"
+            ],
+            2, // correctResponse
+            "25" // points
+        ],
 
         [
-            "2", // id
-            "1", // level
+            "4", // id
+            "2", // level
+            "Enquanto caminhas o distrito de Coimbra, encontras o litoral. Na Foz do rio Mondego encontras uma cidade. Encontras trabalhadores a construirem uma caravela, agora parados sem saberem o que fazer, confusos sobre aonde estão. Exploras o local por pistas e descobres que a cidade foi fundada no ano 1882", // narrative
+            "Qual o nome desta cidade?", // description
+            [
+                "Felgueiras",
+                "Fiães", // responses
+                "Funchal",
+                "Figueira da foz"
+            ],
+            3, // correctResponse
+            "25" // points
+        ],
+
+        [
+            "5", // id
+            "2", // level
+            "Encontras um portal que te leva para uma das ilhas dos açores. Encontras-te agora numa praia com pescadores que se preparavam para pescar, mas agora não sabiam se estavam no lugar certo. Vêm ter contigo para perguntar aonde estão. Sabem que estão num lugar chamado de ponta, mas não sabem o resto. Mais pistas que descobres levam-te a concluir que esta cidade foi fundada no ano 1546", // narrative
+            "Qual o nome desta cidade?", // description
+            [
+                "Ponte do Lima",
+                "Ponta do Minho", // responses
+                "Ponta de Setúbal",
+                "Ponta Delgada"
+            ],
+            3, // correctResponse
+            "25" // points
+        ],
+        
+        [
+            "6", // id
+            "2", // level
+            "Nos açores descobres que existe um portal de volta para o continente. Arranjas uns pescadores dispostos a ajudarem-te, mas estes esqueceram a onde está o portal. Apenas sabem que fica perto da Ilha do Pico e que foi fundada em 1833", // narrative
+            "Qual o nome desta cidade?", // description
+            [
+                "Ílhavo",
+                "Lagoa", // responses
+                "Horta",
+                "Lagos"
+            ],
+            2, // correctResponse
+            "25" // points
+        ],
+
+
+        [
+            "7", // id
+            "2", // level
+            "Voltas ao portal de onde vieste mas não voltas-te ao continente. Continuas numa das ilhas, desta vez numa das ilhas da Madeira. Sabes que estás na capital deste arquipélago. Várias pessoas vêm ter contigo a perguntar onde estão. As tuas pistas indicam que esta cidade foi fundada no ano de 1508", // narrative
+            "Qual o nome desta cidade?", // description
+            [
+                "Funchal",
+                "Camacha", // responses
+                "Deserta Grande",
+                "Porto Santo"
+            ],
+            0, // correctResponse
+            "25" // points
+        ],
+
+
+        [
+            "8", // id
+            "3", // level
+            "Voltas ao portal de onde vieste mas não voltas-te ao continente. Continuas numa das ilhas, desta vez numa das ilhas da Madeira. Sabes que estás na capital deste arquipélago. Várias pessoas vêm ter contigo a perguntar onde estão. As tuas pistas indicam que esta cidade foi fundada no ano de 1508", // narrative
+            "Qual o nome desta cidade?", // description
+            [
+                "Viseu",
+                "Bragança", // responses
+                "Funchal",
+                "Beja"
+            ],
+            2, // correctResponse
+            "25" // points
+        ],
+
+   
+       
+        [
+            "9", // id
+            "3", // level
+            "Continuas a tua jornada e encontras a cidade mais alta de portugal, situada à beira da serra da estrela, descobres que esta cidade foi fundada no ano 1199. Encontras uma carroça parada, O condutor vem até ti para saber aonde está. ", // narrative
+            "Qual o nome desta cidade?", // description
+            [
+                "Silves",
+                "Lamego", // responses
+                "Bragança",
+                "Guarda"
+            ],
+            3, // correctResponse
+            "25" // points
+        ],
+
+        [
+            "10", // id
+            "3", // level
             "Continuas para sul e encontras-te agora no centro do país. Vês vários mercadores à procura do que devia ser a capital. Mais uma vês procuras por pistas e descobres que esta foi fundada no ano 1147", // narrative
             "Qual o nome desta cidade?", // description
             [
@@ -55,49 +178,39 @@ if (localStorage.questions) {
         ],
 
         [
-            "3", // id
-            "1", // level
-            "Encontras um portal que te leva para uma das ilhas dos açores. Encontras-te agora numa praia com pescadores que se preparavam para pescar, mas agora não sabiam se estavam no lugar certo. Vêm ter contigo para perguntar aonde estão. Sabem que estão num lugar chamado de ponta, mas não sabem o resto. Mais pistas que descobres levam-te a concluir que esta cidade foi fundada no ano 1546", // narrative
+            "11", // id
+            "3", // level
+            "Caminhas mais para sul do país, estás na região do Alentejo. Lá encontras uma cidade antiga com ruínas Romanas. Os cidadãos vagueiam as ruas e alguns vêm até ti para saber a onde estão. Descobres num dos monumentos que foi fundada no ano 1165", // narrative
             "Qual o nome desta cidade?", // description
             [
-                "Ponte do Lima",
-                "Ponta do Minho", // responses
-                "Ponta de Setúbal",
-                "Ponta Delgada"
+                "Évora",
+                "Fafe", // responses
+                "Estremoz",
+                "Esposende"
             ],
-            3, // correctResponse
+            0, // correctResponse
             "25" // points
         ],
 
         [
-            "4", // id
-            "2", // level
-            "Voltas ao portal de onde vieste mas não voltas-te ao continente. Continuas numa das ilhas, desta vez numa das ilhas da Madeira. Sabes que estás na capital deste arquipélago. Várias pessoas vêm ter contigo a perguntar onde estão. As tuas pistas indicam que esta cidade foi fundada no ano de 1508", // narrative
+            "12", // id
+            "4", // level
+            "Continuas a tua caminhada para sul e chegas ao Algarve. Nas praias Algarvias descobres uma cidade. No porto da cidade encontras vários pescadores, estes também confusos sem saber onde estão nem para onde ir. Vagueias a cidade á procura de pistas e descobres que a cidade foi fundada no ano 1924.", // narrative
             "Qual o nome desta cidade?", // description
             [
-                "Funchal",
-                "Camacha", // responses
-                "Deserta Grande",
-                "Porto Santo"
+                "Póvoa de Santa Iria",
+                "Porto", // responses
+                "Portimão",
+                "Quarteira"
             ],
-            0, // correctResponse
+            2, // correctResponse
             "25" // points
-        ]
+        ],
 
-        [
-            "5", // id
-            "2", // level
-            "Ouves boatos de que o malvado que está por detrás desta maldição que confunde a população portuguesa tem causado problemas no norte. Abres um portal que te leva para uma cidade no norte. Moradores locais pedem-te ajuda sobre o nome da cidade e dizem-te que o 1º rei de Portugal tinha o seu castelo nesta cidade.", // narrative
-            "Qual o nome desta cidade?", // description
-            [
-                "Aveiro",
-                "Faro", // responses
-                "Guimarães",
-                "Porto"
-            ],
-            0, // correctResponse
-            "25" // points
-        ]
+
+     
+
+
         
         
     ];
