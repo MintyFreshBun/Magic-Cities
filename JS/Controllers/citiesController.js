@@ -26,16 +26,33 @@ if (localStorage.cities) {
     ]
 
    //Porto
-   const prtGallery = []
+   const prtGallery = [
+       "https://media.timeout.com/images/104692355/630/472/image.jpg",
+       "http://www.warmrental.com/blog/wp-content/uploads/2018/05/20-Things-To-Do-In-Porto-That-You-Cannot-Miss-0.jpg",
+       "https://d254u7jd4zosxo.cloudfront.net/files/2017/07/porto-2048724_1920.jpg?w=640",
+       "https://cdn.ejamo.it/wp-content/uploads/sites/106/porto-panorama.jpg"
+    ]
 
    //Lisboa
-   const lsbGallery = []
+   const lsbGallery = [
+       "https://www.visitportugal.com/sites/www.visitportugal.com/files/mediateca/TAP_PracaComercio_01e_CL-co.jpg",
+       "https://nit.pt/wp-content/uploads/2018/05/89d568ddb3bc9e8c09de6d84b5972ba9-754x394.jpg",
+       "https://www.ulisboa.pt/sites/ulisboa.pt/files/styles/rect_large/public/basicpage/images/1920_600_lisboa_cidade_internacional_1.jpg?itok=cdDlaHtp"
+    ]
 
    //Vila do Conde
-   const vdcGallery = []
+   const vdcGallery = [
+       "https://nit.pt/wp-content/uploads/2017/07/b715e28fc1db1044565276c704c20daa-754x394.jpg",
+       "https://media-cdn.tripadvisor.com/media/photo-s/12/93/6b/2c/largo-dom-afonso-sanches.jpg",
+       "https://www.visitportugal.com/sites/default/files/styles/encontre_detalhe_poi_destaque/public/mediateca/VilaConde_Marginal-Praia_CMVC_660x371.jpg?itok=gV1xXSqP"
+    ]
 
    //Funchal
-   const fncGallery = []
+   const fncGallery = [
+       "https://www.madeira-web.com/images/madeira-web/3-places/31-funchal-a.jpg",
+       "https://agencia.ecclesia.pt/portal/wp-content/uploads/2018/02/funchal.jpg",
+       "https://jornaleconomico.sapo.pt/wp-content/uploads/2017/09/Funchal-Foto-CMF.jpg?w=610&h=381&q=60&compress=auto,format&fit=crop"
+    ]
 
    //############################ Google map scr (there long so we keep them in variable to keep it short) ##########################
    //Ponta Delgada
@@ -57,10 +74,10 @@ if (localStorage.cities) {
 // adding the information to the 3 cities
 
     const city1 = new City("Ponta Delgada", "Açores", "1546","31/5/2019",1,1,0,0,"../IMG/Ponta-Delgada-cover.jpg","../IMG/PDL-Brasao.png","https://pt.wikipedia.org/wiki/Ponta_Delgada","Cidade central da Ilha São Miguel",pdlGallery,pdlMap)
-    const city2 = new City("Porto","Norte","1112","31/5/2019",2,1,0,0,"../IMG/Porto.jpg","../IMG/Porto-Brasao.png","https://pt.wikipedia.org/wiki/Porto","Cidade Linda e boa para visitar"," ",prtMap)
-    const city3 = new City("Lisboa","Área Metropolitana de Lisboa","1147","1/6/2019",3,1,0,0,"../IMG/Lisboa.jpg","../IMG/LSB-Brasao.png" ,"https://pt.wikipedia.org/wiki/Lisboa","Cidade Grande e metropolitana e Capital"," ",lsbMap)
-    const city4 = new City("Vila do Conde","Norte","1988","17/6/2019",4,1,0,0,"../IMG/Vdc-cover.jpg","../IMG/VDC-Brasao.png","https://pt.wikipedia.org/wiki/Vila_do_Conde","Cidade perto do mar!"," ",vdcMap) 
-    const city5 = new City("Funchal","Madeira","1508","17/6/2019",5,2,0,0,"../IMG/Funchal-cover.jpg","../IMG/FNC-Brasao.png","https://pt.wikipedia.org/wiki/Funchal","Cidade principal da ilha da Madeia"," ",fncMap)
+    const city2 = new City("Porto","Norte","1112","31/5/2019",2,1,0,0,"../IMG/Porto.jpg","../IMG/Porto-Brasao.png","https://pt.wikipedia.org/wiki/Porto","Cidade Linda e boa para visitar",pdlGallery,prtMap)
+    const city3 = new City("Lisboa","Área Metropolitana de Lisboa","1147","1/6/2019",3,1,0,0,"../IMG/Lisboa.jpg","../IMG/LSB-Brasao.png" ,"https://pt.wikipedia.org/wiki/Lisboa","Cidade Grande e metropolitana e Capital",lsbGallery,lsbMap)
+    const city4 = new City("Vila do Conde","Norte","1988","17/6/2019",4,1,0,0,"../IMG/Vdc-cover.jpg","../IMG/VDC-Brasao.png","https://pt.wikipedia.org/wiki/Vila_do_Conde","Cidade perto do mar!",vdcGallery,vdcMap) 
+    const city5 = new City("Funchal","Madeira","1508","17/6/2019",5,2,0,0,"../IMG/Funchal-cover.jpg","../IMG/FNC-Brasao.png","https://pt.wikipedia.org/wiki/Funchal","Cidade principal da ilha da Madeia",fncGallery,fncMap)
     const city6 = new City()
     const city7 = new City()
     const city8 = new City()
