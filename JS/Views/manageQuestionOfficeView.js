@@ -61,7 +61,8 @@ for (const elem of btnsRemove) {
                 'A pergunta foi removida.',
                 'success'
               )
-              renderQuestions();                  
+              renderQuestions();
+              this.refresh;           
             }
           })
           
