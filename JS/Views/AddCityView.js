@@ -5,7 +5,7 @@ import{
 //## adding the information from the submition form to the localStorage whit the clikc of the button
 document.querySelector("#frmAddCity").addEventListener("submit", function (event) {
     // Invocação a função importada do fx main.js chamada addBand
-    console.log("submission clicked")
+    
     addCity(
         document.querySelector("#txtName").value,
         document.querySelector("#txtLevel").value,

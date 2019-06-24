@@ -235,7 +235,7 @@ if (localStorage.questions) {
 
 
 
-//############################### Back oFFICE fuctions
+//############################### Back oFFICE fuctions related to quizzes #############
 //############# Removing a question
 export function removeQuestion(questionId){
     for (let i = 0; i < questions.length; i++) {
@@ -270,7 +270,7 @@ export function addQuestion(correctAnswer, txtNarrative, txtDescription, firstAn
     ]
     questions.push(new Question(id,questionLevel,txtNarrative,txtDescription,responses,correctAnswer,points))
     localStorage.setItem("questions", JSON.stringify(questions))
-    console.log("entered")
+    
     Swal.fire({            
         title:'Pergunta adicionada',         
         type: 'success',

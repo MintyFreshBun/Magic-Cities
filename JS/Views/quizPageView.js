@@ -21,8 +21,7 @@ renderCurrentQuestion()
  */
 function renderCurrentQuestion() {
   for (const question of questions) {
-    console.log(question.id)
-    console.log(userQuestionId)
+    
     if (question.id == userQuestionId) {
 
       // Nº da pergunta

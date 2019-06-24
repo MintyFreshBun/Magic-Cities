@@ -67,15 +67,14 @@ export function register(usernameRegister, passwordRegister, xp, level, userQues
 
 export function userLikeAdd(cityTxt){
 
-    // Probable solution is the whole thing be a string then split the string in to parts , push them in to an array, and from there add/remove the cities
-  //scrap wip1 Note: in the object user, index:5 is the userlikes
+    //it will add the the city they  pressed like in to a string that will be sent to userLikes
     
     let newLikes =  sessionStorage.getItem("userLikes") + ";" + cityTxt;
 
     sessionStorage.setItem("userLikes", newLikes);
     
 
-    
+    //searching for the index position of the user object 
     for (let i = 0; i < users.length; i++) {
         //find the position of the user
         if (users[i].username === sessionStorage.getItem("loggedUser")) {

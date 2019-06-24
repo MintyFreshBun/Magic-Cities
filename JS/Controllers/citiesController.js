@@ -8,11 +8,9 @@ export let cities = []
 if (localStorage.cities) {
     cities = JSON.parse(localStorage.cities)
 } else {
-    // it wll set 3 cities for the first time aceseecing this application 
     
-   //comments are gonna be an array of objects whit username and the comment and date in a seperate model
-   // may need to modify/ add more data to the cities has we progress
-   // we will add 10 predefined cities
+    
+   // There will be a total of 12 cities hardcoded has defeault, if no local storage exists, these will be created
    // bigger data or an array of objects whit in an object are seperate then added to the city
 
   
@@ -197,11 +195,11 @@ export function sortRecent(){
     localStorage.setItem("cities", JSON.stringify(cities))
 }
 
-// fuctions to add and Remove cities
+//#################### fuctions to add and Remove cities #############
 
 //Add city
 export function addCity(txtCity,txtLevel,sltZone,txtDate,txtCover,txtBrasao,txtMap,txtLink,txtDescription,txtImg1,txtImg2,txtImg3){
-    // current note issuies, at the view you have to put them in seperate parts and then check if each individual part is orrect her in order 
+     
     let existCity = false
     let citynew = txtCity;
     citynew = citynew.toLowerCase();
@@ -254,7 +252,7 @@ export function addCity(txtCity,txtLevel,sltZone,txtDate,txtCover,txtBrasao,txtM
 
 }
 
-//## fuction to get the current date of creation
+//################ fuction to get the current date of creation #################
 function currentDate() {
     let fulldate = "";
     let today = new Date();
@@ -357,4 +355,3 @@ export function cityLike(txtName, keyLike){
 
 }
 
-//########### Function to turn the pictures in to an array

@@ -9,7 +9,7 @@ function renderQuestions(){
     const questionBox= document.querySelector("#questionBox")
     let result = "";
     let wrong = "";
-    console.log("star function")
+    
 
 
     for(const question of questions){
@@ -34,7 +34,7 @@ function renderQuestions(){
         </div>
     </div> `
     wrong= "";
-    }console.log("end for cycle")
+    }
 
     questionBox.innerHTML=result
 

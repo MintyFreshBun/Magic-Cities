@@ -11,7 +11,7 @@ document.querySelector("#progressBar").innerHTML=sessionStorage.getItem("userXP"
 
 
 
-// Avatar pic and tittle
+// Avatar pic and tittle, depending on the users lvl, each 5 lvl is a new tittle and avatar
 if(sessionStorage.getItem("userLvl")< 5){
   document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileNatureApren.png" class="rounded-lg border-secondary" id="perfilIcon">`
   document.querySelector("#perfilName").innerHTML=` Aprendiz ${sessionStorage.getItem("loggedUser")}`
@@ -54,7 +54,7 @@ if(sessionStorage.getItem("userLvl")< 5){
 }
 
 updateNavbar()
-
+//##### Navbar update fuction
 function updateNavbar(){
     if(sessionStorage.getItem("loggedUser")){
 
@@ -80,7 +80,7 @@ if(sessionStorage.getItem("admin") === "true"){
   })
 }
 
-
+//######## Changing the users password
 document.querySelector("#frmNewPass").addEventListener("submit",function(event){
 
       //Checks if the inputted passwords match

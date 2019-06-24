@@ -103,7 +103,7 @@ function renderComment(){
     //reverting back to normal order from old to new
     commentReverse();
     // add the counter to the cities.commentlocal storage
-    console.log(comCount);
+    
 
     city.comments = comCount;
     localStorage.setItem("cities", JSON.stringify(cities));
