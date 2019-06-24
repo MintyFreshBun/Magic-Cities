@@ -50,7 +50,7 @@ function renderAdmin(){
             <div class="col-md-2 align-self-center">
             
             <button type="button" class="btn goodSugestion btn-lg text-white font-weight-bold btn-warning" id="${sugestion.dateId}">
-                Dar Xp
+                <p>Subir 1 nivel</p>
             </button>
             </div>
         </div>
@@ -73,7 +73,7 @@ function renderAdmin(){
         
             // add xp to said user 
             userSugestionUp(username)
-            btnsGood.innerHTML = "Tirar XP"
+            
 
             Swal.fire(
             'Level Up enviado!',
@@ -86,7 +86,8 @@ function renderAdmin(){
           else{
             username = sugestionSwitch(this.id)
             userSugestionDown(username)
-            btnsGood.innerHTML = "Dar XP"
+            
+
 
             Swal.fire(
             'Level Up Removido!',
