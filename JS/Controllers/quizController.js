@@ -235,7 +235,7 @@ if (localStorage.questions) {
 
 
 
-//############################### Back oFFICE fuctions related to quizzes #############
+//############################### Back office fuctions related to quizzes #############
 //############# Removing a question
 export function removeQuestion(questionId){
     for (let i = 0; i < questions.length; i++) {
