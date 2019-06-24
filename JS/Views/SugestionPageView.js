@@ -42,15 +42,15 @@ function renderAdmin(){
         result+= `<div class="container-fluid bg-primary rounded-lg">
         <div class="row">
             <div class="col-md-10 text-white font-weight-bold" style="padding-left: 2%; padding-top:1% ; padding-bottom: 1%;" >
-            <div class=" row-2" style="padding-top: 0.5%; padding-bottom:0.5% ">Sugestão nª: ${sugestion.dateId}</div>
+            <div class=" row-2" style="padding-top: 0.5%; padding-bottom:0.5% ">Sugestão nº: ${sugestion.dateId}</div>
                 <div class=" row-2" style="padding-top: 0.5%; padding-bottom:0.5% ">Utilizador: ${sugestion.username}</div>
                 <div class="row-2" style="padding-top: 0.5%; padding-bottom:0.5% ">Data enviada: ${sugestion.date}</div>
-                <div class="row-2" style="padding-top: 0.5%; padding-bottom:0.5% ">Resposta Correta: ${sugestion.sugestion}</div>                
+                <div class="row-2" style="padding-top: 0.5%; padding-bottom:0.5% ">Sugestão: ${sugestion.sugestion}</div>                
             </div>
             <div class="col-md-2 align-self-center">
             
             <button type="button" class="btn goodSugestion btn-lg text-white font-weight-bold btn-warning" id="${sugestion.dateId}">
-                Dar Xp
+                <p>Subir 1 nivel</p>
             </button>
             </div>
         </div>
@@ -73,7 +73,7 @@ function renderAdmin(){
         
             // add xp to said user 
             userSugestionUp(username)
-            btnsGood.innerHTML = "Tirar XP"
+            
 
             Swal.fire(
             'Level Up enviado!',
@@ -86,7 +86,8 @@ function renderAdmin(){
           else{
             username = sugestionSwitch(this.id)
             userSugestionDown(username)
-            btnsGood.innerHTML = "Dar XP"
+            
+
 
             Swal.fire(
             'Level Up Removido!',

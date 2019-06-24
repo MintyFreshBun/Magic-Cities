@@ -4,7 +4,7 @@ import{
 
 
 document.querySelector("#frmAddQuestion").addEventListener("submit", function(event){
-    console.log("preesed");
+    
     addQuestion(document.querySelector("#correctAnswer").value,
         document.querySelector("#txtNarrative").value,
         document.querySelector("#txtDescription").value,

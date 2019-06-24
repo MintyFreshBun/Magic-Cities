@@ -1,7 +1,9 @@
 import {
   questions
 } from "../Controllers/quizController.js";
-import {updateUser} from "../Controllers/usersController.js";
+import {
+  updateUser
+} from "../Controllers/usersController.js";
 import {
   updateNavbar
 } from "../Views/navBarView.js"
@@ -14,21 +16,19 @@ let userQuestionId = sessionStorage.getItem("userQuestionId")
 
 // fazer uma função que dê render a tudo
 renderCurrentQuestion()
-//renderNarrative()
 
 /**
  * Função que renderiza a questão atual
  */
 function renderCurrentQuestion() {
   for (const question of questions) {
-    console.log(question.id)
-    console.log(userQuestionId)
+
     if (question.id == userQuestionId) {
 
       // Nº da pergunta
       document.querySelector("#QuestionNumber").innerHTML = `<p>Pergunta #${+question.id+1}</p>`
       // Narração
-      document.querySelector("#narrativeBox").innerHTML= `<p>${question.narrative}</p>`
+      document.querySelector("#narrativeBox").innerHTML = `<p>${question.narrative}</p>`
 
       // Questão      
       document.querySelector("#QuestionText").innerHTML = `<p>${question.description}</p>`
@@ -41,7 +41,7 @@ function renderCurrentQuestion() {
         i++
       }
       document.querySelector("#Buttons").innerHTML = result
-    //document.querySelector("#Buttons").style.visibility = "hidden"
+
     }
   }
 
@@ -66,14 +66,14 @@ function checkAnswer(answer) {
     if (question.id == userQuestionId) {
 
       if (answer == question.correctResponse) {
-        
+
         //Update do user
         updateUser()
         //update da navbar
         updateNavbar()
         //Chamar a função renderCurrentQuestion para renderizar a proxima pergunta quando o User acerta numa questão
         renderCurrentQuestion()
-        
+
       } else {
         Swal.fire({
           type: 'error',

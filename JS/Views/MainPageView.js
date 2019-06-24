@@ -100,7 +100,11 @@ function renderTops(filterType = ""){
                 setCurrentCity(this.id)
             }
             else{
-                alert("O seu Nivel e' demasiado baixo! Joga quizzes para ganhares XP e aumentar o seu nivel!")
+                Swal.fire(
+                    'Nivel Baixo!',
+                    'O seu Nivel é demasiado baixo! Joga quizzes para ganhares XP e aumentar o seu nivel!',
+                    'error'
+                  )
             }
         })
     }

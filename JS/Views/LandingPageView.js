@@ -9,6 +9,8 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
     const pass = document.querySelector("#passwordRegister").value
     const confirmPass = document.querySelector("#passwordRegisterConfirm").value
 
+    // Condition in the registration of a new user, if the pass is correct it will precsse to the next part witch will check if the username already exist,
+    // if not then it will create a new user
     if(pass!==confirmPass){
         Swal.fire({
             type: 'error',
@@ -53,6 +55,7 @@ document.querySelector("#frmSignUp").addEventListener("submit", function (event)
 
 
 document.querySelector("#frmLogin").addEventListener("submit", function (event){
+    //section for Loggin it, if username and pass match it will let the user log in and saving its gredentials in the session storage
 
     const loginResult= login(
          document.querySelector("#usernameLogin").value,

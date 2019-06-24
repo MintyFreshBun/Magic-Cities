@@ -55,7 +55,7 @@ function renderCatalog (filterName = "", filterZone = ""){
                     <div class="row" style="padding-top: 2%">
                         <div class="col"><button type="button" id="${city.name}" class="btn btn-primary view"> Visitar Pagina</button></div>`
                         if(sessionStorage.getItem("admin") == "true"){ 
-                            console.log("if entered")
+                            
                             // if the user is an admin thne the remove button will show
                             result+= `<div class="col"><button type="button" id="${city.name}" class="btn btn-danger remove"> Remover</button></div>`
                         }
@@ -96,7 +96,13 @@ function renderCatalog (filterName = "", filterZone = ""){
                 setCurrentCity(this.id)
             }
             else{
-                alert("O seu Nivel e' demasiado baixo! Joga quizzes para ganhares XP e aumentar o seu nivel!")
+                
+                Swal.fire(
+                    'Nivel Baixo!',
+                    'O seu Nivel é demasiado baixo! Joga quizzes para ganhares XP e aumentar o seu nivel!',
+                    'error'
+                  )
+
             } 
             
         })
@@ -145,12 +151,12 @@ if(sessionStorage.getItem("admin")=="true"){
     document.querySelector(".form-group").innerHTML += `<button type="button" id="btnAddCity"class="btn btn-primary m-2">
     Adicionar Cidade
     </button>`
-
-}
-
 document.querySelector("#btnAddCity").addEventListener("click", function () {
     location.href = "AddCity.html"
 })
+}
+
+
 
 
 // add the 
