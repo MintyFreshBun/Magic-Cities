@@ -48,7 +48,7 @@ if(sessionStorage.getItem("userLvl")< 5){
 }else if(sessionStorage.getItem("userLvl")< 60){
   document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileFireWiz.png" class="rounded-lg border-secondary" id="perfilIcon">` 
   document.querySelector("#perfilName").innerHTML=` Mestre ${sessionStorage.getItem("loggedUser")}`
-}else if(sessionStorage.getItem("userLvl")< 65){
+}else if(sessionStorage.getItem("userLvl")>= 65){
   document.querySelector("#perfilContainer").innerHTML +=`<img src="../IMG/profileImgs/profileGrandWiz.png" class="rounded-lg border-secondary" id="perfilIcon">`
   document.querySelector("#perfilName").innerHTML=` Grande Mestre ${sessionStorage.getItem("loggedUser")}` 
 }
@@ -64,7 +64,7 @@ function updateNavbar(){
           <!--Add/create ID avater icons,make diferent ones for each rank-->
           <!--Temp one atm-->
           <img src="../misc/Images/DG_favicon-02.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">
-          <a class="navbar-brand text-white col-md-2" href="#welcomeUser">Welcome ${sessionStorage.getItem("loggedUser")} !</a>
+          <a class="navbar-brand text-white col-md-2" href="#welcomeUser">Bem Vindo, ${sessionStorage.getItem("loggedUser")} !</a>
         </div>
         <div class="col-md-3 align-self-center">
           <button type="button" class="btn btn-warning text-white" id="logoutBtn">Log Out</button>

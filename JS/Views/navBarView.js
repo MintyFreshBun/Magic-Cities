@@ -40,10 +40,10 @@ export function updateNavbar(){
             document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileWaterWiz.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">`
           }else if(sessionStorage.getItem("userLvl")< 60){
             document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileFireWiz.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">` 
-          }else if(sessionStorage.getItem("userLvl")< 65){
+          }else if(sessionStorage.getItem("userLvl")>= 65){
             document.querySelector("#userContainer").innerHTML +=`<img src="../IMG/profileImgs/profileGrandWiz.png" class="rounded-lg border-secondary" style="width: 22%; height: 22%;">` 
           }
-          document.querySelector("#userContainer").innerHTML +=`<a class="navbar-brand text-white col-md-2" href="#welcomeUser">Welcome ${sessionStorage.getItem("loggedUser")} !</a>`
+          document.querySelector("#userContainer").innerHTML +=`<a class="navbar-brand text-white col-md-2" href="#welcomeUser">Bem Vindo, ${sessionStorage.getItem("loggedUser")} !</a>`
 
        
           document.querySelector("nav").innerHTML +=`</div>
