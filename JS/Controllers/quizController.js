@@ -133,7 +133,7 @@ if (localStorage.questions) {
         [
             "8", // id
             "3", // level
-            "Voltas ao portal de onde vieste mas não voltas-te ao continente. Continuas numa das ilhas, desta vez numa das ilhas da Madeira. Sabes que estás na capital deste arquipélago. Várias pessoas vêm ter contigo a perguntar onde estão. As tuas pistas indicam que esta cidade foi fundada no ano de 1508", // narrative
+            "Voltas a entrar num portal e sais na cidade mais a Sul de Portugal.", // narrative
             "Qual o nome desta cidade?", // description
             [
                 "Viseu",
